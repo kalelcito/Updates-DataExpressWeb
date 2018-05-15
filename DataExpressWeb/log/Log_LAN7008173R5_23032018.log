@@ -1,0 +1,106 @@
+
+Evento de Log :   Hora: 01:50:13
+  Codigo: 100
+  Origen: global_asax./recepcion/SubirArchivos.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> Argumento de postback o de devolución de llamadas no válido. La validación de eventos se habilita usando <pages enableEventValidation="true"/> en la configuración o <%@ Page EnableEventValidation="true" %> en una página. Por motivos de seguridad, esta característica comprueba que los argumentos pasados a eventos de postback o de devolución de llamadas se origina desde el control del servidor que inicialmente los procesó. Si los datos son válidos y son los que se esperaba, utilice el método ClientScriptManager.RegisterForEventValidation para registrar los datos de postback o de devolución de llamadas para su validación.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.ArgumentException: Argumento de postback o de devolución de llamadas no válido. La validación de eventos se habilita usando <pages enableEventValidation="true"/> en la configuración o <%@ Page EnableEventValidation="true" %> en una página. Por motivos de seguridad, esta característica comprueba que los argumentos pasados a eventos de postback o de devolución de llamadas se origina desde el control del servidor que inicialmente los procesó. Si los datos son válidos y son los que se esperaba, utilice el método ClientScriptManager.RegisterForEventValidation para registrar los datos de postback o de devolución de llamadas para su validación.
+   en System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   en System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   en System.Web.UI.WebControls.HiddenField.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.WebControls.HiddenField.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.recepcion_subirarchivos_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\LJAH\AppData\Local\Temp\Temporary ASP.NET Files\root\fd87d3fd\d9545156\App_Web_ajivgetk.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.ArgumentException: Argumento de postback o de devolución de llamadas no válido. La validación de eventos se habilita usando <pages enableEventValidation="true"/> en la configuración o <%@ Page EnableEventValidation="true" %> en una página. Por motivos de seguridad, esta característica comprueba que los argumentos pasados a eventos de postback o de devolución de llamadas se origina desde el control del servidor que inicialmente los procesó. Si los datos son válidos y son los que se esperaba, utilice el método ClientScriptManager.RegisterForEventValidation para registrar los datos de postback o de devolución de llamadas para su validación.
+   en System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   en System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   en System.Web.UI.WebControls.HiddenField.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.WebControls.HiddenField.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.recepcion_subirarchivos_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\LJAH\AppData\Local\Temp\Temporary ASP.NET Files\root\fd87d3fd\d9545156\App_Web_ajivgetk.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   en System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   en System.Web.UI.WebControls.HiddenField.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.WebControls.HiddenField.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 01:50:47
+  Codigo: 100
+  Origen: global_asax./recepcion/SubirArchivos.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> Argumento de postback o de devolución de llamadas no válido. La validación de eventos se habilita usando <pages enableEventValidation="true"/> en la configuración o <%@ Page EnableEventValidation="true" %> en una página. Por motivos de seguridad, esta característica comprueba que los argumentos pasados a eventos de postback o de devolución de llamadas se origina desde el control del servidor que inicialmente los procesó. Si los datos son válidos y son los que se esperaba, utilice el método ClientScriptManager.RegisterForEventValidation para registrar los datos de postback o de devolución de llamadas para su validación.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.ArgumentException: Argumento de postback o de devolución de llamadas no válido. La validación de eventos se habilita usando <pages enableEventValidation="true"/> en la configuración o <%@ Page EnableEventValidation="true" %> en una página. Por motivos de seguridad, esta característica comprueba que los argumentos pasados a eventos de postback o de devolución de llamadas se origina desde el control del servidor que inicialmente los procesó. Si los datos son válidos y son los que se esperaba, utilice el método ClientScriptManager.RegisterForEventValidation para registrar los datos de postback o de devolución de llamadas para su validación.
+   en System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   en System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   en System.Web.UI.WebControls.HiddenField.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.WebControls.HiddenField.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.recepcion_subirarchivos_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\LJAH\AppData\Local\Temp\Temporary ASP.NET Files\root\fd87d3fd\d9545156\App_Web_ajivgetk.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.ArgumentException: Argumento de postback o de devolución de llamadas no válido. La validación de eventos se habilita usando <pages enableEventValidation="true"/> en la configuración o <%@ Page EnableEventValidation="true" %> en una página. Por motivos de seguridad, esta característica comprueba que los argumentos pasados a eventos de postback o de devolución de llamadas se origina desde el control del servidor que inicialmente los procesó. Si los datos son válidos y son los que se esperaba, utilice el método ClientScriptManager.RegisterForEventValidation para registrar los datos de postback o de devolución de llamadas para su validación.
+   en System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   en System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   en System.Web.UI.WebControls.HiddenField.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.WebControls.HiddenField.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.recepcion_subirarchivos_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\LJAH\AppData\Local\Temp\Temporary ASP.NET Files\root\fd87d3fd\d9545156\App_Web_ajivgetk.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   en System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   en System.Web.UI.WebControls.HiddenField.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.WebControls.HiddenField.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   en System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------

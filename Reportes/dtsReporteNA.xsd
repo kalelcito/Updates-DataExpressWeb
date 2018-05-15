@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema id="dtsReporteNA" targetNamespace="http://tempuri.org/dtsReporteNA.xsd"
+           xmlns:mstns="http://tempuri.org/dtsReporteNA.xsd" xmlns="http://tempuri.org/dtsReporteNA.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified"
+           elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter"
+                  Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema"
+                  xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dataEcuadorConnectionString"
+                      ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly"
+                      Name="dataEcuadorConnectionString (Settings)" ParameterPrefix="@"
+                      PropertyReference="ApplicationSettings.Reportes.Properties.Settings.GlobalReference.Default.dataEcuadorConnectionString"
+                      Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component"
+                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
+                        DataAccessorName="ReporteNATableAdapter"
+                        GeneratorDataComponentClassName="ReporteNATableAdapter" Name="ReporteNA"
+                        UserDataComponentName="ReporteNATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dataEcuadorConnectionString (Settings)"
+                        DbObjectName="SELECT RECEPTOR.RFCREC, CAST(RECEPTOR.NOMREC AS VARCHAR(30)) AS NOMREC, CAST(Catalogo1_C.descripcion AS VARCHAR(15)) AS TIPODOC, GENERAL_1.secuencial AS FOLFAC, GENERAL_1.fecha AS FECHA, CASE CAST(Catalogo1_C.descripcion AS VARCHAR(15)) WHEN 'NOTA DE CREDITO' THEN CAST(GENERAL_1.importeAPagar AS NUMERIC(18, 2)) * (- 1) ELSE CAST(GENERAL_1.importeAPagar AS NUMERIC(18, 2)) END AS TOTAL, GENERAL_1.numeroAutorizacion, GENERAL_1.fechaAutorizacion, Herbalife_1.noOrden, Herbalife_1.empleado, GENERAL_1.numDocModificado, Herbalife_1.numeroAdicional, Herbalife_1.noIDRecInterno, GENERAL_1.codDoc, Herbalife_1.WH FROM Archivos INNER JOIN GENERAL AS GENERAL_1 ON Archivos.IDEFAC = GENERAL_1.idComprobante INNER JOIN RECEPTOR ON GENERAL_1.id_Receptor = RECEPTOR.IDEREC INNER JOIN Herbalife AS Herbalife_1 ON GENERAL_1.idComprobante = Herbalife_1.id_Comprobante INNER JOIN Catalogo1_C ON GENERAL_1.codDoc = Catalogo1_C.codigo AND Catalogo1_C.tipo = 'Comprobante' WHERE (GENERAL_1.estado = 0) AND (GENERAL_1.tipo = 'N')"
+                        DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
+                        GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
+                        GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
+                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+                        UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        INVALIDAS.RFCREC, INVALIDAS.NOMREC, INVALIDAS.TIPODOC, INVALIDAS.FOLFAC, INVALIDAS.FECHA, INVALIDAS.TOTAL, INVALIDAS.numeroAutorizacion,
+                      INVALIDAS.fechaAutorizacion, INVALIDAS.noOrden, INVALIDAS.empleado, INVALIDAS.numDocModificado, INVALIDAS.numeroAdicional,
+                      INVALIDAS.noIDRecInterno, INVALIDAS.codDoc, INVALIDAS.WH
+                      FROM            (SELECT        Herbalife.noOrden, GENERAL.codDoc
+                      FROM            GENERAL INNER JOIN
+                      Herbalife ON Herbalife.id_Comprobante = GENERAL.idComprobante
+                      WHERE        (GENERAL.estado = 1) AND (GENERAL.tipo = 'E')) AS VALIDAS RIGHT OUTER JOIN
+                      (SELECT        RECEPTOR.RFCREC, CAST(RECEPTOR.NOMREC AS VARCHAR(30)) AS NOMREC, CAST(Catalogo1_C.descripcion AS VARCHAR(15))
+                      AS TIPODOC, GENERAL_1.secuencial AS FOLFAC, GENERAL_1.fecha AS FECHA, CASE CAST(Catalogo1_C.descripcion AS VARCHAR(15))
+                      WHEN 'NOTA DE CREDITO' THEN CAST(GENERAL_1.importeAPagar AS NUMERIC(18, 2)) * (- 1)
+                      ELSE CAST(GENERAL_1.importeAPagar AS NUMERIC(18, 2)) END AS TOTAL, GENERAL_1.numeroAutorizacion, GENERAL_1.fechaAutorizacion,
+                      Herbalife_1.noOrden, Herbalife_1.empleado, GENERAL_1.numDocModificado, Herbalife_1.numeroAdicional, Herbalife_1.noIDRecInterno,
+                      GENERAL_1.codDoc, Herbalife_1.WH
+                      FROM            Archivos INNER JOIN
+                      GENERAL AS GENERAL_1 ON Archivos.IDEFAC = GENERAL_1.idComprobante INNER JOIN
+                      RECEPTOR ON GENERAL_1.id_Receptor = RECEPTOR.IDEREC INNER JOIN
+                      Herbalife AS Herbalife_1 ON GENERAL_1.idComprobante = Herbalife_1.id_Comprobante INNER JOIN
+                      Catalogo1_C ON GENERAL_1.codDoc = Catalogo1_C.codigo AND Catalogo1_C.tipo = 'Comprobante'
+                      WHERE        (GENERAL_1.estado = 0) AND (GENERAL_1.tipo = 'N')) AS INVALIDAS ON INVALIDAS.noOrden = VALIDAS.noOrden
+                      WHERE        (VALIDAS.noOrden IS NULL) AND (ISNULL(VALIDAS.codDoc, INVALIDAS.codDoc) = INVALIDAS.codDoc)
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="noOrden" DataSetColumn="noOrden" />
+              <Mapping SourceColumn="codDoc" DataSetColumn="codDoc" />
+              <Mapping SourceColumn="RFCREC" DataSetColumn="RFCREC" />
+              <Mapping SourceColumn="NOMREC" DataSetColumn="NOMREC" />
+              <Mapping SourceColumn="TIPODOC" DataSetColumn="TIPODOC" />
+              <Mapping SourceColumn="FOLFAC" DataSetColumn="FOLFAC" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="TOTAL" DataSetColumn="TOTAL" />
+              <Mapping SourceColumn="numeroAutorizacion" DataSetColumn="numeroAutorizacion" />
+              <Mapping SourceColumn="fechaAutorizacion" DataSetColumn="fechaAutorizacion" />
+              <Mapping SourceColumn="empleado" DataSetColumn="empleado" />
+              <Mapping SourceColumn="numDocModificado" DataSetColumn="numDocModificado" />
+              <Mapping SourceColumn="numeroAdicional" DataSetColumn="numeroAdicional" />
+              <Mapping SourceColumn="noIDRecInterno" DataSetColumn="noIDRecInterno" />
+              <Mapping SourceColumn="WH" DataSetColumn="WH" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsReporteNA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
+              msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsReporteNA"
+              msprop:Generator_UserDSName="dtsReporteNA">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteNA" msprop:Generator_TableClassName="ReporteNADataTable"
+                    msprop:Generator_TableVarName="tableReporteNA"
+                    msprop:Generator_RowChangedName="ReporteNARowChanged" msprop:Generator_TablePropName="ReporteNA"
+                    msprop:Generator_RowDeletingName="ReporteNARowDeleting"
+                    msprop:Generator_RowChangingName="ReporteNARowChanging"
+                    msprop:Generator_RowEvHandlerName="ReporteNARowChangeEventHandler"
+                    msprop:Generator_RowDeletedName="ReporteNARowDeleted" msprop:Generator_RowClassName="ReporteNARow"
+                    msprop:Generator_UserTableName="ReporteNA" msprop:Generator_RowEvArgName="ReporteNARowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="noOrden" msprop:Generator_ColumnVarNameInTable="columnnoOrden"
+                          msprop:Generator_ColumnPropNameInRow="noOrden"
+                          msprop:Generator_ColumnPropNameInTable="noOrdenColumn"
+                          msprop:Generator_UserColumnName="noOrden" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codDoc" msprop:Generator_ColumnVarNameInTable="columncodDoc"
+                          msprop:Generator_ColumnPropNameInRow="codDoc"
+                          msprop:Generator_ColumnPropNameInTable="codDocColumn"
+                          msprop:Generator_UserColumnName="codDoc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFCREC" msprop:Generator_ColumnVarNameInTable="columnRFCREC"
+                          msprop:Generator_ColumnPropNameInRow="RFCREC"
+                          msprop:Generator_ColumnPropNameInTable="RFCRECColumn"
+                          msprop:Generator_UserColumnName="RFCREC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMREC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNOMREC"
+                          msprop:Generator_ColumnPropNameInRow="NOMREC"
+                          msprop:Generator_ColumnPropNameInTable="NOMRECColumn"
+                          msprop:Generator_UserColumnName="NOMREC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPODOC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIPODOC"
+                          msprop:Generator_ColumnPropNameInRow="TIPODOC"
+                          msprop:Generator_ColumnPropNameInTable="TIPODOCColumn"
+                          msprop:Generator_UserColumnName="TIPODOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FOLFAC" msprop:Generator_ColumnVarNameInTable="columnFOLFAC"
+                          msprop:Generator_ColumnPropNameInRow="FOLFAC"
+                          msprop:Generator_ColumnPropNameInTable="FOLFACColumn"
+                          msprop:Generator_UserColumnName="FOLFAC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA"
+                          msprop:Generator_ColumnPropNameInRow="FECHA"
+                          msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA"
+                          type="xs:dateTime" />
+              <xs:element name="TOTAL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTAL"
+                          msprop:Generator_ColumnPropNameInRow="TOTAL"
+                          msprop:Generator_ColumnPropNameInTable="TOTALColumn" msprop:Generator_UserColumnName="TOTAL"
+                          type="xs:decimal" minOccurs="0" />
+              <xs:element name="numeroAutorizacion" msprop:Generator_ColumnVarNameInTable="columnnumeroAutorizacion"
+                          msprop:Generator_ColumnPropNameInRow="numeroAutorizacion"
+                          msprop:Generator_ColumnPropNameInTable="numeroAutorizacionColumn"
+                          msprop:Generator_UserColumnName="numeroAutorizacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="37" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaAutorizacion" msprop:Generator_ColumnVarNameInTable="columnfechaAutorizacion"
+                          msprop:Generator_ColumnPropNameInRow="fechaAutorizacion"
+                          msprop:Generator_ColumnPropNameInTable="fechaAutorizacionColumn"
+                          msprop:Generator_UserColumnName="fechaAutorizacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="empleado" msprop:Generator_ColumnVarNameInTable="columnempleado"
+                          msprop:Generator_ColumnPropNameInRow="empleado"
+                          msprop:Generator_ColumnPropNameInTable="empleadoColumn"
+                          msprop:Generator_UserColumnName="empleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numDocModificado" msprop:Generator_ColumnVarNameInTable="columnnumDocModificado"
+                          msprop:Generator_ColumnPropNameInRow="numDocModificado"
+                          msprop:Generator_ColumnPropNameInTable="numDocModificadoColumn"
+                          msprop:Generator_UserColumnName="numDocModificado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numeroAdicional" msprop:Generator_ColumnVarNameInTable="columnnumeroAdicional"
+                          msprop:Generator_ColumnPropNameInRow="numeroAdicional"
+                          msprop:Generator_ColumnPropNameInTable="numeroAdicionalColumn"
+                          msprop:Generator_UserColumnName="numeroAdicional" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="noIDRecInterno" msprop:Generator_ColumnVarNameInTable="columnnoIDRecInterno"
+                          msprop:Generator_ColumnPropNameInRow="noIDRecInterno"
+                          msprop:Generator_ColumnPropNameInTable="noIDRecInternoColumn"
+                          msprop:Generator_UserColumnName="noIDRecInterno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WH" msprop:Generator_ColumnVarNameInTable="columnWH"
+                          msprop:Generator_ColumnPropNameInRow="WH" msprop:Generator_ColumnPropNameInTable="WHColumn"
+                          msprop:Generator_UserColumnName="WH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

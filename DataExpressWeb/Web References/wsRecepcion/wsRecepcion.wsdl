@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ObtenerMensaje">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerMensajeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerMensajeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMensajeTecnico">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerMensajeTecnicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerMensajeTecnicoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibeComprobanteEmision">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlInvoice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emisorDb" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibeComprobanteEmisionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecibeComprobanteEmisionResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RecibeComprobante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlInvoice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEmpleado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emisorDb" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="manual" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pdf" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ordenFilename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibeComprobanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecibeComprobanteResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibeComplementoPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idComprobante" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonPagos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPagos" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEmpleado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emisorDb" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RecibeComplementoPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecibeComplementoPagoResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarComprobante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idComprobante" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEmpleado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emisorDb" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarComprobanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelarComprobanteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtenerMensajeSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerMensaje" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMensajeSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMensajeTecnicoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajeTecnico" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMensajeTecnicoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajeTecnicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibeComprobanteEmisionSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibeComprobanteEmision" />
+  </wsdl:message>
+  <wsdl:message name="RecibeComprobanteEmisionSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibeComprobanteEmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibeComprobanteSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibeComprobante" />
+  </wsdl:message>
+  <wsdl:message name="RecibeComprobanteSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibeComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibeComplementoPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibeComplementoPago" />
+  </wsdl:message>
+  <wsdl:message name="RecibeComplementoPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibeComplementoPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelarComprobanteSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelarComprobante" />
+  </wsdl:message>
+  <wsdl:message name="CancelarComprobanteSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelarComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WsRecepcionSoap">
+    <wsdl:operation name="ObtenerMensaje">
+      <wsdl:input message="tns:ObtenerMensajeSoapIn" />
+      <wsdl:output message="tns:ObtenerMensajeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajeTecnico">
+      <wsdl:input message="tns:ObtenerMensajeTecnicoSoapIn" />
+      <wsdl:output message="tns:ObtenerMensajeTecnicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComprobanteEmision">
+      <wsdl:input message="tns:RecibeComprobanteEmisionSoapIn" />
+      <wsdl:output message="tns:RecibeComprobanteEmisionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComprobante">
+      <wsdl:input message="tns:RecibeComprobanteSoapIn" />
+      <wsdl:output message="tns:RecibeComprobanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComplementoPago">
+      <wsdl:input message="tns:RecibeComplementoPagoSoapIn" />
+      <wsdl:output message="tns:RecibeComplementoPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarComprobante">
+      <wsdl:input message="tns:CancelarComprobanteSoapIn" />
+      <wsdl:output message="tns:CancelarComprobanteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsRecepcionSoap" type="tns:WsRecepcionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerMensaje">
+      <soap:operation soapAction="http://tempuri.org/ObtenerMensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajeTecnico">
+      <soap:operation soapAction="http://tempuri.org/ObtenerMensajeTecnico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComprobanteEmision">
+      <soap:operation soapAction="http://tempuri.org/RecibeComprobanteEmision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComprobante">
+      <soap:operation soapAction="http://tempuri.org/RecibeComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComplementoPago">
+      <soap:operation soapAction="http://tempuri.org/RecibeComplementoPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarComprobante">
+      <soap:operation soapAction="http://tempuri.org/CancelarComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsRecepcionSoap12" type="tns:WsRecepcionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerMensaje">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerMensaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajeTecnico">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerMensajeTecnico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComprobanteEmision">
+      <soap12:operation soapAction="http://tempuri.org/RecibeComprobanteEmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComprobante">
+      <soap12:operation soapAction="http://tempuri.org/RecibeComprobante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeComplementoPago">
+      <soap12:operation soapAction="http://tempuri.org/RecibeComplementoPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarComprobante">
+      <soap12:operation soapAction="http://tempuri.org/CancelarComprobante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsRecepcion">
+    <wsdl:port name="WsRecepcionSoap" binding="tns:WsRecepcionSoap">
+      <soap:address location="http://localhost:49558/wsRecepcion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsRecepcionSoap12" binding="tns:WsRecepcionSoap12">
+      <soap12:address location="http://localhost:49558/wsRecepcion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,28 @@
+C:\DataExpres\WebMX\Datos\bin\Release\SqlServerTypes\x64\msvcr100.dll
+C:\DataExpres\WebMX\Datos\bin\Release\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\DataExpres\WebMX\Datos\bin\Release\SqlServerTypes\x86\msvcr100.dll
+C:\DataExpres\WebMX\Datos\bin\Release\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\DataExpres\WebMX\Datos\bin\Release\Datos.dll
+C:\DataExpres\WebMX\Datos\bin\Release\Datos.pdb
+C:\DataExpres\WebMX\Datos\bin\Release\Microsoft.SqlServer.Types.dll
+C:\DataExpres\WebMX\Datos\bin\Release\Mirabeau.MsSql.Library.dll
+C:\DataExpres\WebMX\Datos\bin\Release\Mirabeau.Sql.dll
+C:\DataExpres\WebMX\Datos\bin\Release\Mirabeau.Sql.xml
+C:\DataExpres\WebMX\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+C:\DataExpres\WebMX\Datos\obj\Release\Datos.dll
+C:\DataExpres\WebMX\Datos\obj\Release\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\SqlServerTypes\x64\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\SqlServerTypes\x86\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\Mirabeau.MsSql.Library.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\Mirabeau.Sql.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Release\Mirabeau.Sql.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Release\Datos.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Release\Datos.csproj.CopyComplete
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Release\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Release\Datos.pdb

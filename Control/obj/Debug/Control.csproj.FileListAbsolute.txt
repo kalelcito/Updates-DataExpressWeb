@@ -1,0 +1,85 @@
+C:\DataExpres\WebMX\Control\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\DataExpres\WebMX\Control\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\DataExpres\WebMX\Control\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\DataExpres\WebMX\Control\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\DataExpres\WebMX\Control\bin\Debug\Control.dll.config
+C:\DataExpres\WebMX\Control\bin\Debug\Control.dll
+C:\DataExpres\WebMX\Control\bin\Debug\Control.pdb
+C:\DataExpres\WebMX\Control\bin\Debug\ClosedXML.dll
+C:\DataExpres\WebMX\Control\bin\Debug\Config.dll
+C:\DataExpres\WebMX\Control\bin\Debug\Datos.dll
+C:\DataExpres\WebMX\Control\bin\Debug\DocumentFormat.OpenXml.dll
+C:\DataExpres\WebMX\Control\bin\Debug\FastMember.Signed.dll
+C:\DataExpres\WebMX\Control\bin\Debug\MailBee.NET.dll
+C:\DataExpres\WebMX\Control\bin\Debug\Mirabeau.MsSql.Library.dll
+C:\DataExpres\WebMX\Control\bin\Debug\Mirabeau.Sql.dll
+C:\DataExpres\WebMX\Control\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\DataExpres\WebMX\Control\bin\Debug\Config.pdb
+C:\DataExpres\WebMX\Control\bin\Debug\Datos.pdb
+C:\DataExpres\WebMX\Control\bin\Debug\ClosedXML.pdb
+C:\DataExpres\WebMX\Control\bin\Debug\ClosedXML.xml
+C:\DataExpres\WebMX\Control\bin\Debug\DocumentFormat.OpenXml.xml
+C:\DataExpres\WebMX\Control\bin\Debug\MailBee.NET.xml
+C:\DataExpres\WebMX\Control\bin\Debug\Mirabeau.Sql.xml
+C:\DataExpres\WebMX\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
+C:\DataExpres\WebMX\Control\obj\Debug\Control.csproj.ResolveComReference.cache
+C:\DataExpres\WebMX\Control\obj\Debug\Control.dll
+C:\DataExpres\WebMX\Control\obj\Debug\Control.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Control.dll.config
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Control.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Control.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\ClosedXML.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Config.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\FastMember.Signed.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\MailBee.NET.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Mirabeau.MsSql.Library.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Mirabeau.Sql.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Config.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\ClosedXML.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\ClosedXML.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\MailBee.NET.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\bin\Debug\Mirabeau.Sql.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\obj\Debug\Control.csproj.ResolveComReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\obj\Debug\Control.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\obj\Debug\Control.csproj.CopyComplete
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\obj\Debug\Control.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Control\obj\Debug\Control.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Control.dll.config
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Control.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Control.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\ClosedXML.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Config.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\FastMember.Signed.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\MailBee.NET.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Mirabeau.MsSql.Library.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Mirabeau.Sql.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Config.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\ClosedXML.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\ClosedXML.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\MailBee.NET.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Debug\Mirabeau.Sql.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Debug\Control.csproj.ResolveComReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Debug\Control.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Debug\Control.csproj.CopyComplete
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Debug\Control.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Debug\Control.pdb

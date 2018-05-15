@@ -1,0 +1,175 @@
+
+Evento de Log :   Hora: 10:36:35
+  Codigo: 100
+  Origen: global_asax./Documentos.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'NOMEMI'.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'NOMEMI'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.documentos_aspx.__DataBinding__control114(Object sender, EventArgs e) en c:\DataExpres\WebMX\DataExpressWeb\Documentos.aspx:línea 405
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en DataExpressWeb.Documentos.Page_Load(Object sender, EventArgs e) en C:\DataExpres\WebMX\DataExpressWeb\Documentos.aspx.cs:línea 202
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.documentos_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\LJAH\AppData\Local\Temp\Temporary ASP.NET Files\root\fd87d3fd\d9545156\App_Web_documentos.aspx.cdcab7d2.gcxbzo0c.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'NOMEMI'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.documentos_aspx.__DataBinding__control114(Object sender, EventArgs e) en c:\DataExpres\WebMX\DataExpressWeb\Documentos.aspx:línea 405
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en DataExpressWeb.Documentos.Page_Load(Object sender, EventArgs e) en C:\DataExpres\WebMX\DataExpressWeb\Documentos.aspx.cs:línea 202
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.documentos_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\LJAH\AppData\Local\Temp\Temporary ASP.NET Files\root\fd87d3fd\d9545156\App_Web_documentos.aspx.cdcab7d2.gcxbzo0c.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.documentos_aspx.__DataBinding__control114(Object sender, EventArgs e) en c:\DataExpres\WebMX\DataExpressWeb\Documentos.aspx:línea 405
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en DataExpressWeb.Documentos.Page_Load(Object sender, EventArgs e) en C:\DataExpres\WebMX\DataExpressWeb\Documentos.aspx.cs:línea 202
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 11:41:37
+  Codigo: 100
+  Origen: global_asax./nuevo/factura/crearFactura.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> Referencia a objeto no establecida como instancia de un objeto.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en DataExpressWeb.CrearFacturaMx.bAgregarConcepto_Click(Object sender, EventArgs e) en C:\DataExpres\WebMX\DataExpressWeb\nuevo\factura\crearFactura.aspx.cs:línea 1265
+   en System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   en System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.nuevo_factura_crearfactura_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\LJAH\AppData\Local\Temp\Temporary ASP.NET Files\root\fd87d3fd\d9545156\App_Web_ewasiapo.2.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en DataExpressWeb.CrearFacturaMx.bAgregarConcepto_Click(Object sender, EventArgs e) en C:\DataExpres\WebMX\DataExpressWeb\nuevo\factura\crearFactura.aspx.cs:línea 1265
+   en System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   en System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.nuevo_factura_crearfactura_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\LJAH\AppData\Local\Temp\Temporary ASP.NET Files\root\fd87d3fd\d9545156\App_Web_ewasiapo.2.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en DataExpressWeb.CrearFacturaMx.bAgregarConcepto_Click(Object sender, EventArgs e) en C:\DataExpres\WebMX\DataExpressWeb\nuevo\factura\crearFactura.aspx.cs:línea 1265
+   en System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   en System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------

@@ -1,0 +1,60 @@
+C:\DataExpres\WebMX\Control\bin\Release\SqlServerTypes\x64\msvcr100.dll
+C:\DataExpres\WebMX\Control\bin\Release\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\DataExpres\WebMX\Control\bin\Release\SqlServerTypes\x86\msvcr100.dll
+C:\DataExpres\WebMX\Control\bin\Release\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\DataExpres\WebMX\Control\bin\Release\Control.dll.config
+C:\DataExpres\WebMX\Control\bin\Release\Control.dll
+C:\DataExpres\WebMX\Control\bin\Release\Control.XmlSerializers.dll
+C:\DataExpres\WebMX\Control\bin\Release\Control.pdb
+C:\DataExpres\WebMX\Control\bin\Release\ClosedXML.dll
+C:\DataExpres\WebMX\Control\bin\Release\Config.dll
+C:\DataExpres\WebMX\Control\bin\Release\Datos.dll
+C:\DataExpres\WebMX\Control\bin\Release\DocumentFormat.OpenXml.dll
+C:\DataExpres\WebMX\Control\bin\Release\FastMember.Signed.dll
+C:\DataExpres\WebMX\Control\bin\Release\MailBee.NET.dll
+C:\DataExpres\WebMX\Control\bin\Release\Mirabeau.MsSql.Library.dll
+C:\DataExpres\WebMX\Control\bin\Release\Mirabeau.Sql.dll
+C:\DataExpres\WebMX\Control\bin\Release\Microsoft.SqlServer.Types.dll
+C:\DataExpres\WebMX\Control\bin\Release\Config.pdb
+C:\DataExpres\WebMX\Control\bin\Release\Datos.pdb
+C:\DataExpres\WebMX\Control\bin\Release\ClosedXML.pdb
+C:\DataExpres\WebMX\Control\bin\Release\ClosedXML.xml
+C:\DataExpres\WebMX\Control\bin\Release\DocumentFormat.OpenXml.xml
+C:\DataExpres\WebMX\Control\bin\Release\MailBee.NET.xml
+C:\DataExpres\WebMX\Control\bin\Release\Mirabeau.Sql.xml
+C:\DataExpres\WebMX\Control\obj\Release\Control.csprojResolveAssemblyReference.cache
+C:\DataExpres\WebMX\Control\obj\Release\Control.csproj.ResolveComReference.cache
+C:\DataExpres\WebMX\Control\obj\Release\Control.dll
+C:\DataExpres\WebMX\Control\obj\Release\Control.pdb
+C:\DataExpres\WebMX\Control\obj\Release\Control.XmlSerializers.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\SqlServerTypes\x64\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\SqlServerTypes\x86\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Control.dll.config
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Control.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Control.XmlSerializers.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Control.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\ClosedXML.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Config.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\FastMember.Signed.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\MailBee.NET.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Mirabeau.MsSql.Library.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Mirabeau.Sql.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Config.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\ClosedXML.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\ClosedXML.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\DocumentFormat.OpenXml.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\MailBee.NET.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\bin\Release\Mirabeau.Sql.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Release\Control.csprojResolveAssemblyReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Release\Control.csproj.ResolveComReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Release\Control.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Release\Control.csproj.CopyComplete
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Release\Control.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Release\Control.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Control\obj\Release\Control.XmlSerializers.dll

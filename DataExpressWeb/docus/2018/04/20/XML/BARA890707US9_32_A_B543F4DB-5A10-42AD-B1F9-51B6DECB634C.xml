@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd http://www.sat.gob.mx/implocal http://www.sat.gob.mx/sitio_internet/cfd/implocal/implocal.xsd" Version="3.3" Serie="A" Folio="32" Fecha="2018-04-20T13:41:57" FormaPago="01" SubTotal="1.00" Moneda="MXN" TipoCambio="1" Total="1.19" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="52148" xmlns:implocal="http://www.sat.gob.mx/implocal" Sello="UmhwUXlPK6Wdl+Ot68hoVEpWvLGBpPMAoSUafBdKzhEI40OiTzXGBIG+L8djw/zaXRlTgEYsYxqqa/E9oAWCdbzWaAa3EZ8lamBcUOIKa1PmFb2V/5XPYWD9geQLicIp84VKLc9AKzpkvi9Icb5CIiYm19mxZ0Fp1Zd7VBWlZnKWmcwGfzbeYaDIuy/abImNdxIdmYNlYcMCAhb5C6gcU0Sue/394a0TGi78zj8E/PsWDaniMDrPiaK9OjtrAkdO9Fdyel5j/TKgOkDZVMjDyqPIkpIp8J8Lpj1MfyjXE/KfBrcsQeJ01i+D5/+3TycAC69RtUZJz//Guho6uB94PA==" Certificado="MIIFxTCCA62gAwIBAgIUMjAwMDEwMDAwMDAzMDAwMjI4MTUwDQYJKoZIhvcNAQELBQAwggFmMSAwHgYDVQQDDBdBLkMuIDIgZGUgcHJ1ZWJhcyg0MDk2KTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSkwJwYJKoZIhvcNAQkBFhphc2lzbmV0QHBydWViYXMuc2F0LmdvYi5teDEmMCQGA1UECQwdQXYuIEhpZGFsZ28gNzcsIENvbC4gR3VlcnJlcm8xDjAMBgNVBBEMBTA2MzAwMQswCQYDVQQGEwJNWDEZMBcGA1UECAwQRGlzdHJpdG8gRmVkZXJhbDESMBAGA1UEBwwJQ295b2Fjw6FuMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxITAfBgkqhkiG9w0BCQIMElJlc3BvbnNhYmxlOiBBQ0RNQTAeFw0xNjEwMjUyMTUyMTFaFw0yMDEwMjUyMTUyMTFaMIGxMRowGAYDVQQDExFDSU5ERU1FWCBTQSBERSBDVjEaMBgGA1UEKRMRQ0lOREVNRVggU0EgREUgQ1YxGjAYBgNVBAoTEUNJTkRFTUVYIFNBIERFIENWMSUwIwYDVQQtExxMQU43MDA4MTczUjUgLyBGVUFCNzcwMTE3QlhBMR4wHAYDVQQFExUgLyBGVUFCNzcwMTE3TURGUk5OMDkxFDASBgNVBAsUC1BydWViYV9DRkRJMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgvvCiCFDFVaYX7xdVRhp/38ULWto/LKDSZy1yrXKpaqFXqERJWF78YHKf3N5GBoXgzwFPuDX+5kvY5wtYNxx/Owu2shNZqFFh6EKsysQMeP5rz6kE1gFYenaPEUP9zj+h0bL3xR5aqoTsqGF24mKBLoiaK44pXBzGzgsxZishVJVM6XbzNJVonEUNbI25DhgWAd86f2aU3BmOH2K1RZx41dtTT56UsszJls4tPFODr/caWuZEuUvLp1M3nj7Dyu88mhD2f+1fA/g7kzcU/1tcpFXF/rIy93APvkU72jwvkrnprzs+SnG81+/F16ahuGsb2EZ88dKHwqxEkwzhMyTbQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAJ/xkL8I+fpilZP+9aO8n93+20XxVomLJjeSL+Ng2ErL2GgatpLuN5JknFBkZAhxVIgMaTS23zzk1RLtRaYvH83lBH5E+M+kEjFGp14Fne1iV2Pm3vL4jeLmzHgY1Kf5HmeVrrp4PU7WQg16VpyHaJ/eonPNiEBUjcyQ1iFfkzJmnSJvDGtfQK2TiEolDJApYv0OWdm4is9Bsfi9j6lI9/T6MNZ+/LM2L/t72Vau4r7m94JDEzaO3A0wHAtQ97fjBfBiO5M8AEISAV7eZidIl3iaJJHkQbBYiiW2gikreUZKPUX0HmlnIqqQcBJhWKRu6Nqk6aZBTETLLpGrvF9OArV1JSsbdw/ZH+P88RAt5em5/gjwwtFlNHyiKG5w+UFpaZOK3gZP0su0sa6dlPeQ9EL4JlFkGqQCgSQ+NOsXqaOavgoP5VLykLwuGnwIUnuhBTVeDbzpgrg9LuF5dYp/zs+Y9ScJqe5VMAagLSYTShNtN8luV7LvxF9pgWwZdcM7lUwqJmUddCiZqdngg3vzTactMToG16gZA4CWnMgbU4E+r541+FNMpgAZNvs2CiW/eApfaaQojsZEAHDsDv4L5n3M1CC7fYjE/d61aSng1LaO6T1mh+dEfPvLzp7zyzz+UgWMhi5Cs4pcXx1eic5r7uxPoBwcCTt3YI1jKVVnV7/w=" NoCertificado="20001000000300022815">
+  <cfdi:Emisor Rfc="LAN7008173R5" Nombre="BDI DISTRIBUCIONES DE MEXICO S DE RL DE CV" RegimenFiscal="601" />
+  <cfdi:Receptor Rfc="BARA890707US9" Nombre="AARON BARRAGAN RAMIREZ" UsoCFDI="P01" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="81111811" NoIdentificacion="E48" Cantidad="1.00" ClaveUnidad="E48" Unidad="SERVICIO" Descripcion="Soporte, Mantenimiento y Hosting Mensual" ValorUnitario="1.00" Importe="1.00">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="0.16">
+    <cfdi:Traslados>
+      <cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <implocal:ImpuestosLocales version="1.0" TotaldeRetenciones="0.00" TotaldeTraslados="0.03">
+      <implocal:TrasladosLocales ImpLocTrasladado="ISH" TasadeTraslado="3.00" Importe="0.03" />
+    </implocal:ImpuestosLocales>
+    <tfd:TimbreFiscalDigital Version="1.1" UUID="B543F4DB-5A10-42AD-B1F9-51B6DECB634C" FechaTimbrado="2018-04-20T13:55:35" SelloCFD="UmhwUXlPK6Wdl+Ot68hoVEpWvLGBpPMAoSUafBdKzhEI40OiTzXGBIG+L8djw/zaXRlTgEYsYxqqa/E9oAWCdbzWaAa3EZ8lamBcUOIKa1PmFb2V/5XPYWD9geQLicIp84VKLc9AKzpkvi9Icb5CIiYm19mxZ0Fp1Zd7VBWlZnKWmcwGfzbeYaDIuy/abImNdxIdmYNlYcMCAhb5C6gcU0Sue/394a0TGi78zj8E/PsWDaniMDrPiaK9OjtrAkdO9Fdyel5j/TKgOkDZVMjDyqPIkpIp8J8Lpj1MfyjXE/KfBrcsQeJ01i+D5/+3TycAC69RtUZJz//Guho6uB94PA==" NoCertificadoSAT="20001000000300022323" RfcProvCertif="DAL050601L35" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/timbrefiscaldigital/TimbreFiscalDigitalv11.xsd" SelloSAT="" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" />
+  </cfdi:Complemento>
+  <cfdi:Addenda>
+    <addendaHotel:AddendaHotel xsi:schemaLocation="https://www.facturehoy.com/CFDI/addendas/addendaHotel/addendaHotel.xsd" FechaRegistro="2018/04/20" Huesped="dsdf" Referencia="645" ImporteAPagar="1.19" PropinasYotros="0.00" xmlns:addendaHotel="https://www.facturehoy.com/CFDI/addendas/addendaHotel" />
+  </cfdi:Addenda>
+</cfdi:Comprobante>

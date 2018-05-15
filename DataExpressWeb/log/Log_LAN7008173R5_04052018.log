@@ -1,0 +1,602 @@
+
+Evento de Log :   Hora: 01:58:37
+  Codigo: 100
+  Origen: global_asax./adminstracion/usuarios/clientes.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_bufuvmjm.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_bufuvmjm.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 01:58:51
+  Codigo: 100
+  Origen: global_asax./adminstracion/usuarios/clientes.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_bufuvmjm.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_bufuvmjm.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 01:59:06
+  Codigo: 100
+  Origen: global_asax./adminstracion/usuarios/clientes.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_bufuvmjm.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_bufuvmjm.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 02:01:10
+  Codigo: 100
+  Origen: global_asax./adminstracion/usuarios/clientes.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_qmcds52d.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_qmcds52d.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 02:09:39
+  Codigo: 100
+  Origen: global_asax./adminstracion/usuarios/clientes.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_qmcds52d.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_qmcds52d.4.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 02:29:10
+  Codigo: 100
+  Origen: global_asax./adminstracion/usuarios/clientes.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_2ussnqd3.3.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_2ussnqd3.3.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 02:29:44
+  Codigo: 100
+  Origen: global_asax./adminstracion/usuarios/clientes.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_2ussnqd3.3.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'IDEREC'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_clientes_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\d33e2fa4\3e4f89c1\App_Web_2ussnqd3.3.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   en System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Control.PreRenderRecursiveInternal()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------

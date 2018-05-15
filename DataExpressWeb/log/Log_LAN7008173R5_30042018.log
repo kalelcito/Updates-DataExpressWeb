@@ -1,0 +1,211 @@
+
+Evento de Log :   Hora: 12:35:42
+  Codigo: 100
+  Origen: global_asax./previsualizarPDF.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> No es posible conectar con el servidor remoto<br/>-> No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:49557
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Net.WebException: No es posible conectar con el servidor remoto ---> System.Net.Sockets.SocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:49557
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en DataExpressWeb.wsEmision.WsEmision.PreviewPdf(String emisorDb, String txtInvoice, String codDoc) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Web References\wsEmision\Reference.cs:línea 499
+   en DataExpressWeb.PrevisualizarDocumento.Page_Load(Object sender, EventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\previsualizarPDF.aspx.cs:línea 53
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.previsualizarpdf_aspx.ProcessRequest(HttpContext context) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\ac9c7170\2de115fd\App_Web_551jv30l.3.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Net.WebException: No es posible conectar con el servidor remoto ---> System.Net.Sockets.SocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:49557
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en DataExpressWeb.wsEmision.WsEmision.PreviewPdf(String emisorDb, String txtInvoice, String codDoc) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Web References\wsEmision\Reference.cs:línea 499
+   en DataExpressWeb.PrevisualizarDocumento.Page_Load(Object sender, EventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\previsualizarPDF.aspx.cs:línea 53
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br/>-> System.Net.Sockets.SocketException (0x80004005): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:49557
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.previsualizarpdf_aspx.ProcessRequest(HttpContext context) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\ac9c7170\2de115fd\App_Web_551jv30l.3.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en DataExpressWeb.wsEmision.WsEmision.PreviewPdf(String emisorDb, String txtInvoice, String codDoc) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Web References\wsEmision\Reference.cs:línea 499
+   en DataExpressWeb.PrevisualizarDocumento.Page_Load(Object sender, EventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\previsualizarPDF.aspx.cs:línea 53
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br/>->    en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 05:26:00
+  Codigo: 100
+  Origen: global_asax./Documentos.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> No es posible conectar con el servidor remoto<br/>-> No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:49557
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Net.WebException: No es posible conectar con el servidor remoto ---> System.Net.Sockets.SocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:49557
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en DataExpressWeb.wsEmision.WsEmision.GenerarPdf(String emisorDb, String idComprobante, String codDoc) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Web References\wsEmision\Reference.cs:línea 597
+   en DataExpressWeb.Documentos.btnZip_Click(Object sender, EventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Documentos.aspx.cs:línea 705
+   en System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   en System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.documentos_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\ac9c7170\2de115fd\App_Web_rvdtxro5.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.Net.WebException: No es posible conectar con el servidor remoto ---> System.Net.Sockets.SocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:49557
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en DataExpressWeb.wsEmision.WsEmision.GenerarPdf(String emisorDb, String idComprobante, String codDoc) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Web References\wsEmision\Reference.cs:línea 597
+   en DataExpressWeb.Documentos.btnZip_Click(Object sender, EventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Documentos.aspx.cs:línea 705
+   en System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   en System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br/>-> System.Net.Sockets.SocketException (0x80004005): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:49557
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.documentos_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\ac9c7170\2de115fd\App_Web_rvdtxro5.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en DataExpressWeb.wsEmision.WsEmision.GenerarPdf(String emisorDb, String idComprobante, String codDoc) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Web References\wsEmision\Reference.cs:línea 597
+   en DataExpressWeb.Documentos.btnZip_Click(Object sender, EventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\Documentos.aspx.cs:línea 705
+   en System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   en System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br/>->    en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------
+
+Evento de Log :   Hora: 05:53:20
+  Codigo: 100
+  Origen: global_asax./adminstracion/usuarios/proveedores.aspx
+  Mensaje: Error en la Web
+  Tecnico: Mensaje:
+Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.<br/>-> Referencia a objeto no establecida como instancia de un objeto.
+
+Error:
+System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Administracion.Proveedores.gvEmpleados_Sorting(Object sender, GridViewSortEventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\adminstracion\usuarios\proveedores.aspx.cs:línea 584
+   en System.Web.UI.WebControls.GridView.OnSorting(GridViewSortEventArgs e)
+   en System.Web.UI.WebControls.GridView.HandleSort(String sortExpression, SortDirection sortDirection)
+   en System.Web.UI.WebControls.GridView.HandleSort(String sortExpression)
+   en System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   en System.Web.UI.WebControls.GridView.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.GridView.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_proveedores_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\ac9c7170\2de115fd\App_Web_wssupzqx.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>-> System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Administracion.Proveedores.gvEmpleados_Sorting(Object sender, GridViewSortEventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\adminstracion\usuarios\proveedores.aspx.cs:línea 584
+   en System.Web.UI.WebControls.GridView.OnSorting(GridViewSortEventArgs e)
+   en System.Web.UI.WebControls.GridView.HandleSort(String sortExpression, SortDirection sortDirection)
+   en System.Web.UI.WebControls.GridView.HandleSort(String sortExpression)
+   en System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   en System.Web.UI.WebControls.GridView.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.GridView.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+StackTrace
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.AsyncPageProcessRequestBeforeAsyncPointCancellableCallback(Object state)
+   en System.Web.HttpContext.InvokeCancellableCallback(WaitCallback callback, Object state)
+   en System.Web.UI.Page.LegacyAsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en System.Web.UI.Page.AsyncPageBeginProcessRequest(HttpContext context, AsyncCallback callback, Object extraData)
+   en ASP.adminstracion_usuarios_proveedores_aspx.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object data) en c:\Users\cesar\AppData\Local\Temp\Temporary ASP.NET Files\vs\ac9c7170\2de115fd\App_Web_wssupzqx.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br/>->    en Administracion.Proveedores.gvEmpleados_Sorting(Object sender, GridViewSortEventArgs e) en C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\DataExpressWeb\adminstracion\usuarios\proveedores.aspx.cs:línea 584
+   en System.Web.UI.WebControls.GridView.OnSorting(GridViewSortEventArgs e)
+   en System.Web.UI.WebControls.GridView.HandleSort(String sortExpression, SortDirection sortDirection)
+   en System.Web.UI.WebControls.GridView.HandleSort(String sortExpression)
+   en System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   en System.Web.UI.WebControls.GridView.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.WebControls.GridView.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   en System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  RFC Emisor: LAN7008173R5
+--------------------------------------------------------------------------------------

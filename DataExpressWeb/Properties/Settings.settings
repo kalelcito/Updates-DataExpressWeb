@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DataExpressWeb.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DataExpressWeb_wsTimbres_wsCertTimbres" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsCertTimbres.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsRecepcion_WsRecepcion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsRecepcion.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsEmision_WsEmision" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsEmision.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsRestaurantes_wsRestaurantes" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsRestaurantes.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsMicros_wsMicros" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsMicros.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsBanxico_DgieWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.banxico.org.mx/DgieWSWeb/DgieWS</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsHpresidente_wsHpresidente" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsHpresidente.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsDescargarZip_wsDescargarZip" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsDescargarZip.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsOpera_WsOpera" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsOpera.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_FacturaGlobalWeb_FacturaGlobalWeb" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/FacturaGlobalWeb.asmx</Value>
+    </Setting>
+    <Setting Name="DataExpressWeb_wsAloha_wsAloha" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49558/wsAloha.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

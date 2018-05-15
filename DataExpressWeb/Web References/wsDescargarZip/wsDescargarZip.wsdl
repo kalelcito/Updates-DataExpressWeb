@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DescargarZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idEmple" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rango" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NroFac" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaSolicitud" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaTermino" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RutaZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcEmisor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DescargarZipResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="DescargarZipSoapIn">
+    <wsdl:part name="parameters" element="tns:DescargarZip" />
+  </wsdl:message>
+  <wsdl:message name="DescargarZipSoapOut">
+    <wsdl:part name="parameters" element="tns:DescargarZipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsDescargarZipSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DescargarZip">
+      <wsdl:input message="tns:DescargarZipSoapIn" />
+      <wsdl:output message="tns:DescargarZipSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsDescargarZipSoap" type="tns:wsDescargarZipSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DescargarZip">
+      <soap:operation soapAction="http://tempuri.org/DescargarZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsDescargarZipSoap12" type="tns:wsDescargarZipSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DescargarZip">
+      <soap12:operation soapAction="http://tempuri.org/DescargarZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsDescargarZip">
+    <wsdl:port name="wsDescargarZipSoap" binding="tns:wsDescargarZipSoap">
+      <soap:address location="http://localhost:49558/wsDescargarZip.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsDescargarZipSoap12" binding="tns:wsDescargarZipSoap12">
+      <soap12:address location="http://localhost:49558/wsDescargarZip.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

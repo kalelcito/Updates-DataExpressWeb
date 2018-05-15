@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="FacuraGlobal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rfcEmi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idgiro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonDocument" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iduser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ambiente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateReceptor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateComprobante" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacuraGlobalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GenerarReporte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="año" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcEm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cfdi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="directorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerarReporteResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FacuraGlobalSoapIn">
+    <wsdl:part name="parameters" element="tns:FacuraGlobal" />
+  </wsdl:message>
+  <wsdl:message name="FacuraGlobalSoapOut">
+    <wsdl:part name="parameters" element="tns:FacuraGlobalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReporteSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerarReporte" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReporteSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerarReporteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FacturaGlobalWebSoap">
+    <wsdl:operation name="FacuraGlobal">
+      <wsdl:input message="tns:FacuraGlobalSoapIn" />
+      <wsdl:output message="tns:FacuraGlobalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporte">
+      <wsdl:input message="tns:GenerarReporteSoapIn" />
+      <wsdl:output message="tns:GenerarReporteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FacturaGlobalWebSoap" type="tns:FacturaGlobalWebSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FacuraGlobal">
+      <soap:operation soapAction="http://tempuri.org/FacuraGlobal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporte">
+      <soap:operation soapAction="http://tempuri.org/GenerarReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FacturaGlobalWebSoap12" type="tns:FacturaGlobalWebSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FacuraGlobal">
+      <soap12:operation soapAction="http://tempuri.org/FacuraGlobal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporte">
+      <soap12:operation soapAction="http://tempuri.org/GenerarReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FacturaGlobalWeb">
+    <wsdl:port name="FacturaGlobalWebSoap" binding="tns:FacturaGlobalWebSoap">
+      <soap:address location="http://localhost:49558/FacturaGlobalWeb.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FacturaGlobalWebSoap12" binding="tns:FacturaGlobalWebSoap12">
+      <soap12:address location="http://localhost:49558/FacturaGlobalWeb.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

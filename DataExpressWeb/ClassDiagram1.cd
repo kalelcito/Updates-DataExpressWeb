@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="DataExpressWeb.About" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>About.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Cancelaciones" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAgGCgYNcREGECABwAEhgCWgQVQEBjIhgAAyIhgyA=</HashCode>
+      <FileName>Cancelaciones.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.CantidadTimbres" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>CantidadTimbres.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Cerrar" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Cerrar.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Distribucion" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAgCKgAEADACAJACAEAAABAAAAAAAAAAIIACIgggA=</HashCode>
+      <FileName>configuracion\email\reglas.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Emisores" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFMAgeKkAUALCEAMRAAAMgIRBBAAARBGAwYakoIhQoA=</HashCode>
+      <FileName>configuracion\Emisores.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.ConsultarCodigo" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEQIgrqKMAYxAkLbgBhHEiGsIgMAKRiKaRmiQA+AAgE=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.TramaMicros" Collapsed="true">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAACAAAAAAAAAIAAAAAABABIAAIAAgAAAgAAAA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.ExtraMicros" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.ResumenMicros" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABIAQBGAAAAAQAABCCAAAAAAQAAAAEBAQAAAAAAA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.PagoMicros" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAABIAAEEAAAAAAEABmAAAAAAAEAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.DetalleMicros" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAIAAAAAABAACAIBAAAIAEAAQAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.DescuentoMicros" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAFAEAAAAEAAABAAAAAAgAAAAAAAIAAAACAAAA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.PropinaMicros" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAIEBAAIAACABAABAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.ImpuestoMicros" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAIAEAAAAAgAABAAAAEAAAAACAAAAEAQAAAAAA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.receptorMicros" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAAAAAAAAAIACAIAAAAIAAEAAACgAAACEAAAAAAAAA=</HashCode>
+      <FileName>consultarCodigo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.ControlUtilities" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAgAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ControlUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Login" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBYAgGAqAAQBRGEJIAAEIgQFAAAACQwBAB0IATIowwk=</HashCode>
+      <FileName>cuenta\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Extensiones" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>cuenta\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Default" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.VisualizarDocumento" Collapsed="true">
+    <Position X="16.25" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>descargarPDF.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Documentos" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBQAgXmgYNNxHnkOBByEFh2AmiRVYEDrepgAIycho+I=</HashCode>
+      <FileName>Documentos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.DocumentosPendientes" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QEUIgHKhYNdxEmtWAD2CFjms+gZdaVujI7AGAyujgyE=</HashCode>
+      <FileName>DocumentosPendientes.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.DocumentosPorCobrar" Collapsed="true">
+    <Position X="4" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QFQAgOCgYNMhEyECABzAVhgAWiERQkAiYhgAwyIkgyI=</HashCode>
+      <FileName>DocumentosPorCobrar.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.FormularioWeb11" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>download.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Global" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAABBgAGgEAAgABAAAgAAAAECIBAEAAAAgAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.LicExpirada" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LicExpirada.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Logo" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Logo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Notificacion" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Notificacion.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.CrearCartaPorte" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>efOr+feauNZrb0/cvwqjtve849rdZJnWf3u2Gvp91r8=</HashCode>
+      <FileName>nuevo\cartaporte\crearCartaPorte.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.EditarComprobante" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>SEEKkDeBqAYxAkJQkAgCFiSsYgLAKRmBIbASCgslhkM=</HashCode>
+      <FileName>nuevo\editarComprobante.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.CrearFacturaMx" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>bfOv+f+7vNZrf3v8vz63Nue/+/77fjn3f3q++v//1r8=</HashCode>
+      <FileName>nuevo\factura\crearFactura.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.CrearFacturaRestauranteMx" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>bMKumbeJrEJrX3vclD6SJme8urLhIBj3c/K+Kvo11pc=</HashCode>
+      <FileName>nuevo\factura\crearFacturaRestaurante.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.CrearNomina" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>e8eq37fYqG4rysvclx7SJmW9qpbJLRre53q2Kv8//p8=</HashCode>
+      <FileName>nuevo\factura\crearNomina.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.CrearNotaCredito" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>afOr+f+6uNZrb2v8vy6nNue/4/7bfjnXf3q22v/91r8=</HashCode>
+      <FileName>nuevo\notacredito\crearNotaCredito.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.CrearNotaCreditoNuevo" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAACgAEACAABCkAAgAAABAAUQAABIAAFAEBAAAoBAAQ=</HashCode>
+      <FileName>nuevo\notacredito\crearNotaCreditoNuevo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.CrearRetencion" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>7V0mgK8YUEIhimCgwJBCAMEpwB8ZMwHFRBJAYqoNQwE=</HashCode>
+      <FileName>nuevo\retencion\crearRetencion.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.PeriodoTimbres" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>PeriodoTimbres.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Print" Collapsed="true">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>print.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.RawPrinterHelper" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEAAQACAAAAAAgAAABIAABAAAAAAAAAAAAAICAAAAA=</HashCode>
+      <FileName>RawPrinterHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.ReporteMensual" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReporteMensual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.RepGeneral" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEDgAAAUAIJEAAAACgAAAgAAAQRQECABBCBQgKgAAA=</HashCode>
+      <FileName>reportes\RepGeneral.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Seguridad" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Seguridad.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.SinLicencia" Collapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SinLicencia.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.SiteMaster" Collapsed="true">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAhaSJJKzgBCRRc5YbE0IAQBkAkBTJHuYAgYp6kQo=</HashCode>
+      <FileName>Site.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.VisorEventos" Collapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAEAAAABAAAAAAAAACCAACAQAAAACCYAAAMgAEA=</HashCode>
+      <FileName>visorEventos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.configuracion.email.Editemail" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgABAAAALAAAAAAAACBAAAAAQAAAAACAABQIAAgA=</HashCode>
+      <FileName>configuracion\email\editemail.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.configuracion.email.Servermail" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoIAAABAhAEAAAAACAAQQwBAIAAAABAMAkAIkAwE=</HashCode>
+      <FileName>configuracion\email\servermail.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.configuracion.Herramientas.Certificado" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEGgIAEAMAFAAAVAAiAUDAIASAJAAAYQQAgoAIgASA=</HashCode>
+      <FileName>configuracion\Herramientas\Certificado.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.configuracion.Herramientas.Certificados" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAACAAAAAAAAABCAAAAAAMAAAAAAIAAACCAIAAAA=</HashCode>
+      <FileName>configuracion\Herramientas\Certificado.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.configuracion.Herramientas.Helpdesk" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQCogBIABDhEAgQAAiGDhIGhCAAABAAAAoAAAIgAAA=</HashCode>
+      <FileName>configuracion\Herramientas\helpdesk.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.cuenta.ActivarCuenta" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAABQAAAAAAAAAAABAAAAAAAAAAAAgAIAAAA=</HashCode>
+      <FileName>cuenta\ActivarCuenta.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.nuevo.AutoComprobantes" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nuevo\autoComprobantes.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.nuevo.AutoRuc" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggAAIAAAAAAAAAAAAAAAAAAAAAgAAAAAAgAAAAA=</HashCode>
+      <FileName>nuevo\autoRuc.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.Properties.Settings" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAEEAAABIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.recepcion.Documentos" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QB0IgHmgcJNzFnkPBDiEVhnA3iQRQkDDYhkEIaYh4yI=</HashCode>
+      <FileName>recepcion\Documentos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.recepcion.SubirArchivos" Collapsed="true">
+    <Position X="2.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAABAFAEESAAQBAAACEAAAAAAIABAAIBEAA=</HashCode>
+      <FileName>recepcion\SubirArchivos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.WsEmision" Collapsed="true">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIgKwUAAGEARBABgApjwCgAAIAYMGoNGGESAAALQgE=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.ObtenerMensajeCompletedEventArgs" Collapsed="true">
+    <Position X="4" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.ObtenerMensajeTecnicoCompletedEventArgs" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.ObtenerMensajeXmlCompletedEventArgs" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.CancelarComprobanteCompletedEventArgs" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.ComprobantePaqueteCompletedEventArgs" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.RecibeInfoTxtCompletedEventArgs" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.RecibeInfoXmlCompletedEventArgs" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.GenerarPdfCancelacionCompletedEventArgs" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.PreviewPdfCompletedEventArgs" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.GenerarPdfCompletedEventArgs" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsEmision.TimbrarCompletedEventArgs" Collapsed="true">
+    <Position X="7.5" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsMicros.wsMicros" Collapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAAAAAAAAAgCAAAAAAAAAJGAAAAAAAQAE=</HashCode>
+      <FileName>Web References\wsMicros\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsMicros.RecibeInfoTxtCompletedEventArgs" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsMicros\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsRecepcion.WsRecepcion" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCIAgQUAACAABBABggBikAAAAAAIACEEGAACCACAAQE=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsRecepcion.ObtenerMensajeCompletedEventArgs" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsRecepcion.ObtenerMensajeTecnicoCompletedEventArgs" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsRecepcion.RecibeComprobanteEmisionCompletedEventArgs" Collapsed="true">
+    <Position X="11" Y="6.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsRecepcion.RecibeComprobanteCompletedEventArgs" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsRecepcion.CancelarComprobanteCompletedEventArgs" Collapsed="true">
+    <Position X="11" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsRestaurantes.wsRestaurantes" Collapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAAAAAAAAAgCAAAAAAAAAJGAAAAAAAQAE=</HashCode>
+      <FileName>Web References\wsRestaurantes\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsRestaurantes.RecibeInfoTxtCompletedEventArgs" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRestaurantes\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsTimbres.wsCertTimbres" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAQAACAAAAEAAAAAgAAEAAAAAgAADAAAQAEIgAE=</HashCode>
+      <FileName>Web References\wsTimbres\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsTimbres.ValidaCertificadoCompletedEventArgs" Collapsed="true">
+    <Position X="11" Y="8.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsTimbres\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExpressWeb.wsTimbres.ValidaFoliosCompletedEventArgs" Collapsed="true">
+    <Position X="12.75" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsTimbres\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Configuracion.Conceptos" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIEAgMKgIEADAkAoICKBAQCFEBAAAAAQQAgIAAIRAiA=</HashCode>
+      <FileName>configuracion\Conceptos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Configuracion.ConceptosOnQ" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIEAgMKgAEADAkAoAAIBAYCBkAAAAAASQAgIAAIRAgA=</HashCode>
+      <FileName>configuracion\ConceptosOnQ.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Configuracion.Impuestos" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIEAwEKgIEIjBkAIAAAAAACBAgAAAAAAQAgIAAIAggE=</HashCode>
+      <FileName>configuracion\Impuestos\Impuestos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.Roles" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAFImFBEAGAN0BJEIKDgIAEAgQAASCaJAAgcAIIAAIA=</HashCode>
+      <FileName>adminstracion\roles\roles.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.Series" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CANAwGKgAFCjAEoIAAIABgABAAAYgAAAUBFIgAIAFwE=</HashCode>
+      <FileName>adminstracion\sucursales\series.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.Sucursales" Collapsed="true">
+    <Position X="4" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYEAgAKggEIjEExIxAAgAyANISJQAAgAQCAIgSJECwA=</HashCode>
+      <FileName>adminstracion\sucursales\sucursales.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.SucursalesEmisor" Collapsed="true">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYEAgAKggEIjEExIxAAgAyANISJQAAgAQCAIgSJECwA=</HashCode>
+      <FileName>adminstracion\sucursales\sucursalesEmisor.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.Clientes" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIgGKggEEDgCAIYAAEAgCJQAQAEQwASAQIgAIgwUE=</HashCode>
+      <FileName>adminstracion\usuarios\clientes.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.Empleados" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIEIgAKgAEGDAAQIYAgEAgIBAAwAAQwASAIIgCIg4UE=</HashCode>
+      <FileName>adminstracion\usuarios\empleados.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.ModificarPerfil" Collapsed="true">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kkEgoCAABAABCAABEFQEABQIEIAAAQAACAIBgAIByAA=</HashCode>
+      <FileName>adminstracion\usuarios\modificarPerfil.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.Proveedores" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIgGKggEMjgCBIZEAEAiCpIAYAAQwBaCQIgAIhw0E=</HashCode>
+      <FileName>adminstracion\usuarios\proveedores.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.Receptores" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAdgicKkgGIjCEDK1BAAMmWZYAIAAAgTIACoIsIhkgA=</HashCode>
+      <FileName>adminstracion\usuarios\receptores.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Administracion.ArchivosRecibidos" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFIAwEggAVEBAAAAQAIABgAAEAgAQAABAAJQgCIAAwA=</HashCode>
+      <FileName>configuracion\Herramientas\archivosRecibidos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Delegate Name="DataExpressWeb.wsEmision.ObtenerMensajeCompletedEventHandler" Collapsed="true">
+    <Position X="11" Y="10.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.ObtenerMensajeTecnicoCompletedEventHandler" Collapsed="true">
+    <Position X="14.5" Y="10.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.ObtenerMensajeXmlCompletedEventHandler" Collapsed="true">
+    <Position X="16.25" Y="10.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.CancelarComprobanteCompletedEventHandler" Collapsed="true">
+    <Position X="2.25" Y="10.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.ComprobantePaqueteCompletedEventHandler" Collapsed="true">
+    <Position X="4" Y="10.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.RecibeInfoTxtCompletedEventHandler" Collapsed="true">
+    <Position X="5.75" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.RecibeInfoXmlCompletedEventHandler" Collapsed="true">
+    <Position X="11" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.GenerarPdfCancelacionCompletedEventHandler" Collapsed="true">
+    <Position X="5.75" Y="10.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.PreviewPdfCompletedEventHandler" Collapsed="true">
+    <Position X="0.5" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.GenerarPdfCompletedEventHandler" Collapsed="true">
+    <Position X="7.5" Y="10.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsEmision.TimbrarCompletedEventHandler" Collapsed="true">
+    <Position X="12.75" Y="11.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Web References\wsEmision\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsMicros.RecibeInfoTxtCompletedEventHandler" Collapsed="true">
+    <Position X="7.5" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsMicros\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsRecepcion.ObtenerMensajeCompletedEventHandler" Collapsed="true">
+    <Position X="9.25" Y="10.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsRecepcion.ObtenerMensajeTecnicoCompletedEventHandler" Collapsed="true">
+    <Position X="12.75" Y="10.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsRecepcion.RecibeComprobanteEmisionCompletedEventHandler" Collapsed="true">
+    <Position X="4" Y="11.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsRecepcion.RecibeComprobanteCompletedEventHandler" Collapsed="true">
+    <Position X="2.25" Y="11.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsRecepcion.CancelarComprobanteCompletedEventHandler" Collapsed="true">
+    <Position X="0.5" Y="10.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRecepcion\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsRestaurantes.RecibeInfoTxtCompletedEventHandler" Collapsed="true">
+    <Position X="9.25" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsRestaurantes\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsTimbres.ValidaCertificadoCompletedEventHandler" Collapsed="true">
+    <Position X="14.5" Y="11.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsTimbres\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DataExpressWeb.wsTimbres.ValidaFoliosCompletedEventHandler" Collapsed="true">
+    <Position X="16.25" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\wsTimbres\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

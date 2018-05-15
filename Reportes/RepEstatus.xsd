@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema id="RepEstatus" targetNamespace="http://tempuri.org/RepEstatus.xsd"
+           xmlns:mstns="http://tempuri.org/RepEstatus.xsd" xmlns="http://tempuri.org/RepEstatus.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified"
+           elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter"
+                  Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema"
+                  xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dataEcuadorConnectionString"
+                      ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly"
+                      Name="dataEcuadorConnectionString (Settings)" ParameterPrefix="@"
+                      PropertyReference="ApplicationSettings.Reportes.Properties.Settings.GlobalReference.Default.dataEcuadorConnectionString"
+                      Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component"
+                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
+                        DataAccessorName="ComprobantesEstadoTableAdapter"
+                        GeneratorDataComponentClassName="ComprobantesEstadoTableAdapter" Name="ComprobantesEstado"
+                        UserDataComponentName="ComprobantesEstadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dataEcuadorConnectionString (Settings)" DbObjectType="Unknown"
+                        FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
+                        GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
+                        GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
+                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+                        UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        GENERAL.fecha, GENERAL.ambiente, GENERAL.tipoEmision, GENERAL.claveAcceso, GENERAL.estab, GENERAL.ptoEmi, GENERAL.secuencial,
+                      GENERAL.numeroAutorizacion, GENERAL.fechaAutorizacion, GENERAL.tipo, GENERAL.creado, SRI.respuesta, SRI.tipo AS Expr1, SRI.identificador,
+                      SRI.mensajeUsuario, Catalogo1_C.codigo, GENERAL.codDoc
+                      FROM            GENERAL INNER JOIN
+                      SRI ON GENERAL.idComprobante = SRI.id_Comprobante INNER JOIN
+                      Catalogo1_C ON GENERAL.codDoc = Catalogo1_C.codigo
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="ambiente" DataSetColumn="ambiente" />
+              <Mapping SourceColumn="tipoEmision" DataSetColumn="tipoEmision" />
+              <Mapping SourceColumn="claveAcceso" DataSetColumn="claveAcceso" />
+              <Mapping SourceColumn="estab" DataSetColumn="estab" />
+              <Mapping SourceColumn="ptoEmi" DataSetColumn="ptoEmi" />
+              <Mapping SourceColumn="codDoc" DataSetColumn="codDoc" />
+              <Mapping SourceColumn="secuencial" DataSetColumn="secuencial" />
+              <Mapping SourceColumn="numeroAutorizacion" DataSetColumn="numeroAutorizacion" />
+              <Mapping SourceColumn="fechaAutorizacion" DataSetColumn="fechaAutorizacion" />
+              <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
+              <Mapping SourceColumn="creado" DataSetColumn="creado" />
+              <Mapping SourceColumn="respuesta" DataSetColumn="respuesta" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="identificador" DataSetColumn="identificador" />
+              <Mapping SourceColumn="mensajeUsuario" DataSetColumn="mensajeUsuario" />
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RepEstatus" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
+              msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RepEstatus"
+              msprop:Generator_UserDSName="RepEstatus">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ComprobantesEstado" msprop:Generator_TableClassName="ComprobantesEstadoDataTable"
+                    msprop:Generator_TableVarName="tableComprobantesEstado"
+                    msprop:Generator_TablePropName="ComprobantesEstado"
+                    msprop:Generator_RowDeletingName="ComprobantesEstadoRowDeleting"
+                    msprop:Generator_RowChangingName="ComprobantesEstadoRowChanging"
+                    msprop:Generator_RowEvHandlerName="ComprobantesEstadoRowChangeEventHandler"
+                    msprop:Generator_RowDeletedName="ComprobantesEstadoRowDeleted"
+                    msprop:Generator_UserTableName="ComprobantesEstado"
+                    msprop:Generator_RowChangedName="ComprobantesEstadoRowChanged"
+                    msprop:Generator_RowEvArgName="ComprobantesEstadoRowChangeEvent"
+                    msprop:Generator_RowClassName="ComprobantesEstadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha"
+                          msprop:Generator_ColumnPropNameInRow="fecha"
+                          msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha"
+                          type="xs:dateTime" />
+              <xs:element name="ambiente" msprop:Generator_ColumnVarNameInTable="columnambiente"
+                          msprop:Generator_ColumnPropNameInRow="ambiente"
+                          msprop:Generator_ColumnPropNameInTable="ambienteColumn"
+                          msprop:Generator_UserColumnName="ambiente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipoEmision" msprop:Generator_ColumnVarNameInTable="columntipoEmision"
+                          msprop:Generator_ColumnPropNameInRow="tipoEmision"
+                          msprop:Generator_ColumnPropNameInTable="tipoEmisionColumn"
+                          msprop:Generator_UserColumnName="tipoEmision">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="claveAcceso" msprop:Generator_ColumnVarNameInTable="columnclaveAcceso"
+                          msprop:Generator_ColumnPropNameInRow="claveAcceso"
+                          msprop:Generator_ColumnPropNameInTable="claveAccesoColumn"
+                          msprop:Generator_UserColumnName="claveAcceso">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estab" msprop:Generator_ColumnVarNameInTable="columnestab"
+                          msprop:Generator_ColumnPropNameInRow="estab"
+                          msprop:Generator_ColumnPropNameInTable="estabColumn" msprop:Generator_UserColumnName="estab"
+                          minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptoEmi" msprop:Generator_ColumnVarNameInTable="columnptoEmi"
+                          msprop:Generator_ColumnPropNameInRow="ptoEmi"
+                          msprop:Generator_ColumnPropNameInTable="ptoEmiColumn"
+                          msprop:Generator_UserColumnName="ptoEmi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codDoc" msprop:Generator_ColumnVarNameInTable="columncodDoc"
+                          msprop:Generator_ColumnPropNameInRow="codDoc"
+                          msprop:Generator_ColumnPropNameInTable="codDocColumn"
+                          msprop:Generator_UserColumnName="codDoc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="secuencial" msprop:Generator_ColumnVarNameInTable="columnsecuencial"
+                          msprop:Generator_ColumnPropNameInRow="secuencial"
+                          msprop:Generator_ColumnPropNameInTable="secuencialColumn"
+                          msprop:Generator_UserColumnName="secuencial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numeroAutorizacion" msprop:Generator_ColumnVarNameInTable="columnnumeroAutorizacion"
+                          msprop:Generator_ColumnPropNameInRow="numeroAutorizacion"
+                          msprop:Generator_ColumnPropNameInTable="numeroAutorizacionColumn"
+                          msprop:Generator_UserColumnName="numeroAutorizacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="37" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaAutorizacion" msprop:Generator_ColumnVarNameInTable="columnfechaAutorizacion"
+                          msprop:Generator_ColumnPropNameInRow="fechaAutorizacion"
+                          msprop:Generator_ColumnPropNameInTable="fechaAutorizacionColumn"
+                          msprop:Generator_UserColumnName="fechaAutorizacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tipo" msprop:Generator_ColumnVarNameInTable="columntipo"
+                          msprop:Generator_ColumnPropNameInRow="tipo"
+                          msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo"
+                          minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="creado" msprop:Generator_ColumnVarNameInTable="columncreado"
+                          msprop:Generator_ColumnPropNameInRow="creado"
+                          msprop:Generator_ColumnPropNameInTable="creadoColumn"
+                          msprop:Generator_UserColumnName="creado" type="xs:short" minOccurs="0" />
+              <xs:element name="respuesta" msprop:Generator_ColumnVarNameInTable="columnrespuesta"
+                          msprop:Generator_ColumnPropNameInRow="respuesta"
+                          msprop:Generator_ColumnPropNameInTable="respuestaColumn"
+                          msprop:Generator_UserColumnName="respuesta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1"
+                          msprop:Generator_ColumnPropNameInRow="Expr1"
+                          msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1"
+                          minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="identificador" msprop:Generator_ColumnVarNameInTable="columnidentificador"
+                          msprop:Generator_ColumnPropNameInRow="identificador"
+                          msprop:Generator_ColumnPropNameInTable="identificadorColumn"
+                          msprop:Generator_UserColumnName="identificador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mensajeUsuario" msprop:Generator_ColumnVarNameInTable="columnmensajeUsuario"
+                          msprop:Generator_ColumnPropNameInRow="mensajeUsuario"
+                          msprop:Generator_ColumnPropNameInTable="mensajeUsuarioColumn"
+                          msprop:Generator_UserColumnName="mensajeUsuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo"
+                          msprop:Generator_ColumnPropNameInRow="codigo"
+                          msprop:Generator_ColumnPropNameInTable="codigoColumn"
+                          msprop:Generator_UserColumnName="codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,43 @@
+C:\DataExpres\WebMX\Datos\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\DataExpres\WebMX\Datos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\DataExpres\WebMX\Datos\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\DataExpres\WebMX\Datos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\DataExpres\WebMX\Datos\bin\Debug\Datos.dll
+C:\DataExpres\WebMX\Datos\bin\Debug\Datos.pdb
+C:\DataExpres\WebMX\Datos\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\DataExpres\WebMX\Datos\bin\Debug\Mirabeau.MsSql.Library.dll
+C:\DataExpres\WebMX\Datos\bin\Debug\Mirabeau.Sql.dll
+C:\DataExpres\WebMX\Datos\bin\Debug\Mirabeau.Sql.xml
+C:\DataExpres\WebMX\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\DataExpres\WebMX\Datos\obj\Debug\Datos.dll
+C:\DataExpres\WebMX\Datos\obj\Debug\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\Mirabeau.MsSql.Library.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\Mirabeau.Sql.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\bin\Debug\Mirabeau.Sql.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\obj\Debug\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\WebMX\Datos\obj\Debug\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\Datos.pdb
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\Mirabeau.MsSql.Library.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\Mirabeau.Sql.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\bin\Debug\Mirabeau.Sql.xml
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Debug\Datos.dll
+C:\Users\cesar\Documents\Visual Studio 2017\data\org\Datos\obj\Debug\Datos.pdb

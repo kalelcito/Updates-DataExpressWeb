@@ -1,0 +1,1524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5260D9BC-B3D6-43B3-9F09-218BBF075745}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataExpressWeb</RootNamespace>
+    <AssemblyName>DataExpressWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+    <PublishDatabases>false</PublishDatabases>
+    <DocumentationFile>bin\DataExpressWeb.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+    <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=17.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.17.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.90.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.90.0\lib\net452\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ColorThief.Desktop.v45, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ksemenenko.ColorThief.1.1.0.3\lib\net45\ColorThief.Desktop.v45.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.1\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.0.0.9, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.1.0\lib\net40\FastMember.Signed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MailBee.NET, Version=11.2.0.590, Culture=neutral, PublicKeyToken=cd85b70fb26f9fc1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailBee.NET.11.2.0\lib\net45\MailBee.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="adminstracion\FacturaGlobal.aspx" />
+    <Content Include="adminstracion\roles\grupos.aspx" />
+    <Content Include="adminstracion\roles\gruposValidacion.aspx" />
+    <Content Include="adminstracion\roles\roles.aspx" />
+    <Content Include="adminstracion\sucursales\series.aspx" />
+    <Content Include="adminstracion\sucursales\sucursalesEmisor.aspx" />
+    <Content Include="adminstracion\usuarios\proveedores.aspx" />
+    <Content Include="adminstracion\usuarios\receptores.aspx" />
+    <Content Include="adminstracion\usuarios\clientes.aspx" />
+    <Content Include="adminstracion\usuarios\empleados.aspx" />
+    <Content Include="adminstracion\usuarios\modificarPerfil.aspx" />
+    <Content Include="adminstracion\sucursales\sucursales.aspx" />
+    <Content Include="CantidadTimbres.aspx" />
+    <Content Include="configuracion\Bancos.aspx" />
+    <Content Include="css\bootstrap-tagsinput.css" />
+    <Content Include="css\essentials.css" />
+    <Content Include="css\select2-bootstrap.min.css" />
+    <Content Include="css\select2.min.css" />
+    <Content Include="css\yellow.css" />
+    <Content Include="imagenes\estructura-catalogo-conceptos-33.jpg" />
+    <Content Include="imagenes\tutorial-tickets\maitred\paso1.jpg" />
+    <Content Include="imagenes\tutorial-tickets\maitred\paso2.jpg" />
+    <Content Include="imagenes\tutorial-tickets\maitred\paso3.jpg" />
+    <Content Include="imagenes\tutorial-tickets\maitred\paso4.jpg" />
+    <Content Include="imagenes\tutorial-tickets\micros\paso1.jpg" />
+    <Content Include="imagenes\tutorial-tickets\micros\paso2.jpg" />
+    <Content Include="imagenes\tutorial-tickets\micros\paso3.jpg" />
+    <Content Include="imagenes\tutorial-tickets\micros\paso4.jpg" />
+    <Content Include="imagenes\tutorial-tickets\smh\paso1.jpg" />
+    <Content Include="imagenes\tutorial-tickets\smh\paso2.jpg" />
+    <Content Include="imagenes\tutorial-tickets\smh\paso3.jpg" />
+    <Content Include="imagenes\tutorial-tickets\smh\paso4.jpg" />
+    <Content Include="imagenes\tutorial-tickets\tca\paso1.jpg" />
+    <Content Include="imagenes\tutorial-tickets\tca\paso2.jpg" />
+    <Content Include="imagenes\tutorial-tickets\tca\paso3.jpg" />
+    <Content Include="imagenes\tutorial-tickets\tca\paso4.jpg" />
+    <Content Include="js\bootstrap-tagsinput.min.js" />
+    <Content Include="js\es.js" />
+    <Content Include="configuracion\ConceptosOnQ.aspx" />
+    <Content Include="configuracion\Herramientas\archivosRecibidos.aspx" />
+    <Content Include="configuracion\Herramientas\helpdesk.aspx" />
+    <Content Include="configuracion\Herramientas\Certificado.aspx" />
+    <Content Include="configuracion\Conceptos.aspx" />
+    <Content Include="consultarCodigo.aspx" />
+    <Content Include="configuracion\email\reglas.aspx" />
+    <Content Include="configuracion\email\editemail.aspx" />
+    <Content Include="configuracion\email\servermail.aspx" />
+    <Content Include="configuracion\Emisores.aspx" />
+    <Content Include="configuracion\Impuestos\Impuestos.aspx" />
+    <Content Include="configuracion\Mostrar.aspx" />
+    <Content Include="css\bootstrap-colorpicker.css" />
+    <Content Include="css\bootstrap-datepicker3.min.css" />
+    <Content Include="css\bootstrap-datetimepicker.min.css" />
+    <Content Include="css\bootstrap-select.min.css" />
+    <Content Include="css\bootstrap-submenu.min.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap-toggle.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\dropzone.basic.min.css" />
+    <Content Include="css\dropzone.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\full.css" />
+    <Content Include="css\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="css\Site.Master.css" />
+    <Content Include="css\summernote.css" />
+    <Content Include="css\theme.css" />
+    <Content Include="Cancelaciones.aspx" />
+    <Content Include="cuenta\ActivarCuenta.aspx" />
+    <Content Include="DescargarZip.aspx" />
+    <Content Include="FacturaGlobalMicros.aspx" />
+    <Content Include="imagenes\adicionales.png" />
+    <Content Include="js\bootstrap-datetimepicker.js" />
+    <Content Include="js\bootstrap-select-es_ES.min.js" />
+    <Content Include="js\bootstrap-select.min.js" />
+    <Content Include="js\jquery-1.12.4.min.js" />
+    <Content Include="js\moment.js" />
+    <Content Include="js\select2\es.js" />
+    <Content Include="js\select2\select2.min.js" />
+    <Content Include="js\summernote-es-ES.js" />
+    <Content Include="nuevo\factura\FacturaGlobalOnQ.aspx" />
+    <Content Include="nuevo\factura\FacturaOperaHp.aspx" />
+    <Content Include="previsualizarPDF.aspx" />
+    <Content Include="Tickets.aspx" />
+    <Content Include="DocumentosPendientes.aspx" />
+    <Content Include="DocumentosPorCobrar.aspx" />
+    <Content Include="Documentos.aspx" />
+    <Content Include="imagenes\4.png" />
+    <Content Include="imagenes\backgrounds\trans.jpg" />
+    <Content Include="imagenes\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="imagenes\bootstrap-colorpicker\alpha.png" />
+    <Content Include="imagenes\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="imagenes\bootstrap-colorpicker\hue.png" />
+    <Content Include="imagenes\bootstrap-colorpicker\saturation.png" />
+    <Content Include="imagenes\favicon.png" />
+    <Content Include="imagenes\logo1.jpg" />
+    <Content Include="imagenes\logo2.png" />
+    <Content Include="imagenes\orden.png" />
+    <Content Include="imagenes\Process-Info-icon.png" />
+    <Content Include="js\Blob.js" />
+    <Content Include="js\bootstrap-colorpicker.js" />
+    <Content Include="js\bootstrap-datepicker.es.min.js" />
+    <Content Include="js\bootstrap-datepicker.min.js" />
+    <Content Include="js\bootstrap-submenu.min.js" />
+    <Content Include="js\clipboard.min.js" />
+    <Content Include="js\color-thief.min.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\dropzone.js" />
+    <Content Include="js\FileSaver.min.js" />
+    <Content Include="js\paintbrush.js" />
+    <Content Include="js\summernote.min.js" />
+    <Content Include="nuevo\editarComprobante.aspx" />
+    <Content Include="nuevo\factura\crearFacturaRestaurante.aspx" />
+    <Content Include="nuevo\interfazExcel.aspx" />
+    <Content Include="pdfjs\build\pdf.js" />
+    <Content Include="pdfjs\build\pdf.worker.js" />
+    <Content Include="pdfjs\web\compatibility.js" />
+    <Content Include="pdfjs\web\debugger.js" />
+    <Content Include="pdfjs\web\images\annotation-check.svg" />
+    <Content Include="pdfjs\web\images\annotation-comment.svg" />
+    <Content Include="pdfjs\web\images\annotation-help.svg" />
+    <Content Include="pdfjs\web\images\annotation-insert.svg" />
+    <Content Include="pdfjs\web\images\annotation-key.svg" />
+    <Content Include="pdfjs\web\images\annotation-newparagraph.svg" />
+    <Content Include="pdfjs\web\images\annotation-noicon.svg" />
+    <Content Include="pdfjs\web\images\annotation-note.svg" />
+    <Content Include="pdfjs\web\images\annotation-paragraph.svg" />
+    <Content Include="pdfjs\web\images\findbarButton-next%402x.png" />
+    <Content Include="pdfjs\web\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="pdfjs\web\images\findbarButton-next-rtl.png" />
+    <Content Include="pdfjs\web\images\findbarButton-next.png" />
+    <Content Include="pdfjs\web\images\findbarButton-previous%402x.png" />
+    <Content Include="pdfjs\web\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="pdfjs\web\images\findbarButton-previous-rtl.png" />
+    <Content Include="pdfjs\web\images\findbarButton-previous.png" />
+    <Content Include="pdfjs\web\images\grab.cur" />
+    <Content Include="pdfjs\web\images\grabbing.cur" />
+    <Content Include="pdfjs\web\images\loading-icon.gif" />
+    <Content Include="pdfjs\web\images\loading-small%402x.png" />
+    <Content Include="pdfjs\web\images\loading-small.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="pdfjs\web\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="pdfjs\web\images\shadow.png" />
+    <Content Include="pdfjs\web\images\texture.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-bookmark.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-download%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-download.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-menuArrows.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-openFile%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-openFile.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-pageDown.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-pageUp.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-presentationMode.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-print%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-print.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-search%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-search.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-viewAttachments.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-viewOutline.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-zoomIn.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="pdfjs\web\images\toolbarButton-zoomOut.png" />
+    <Content Include="pdfjs\web\images\treeitem-collapsed%402x.png" />
+    <Content Include="pdfjs\web\images\treeitem-collapsed-rtl%402x.png" />
+    <Content Include="pdfjs\web\images\treeitem-collapsed-rtl.png" />
+    <Content Include="pdfjs\web\images\treeitem-collapsed.png" />
+    <Content Include="pdfjs\web\images\treeitem-expanded%402x.png" />
+    <Content Include="pdfjs\web\images\treeitem-expanded.png" />
+    <Content Include="pdfjs\web\l10n.js" />
+    <Content Include="pdfjs\web\viewer.css" />
+    <Content Include="pdfjs\web\viewer.html" />
+    <Content Include="pdfjs\web\viewer.js" />
+    <Content Include="recepcion\Documentos.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="imagenes\2_.png" />
+    <Content Include="imagenes\CAN1.png" />
+    <Content Include="imagenes\CAN2.png" />
+    <Content Include="imagenes\CAN3.png" />
+    <Content Include="imagenes\CAN4.png" />
+    <Content Include="imagenes\CAN5.png" />
+    <Content Include="imagenes\cancelar.png" />
+    <Content Include="imagenes\credit_card.png" />
+    <Content Include="imagenes\favicon.ico" />
+    <Content Include="imagenes\pago0.png" />
+    <Content Include="imagenes\pago1.png" />
+    <Content Include="imagenes\pago2.png" />
+    <Content Include="imagenes\sat.png" />
+    <Content Include="js\bootstrap-hover-dropdown.min.js" />
+    <Content Include="js\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="nuevo\autoComprobantes.asmx" />
+    <Content Include="nuevo\cartaporte\crearCartaPorte.aspx" />
+    <Content Include="nuevo\factura\crearNomina.aspx" />
+    <Content Include="nuevo\factura\crearFactura.aspx" />
+    <Content Include="print.aspx" />
+    <Content Include="imagenes\0.png" />
+    <Content Include="imagenes\1.png" />
+    <Content Include="imagenes\2.png" />
+    <Content Include="imagenes\bg2.jpg" />
+    <Content Include="imagenes\editar.png" />
+    <Content Include="imagenes\edit_delete.png" />
+    <Content Include="imagenes\loading.gif" />
+    <Content Include="imagenes\logo.png" />
+    <Content Include="imagenes\pdf.png" />
+    <Content Include="imagenes\print.png" />
+    <Content Include="imagenes\sri.png" />
+    <Content Include="imagenes\xml.png" />
+    <Content Include="js\bootbox.min.js" />
+    <Content Include="js\bootstrap-filestyle.min.js" />
+    <Content Include="js\bootstrap-toggle.min.js" />
+    <Content Include="js\bs.pagination.js" />
+    <Content Include="js\download.min.js" />
+    <Content Include="js\jquery.bootstrap.wizard.min.js" />
+    <Content Include="LicExpirada.aspx" />
+    <Content Include="nuevo\notacredito\crearNotaCreditoNuevo.aspx" />
+    <Content Include="PeriodoTimbres.aspx" />
+    <Content Include="Logo.aspx" />
+    <Content Include="recepcion\RepGeneral.aspx" />
+    <Content Include="recepcion\SubirArchivos.aspx" />
+    <Content Include="Seguridad.aspx" />
+    <Content Include="Notificacion.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\ie-emulation-modes-warning.js" />
+    <Content Include="js\ie10-viewport-bug-workaround.js" />
+    <Content Include="js\jqBootstrapValidation.js" />
+    <Content Include="js\login.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="download.aspx" />
+    <Content Include="cuenta\Login.aspx" />
+    <Content Include="Cerrar.aspx" />
+    <Content Include="nuevo\autoRuc.asmx" />
+    <Content Include="nuevo\notacredito\crearNotaCredito.aspx" />
+    <Content Include="nuevo\retencion\crearRetencion.aspx" />
+    <Content Include="reportes\RepGeneral.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="manual\Administrador.pdf" />
+    <Content Include="descargarPDF.aspx" />
+    <Content Include="fonts\summernote.eot" />
+    <Content Include="fonts\summernote.ttf" />
+    <Content Include="fonts\summernote.woff" />
+    <Content Include="pdfjs\web\cmaps\78-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\78-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\78-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\78-RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\78-RKSJ-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\78-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\78ms-RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\78ms-RKSJ-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\83pv-RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\90ms-RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\90ms-RKSJ-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\90msp-RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\90msp-RKSJ-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\90pv-RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\90pv-RKSJ-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Add-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Add-RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Add-RKSJ-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Add-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-CNS1-0.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-CNS1-1.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-CNS1-2.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-CNS1-3.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-CNS1-4.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-CNS1-5.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-CNS1-6.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-GB1-0.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-GB1-1.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-GB1-2.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-GB1-3.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-GB1-4.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-GB1-5.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Japan1-0.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Japan1-1.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Japan1-2.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Japan1-3.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Japan1-4.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Japan1-5.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Japan1-6.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Korea1-0.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Korea1-1.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Korea1-2.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <Content Include="pdfjs\web\cmaps\B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\B5pc-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\B5pc-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\CNS-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\CNS-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\CNS1-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\CNS1-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\CNS2-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\CNS2-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\ETen-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\ETen-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\ETenms-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\ETenms-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\ETHK-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\ETHK-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Ext-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Ext-RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Ext-RKSJ-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Ext-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GB-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GB-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GB-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GB-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBK-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBK-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBK2K-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBK2K-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBKp-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBKp-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBpc-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBpc-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBT-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBT-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBT-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBT-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBTpc-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\GBTpc-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Hankaku.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Hiragana.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKdla-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKdla-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKdlb-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKdlb-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKgccs-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKgccs-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKm314-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKm314-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKm471-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKm471-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKscs-B5-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\HKscs-B5-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Katakana.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSC-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSC-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSC-Johab-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSC-Johab-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSCms-UHC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSCms-UHC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSCpc-EUC-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\KSCpc-EUC-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\LICENSE" />
+    <Content Include="pdfjs\web\cmaps\NWP-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\NWP-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\RKSJ-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\RKSJ-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\Roman.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniCNS-UCS2-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniCNS-UCS2-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniCNS-UTF16-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniCNS-UTF16-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniCNS-UTF32-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniCNS-UTF32-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniCNS-UTF8-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniCNS-UTF8-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniGB-UCS2-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniGB-UCS2-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniGB-UTF16-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniGB-UTF16-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniGB-UTF32-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniGB-UTF32-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniGB-UTF8-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniGB-UTF8-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UCS2-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UCS2-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UTF16-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UTF16-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UTF32-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UTF32-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UTF8-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS-UTF8-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniKS-UCS2-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniKS-UCS2-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniKS-UTF16-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniKS-UTF16-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniKS-UTF32-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniKS-UTF32-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniKS-UTF8-H.bcmap" />
+    <Content Include="pdfjs\web\cmaps\UniKS-UTF8-V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\V.bcmap" />
+    <Content Include="pdfjs\web\cmaps\WP-Symbol.bcmap" />
+    <Content Include="pdfjs\web\compressed.tracemonkey-pldi-09.pdf" />
+    <Content Include="pdfjs\web\locale\ach\viewer.properties" />
+    <Content Include="pdfjs\web\locale\af\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ak\viewer.properties" />
+    <Content Include="pdfjs\web\locale\an\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ar\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ast\viewer.properties" />
+    <Content Include="pdfjs\web\locale\as\viewer.properties" />
+    <Content Include="pdfjs\web\locale\az\viewer.properties" />
+    <Content Include="pdfjs\web\locale\be\viewer.properties" />
+    <Content Include="pdfjs\web\locale\bg\viewer.properties" />
+    <Content Include="pdfjs\web\locale\bn-BD\viewer.properties" />
+    <Content Include="pdfjs\web\locale\bn-IN\viewer.properties" />
+    <Content Include="pdfjs\web\locale\br\viewer.properties" />
+    <Content Include="pdfjs\web\locale\bs\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ca\viewer.properties" />
+    <Content Include="pdfjs\web\locale\csb\viewer.properties" />
+    <Content Include="pdfjs\web\locale\cs\viewer.properties" />
+    <Content Include="pdfjs\web\locale\cy\viewer.properties" />
+    <Content Include="pdfjs\web\locale\da\viewer.properties" />
+    <Content Include="pdfjs\web\locale\de\viewer.properties" />
+    <Content Include="pdfjs\web\locale\el\viewer.properties" />
+    <Content Include="pdfjs\web\locale\en-GB\viewer.properties" />
+    <Content Include="pdfjs\web\locale\en-US\viewer.properties" />
+    <Content Include="pdfjs\web\locale\en-ZA\viewer.properties" />
+    <Content Include="pdfjs\web\locale\eo\viewer.properties" />
+    <Content Include="pdfjs\web\locale\es-AR\viewer.properties" />
+    <Content Include="pdfjs\web\locale\es-CL\viewer.properties" />
+    <Content Include="pdfjs\web\locale\es-ES\viewer.properties" />
+    <Content Include="pdfjs\web\locale\es-MX\viewer.properties" />
+    <Content Include="pdfjs\web\locale\et\viewer.properties" />
+    <Content Include="pdfjs\web\locale\eu\viewer.properties" />
+    <Content Include="pdfjs\web\locale\fa\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ff\viewer.properties" />
+    <Content Include="pdfjs\web\locale\fi\viewer.properties" />
+    <Content Include="pdfjs\web\locale\fr\viewer.properties" />
+    <Content Include="pdfjs\web\locale\fy-NL\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ga-IE\viewer.properties" />
+    <Content Include="pdfjs\web\locale\gd\viewer.properties" />
+    <Content Include="pdfjs\web\locale\gl\viewer.properties" />
+    <Content Include="pdfjs\web\locale\gu-IN\viewer.properties" />
+    <Content Include="pdfjs\web\locale\he\viewer.properties" />
+    <Content Include="pdfjs\web\locale\hi-IN\viewer.properties" />
+    <Content Include="pdfjs\web\locale\hr\viewer.properties" />
+    <Content Include="pdfjs\web\locale\hu\viewer.properties" />
+    <Content Include="pdfjs\web\locale\hy-AM\viewer.properties" />
+    <Content Include="pdfjs\web\locale\id\viewer.properties" />
+    <Content Include="pdfjs\web\locale\is\viewer.properties" />
+    <Content Include="pdfjs\web\locale\it\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ja\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ka\viewer.properties" />
+    <Content Include="pdfjs\web\locale\kk\viewer.properties" />
+    <Content Include="pdfjs\web\locale\km\viewer.properties" />
+    <Content Include="pdfjs\web\locale\kn\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ko\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ku\viewer.properties" />
+    <Content Include="pdfjs\web\locale\lg\viewer.properties" />
+    <Content Include="pdfjs\web\locale\lij\viewer.properties" />
+    <Content Include="pdfjs\web\locale\locale.properties" />
+    <Content Include="pdfjs\web\locale\lt\viewer.properties" />
+    <Content Include="pdfjs\web\locale\lv\viewer.properties" />
+    <Content Include="pdfjs\web\locale\mai\viewer.properties" />
+    <Content Include="pdfjs\web\locale\mk\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ml\viewer.properties" />
+    <Content Include="pdfjs\web\locale\mn\viewer.properties" />
+    <Content Include="pdfjs\web\locale\mr\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ms\viewer.properties" />
+    <Content Include="pdfjs\web\locale\my\viewer.properties" />
+    <Content Include="pdfjs\web\locale\nb-NO\viewer.properties" />
+    <Content Include="pdfjs\web\locale\nl\viewer.properties" />
+    <Content Include="pdfjs\web\locale\nn-NO\viewer.properties" />
+    <Content Include="pdfjs\web\locale\nso\viewer.properties" />
+    <Content Include="pdfjs\web\locale\oc\viewer.properties" />
+    <Content Include="pdfjs\web\locale\or\viewer.properties" />
+    <Content Include="pdfjs\web\locale\pa-IN\viewer.properties" />
+    <Content Include="pdfjs\web\locale\pl\viewer.properties" />
+    <Content Include="pdfjs\web\locale\pt-BR\viewer.properties" />
+    <Content Include="pdfjs\web\locale\pt-PT\viewer.properties" />
+    <Content Include="pdfjs\web\locale\rm\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ro\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ru\viewer.properties" />
+    <Content Include="pdfjs\web\locale\rw\viewer.properties" />
+    <Content Include="pdfjs\web\locale\sah\viewer.properties" />
+    <Content Include="pdfjs\web\locale\si\viewer.properties" />
+    <Content Include="pdfjs\web\locale\sk\viewer.properties" />
+    <Content Include="pdfjs\web\locale\sl\viewer.properties" />
+    <Content Include="pdfjs\web\locale\son\viewer.properties" />
+    <Content Include="pdfjs\web\locale\sq\viewer.properties" />
+    <Content Include="pdfjs\web\locale\sr\viewer.properties" />
+    <Content Include="pdfjs\web\locale\sv-SE\viewer.properties" />
+    <Content Include="pdfjs\web\locale\sw\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ta-LK\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ta\viewer.properties" />
+    <Content Include="pdfjs\web\locale\te\viewer.properties" />
+    <Content Include="pdfjs\web\locale\th\viewer.properties" />
+    <Content Include="pdfjs\web\locale\tl\viewer.properties" />
+    <Content Include="pdfjs\web\locale\tn\viewer.properties" />
+    <Content Include="pdfjs\web\locale\tr\viewer.properties" />
+    <Content Include="pdfjs\web\locale\uk\viewer.properties" />
+    <Content Include="pdfjs\web\locale\ur\viewer.properties" />
+    <Content Include="pdfjs\web\locale\vi\viewer.properties" />
+    <Content Include="pdfjs\web\locale\wo\viewer.properties" />
+    <Content Include="pdfjs\web\locale\xh\viewer.properties" />
+    <Content Include="pdfjs\web\locale\zh-CN\viewer.properties" />
+    <Content Include="pdfjs\web\locale\zh-TW\viewer.properties" />
+    <Content Include="pdfjs\web\locale\zu\viewer.properties" />
+    <Content Include="manual\Extranet.pdf" />
+    <Content Include="manual\Proveedor.pdf" />
+    <Content Include="manual\OnQ.pdf" />
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="manual\RegistroBuzonSat.pdf" />
+    <Content Include="manual\Manual_Administrador.pdf" />
+    <Content Include="manual\Manual_Clientes.pdf" />
+    <Content Include="manual\Manual_Proveedores.pdf" />
+    <Content Include="manual\Manual_Usuario.pdf" />
+    <None Include="Properties\PublishProfiles\Perfil1.pubxml" />
+    <Content Include="recepcion\DropzoneHandler.ashx" />
+    <None Include="Properties\PublishProfiles\web.pubxml" />
+    <None Include="Resources\catCFDI.xlsx" />
+    <None Include="Resources\Layout.Receptores.xlsx" />
+    <None Include="Web References\FacturaGlobalWeb\FacturaGlobalWeb.wsdl" />
+    <None Include="Web References\FacturaGlobalWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\wsAloha\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\wsAloha\wsAloha.wsdl" />
+    <None Include="Web References\wsBanxico\DgieWS.wsdl" />
+    <None Include="Web References\FacturaGlobalWeb\FacturaGlobalWeb.disco" />
+    <None Include="Web References\wsAloha\wsAloha.disco" />
+    <Content Include="Web References\wsBanxico\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\wsDescargarZip\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsDescargarZip\wsDescargarZip.wsdl" />
+    <None Include="Web References\wsEmision\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsEmision\wsEmision.wsdl" />
+    <None Include="Web References\wsDescargarZip\wsDescargarZip.disco" />
+    <Content Include="Web References\wsHpresidente\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\wsHpresidente\wsHpresidente.wsdl" />
+    <None Include="Web References\wsMicros\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsMicros\wsMicros.wsdl" />
+    <Content Include="Web References\wsOpera\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\wsOpera\wsOpera.wsdl" />
+    <None Include="Web References\wsRecepcion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsRecepcion\wsRecepcion.wsdl" />
+    <None Include="Web References\wsMicros\wsMicros.disco" />
+    <None Include="Web References\wsHpresidente\wsHpresidente.disco" />
+    <None Include="Web References\wsOpera\wsOpera.disco" />
+    <Content Include="Web References\wsRestaurantes\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\wsRestaurantes\wsRestaurantes.wsdl" />
+    <None Include="Web References\wsTimbres\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsTimbres\wsCertTimbres.disco" />
+    <None Include="Web References\wsRecepcion\wsRecepcion.disco" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="SinLicencia.aspx" />
+    <Content Include="visorEventos.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <None Include="Web References\wsEmision\wsEmision.disco" />
+    <None Include="Web References\wsRestaurantes\wsRestaurantes.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Web References\wsTimbres\wsCertTimbres.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\FacturaGlobal.aspx.cs">
+      <DependentUpon>FacturaGlobal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\FacturaGlobal.aspx.designer.cs">
+      <DependentUpon>FacturaGlobal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\roles\grupos.aspx.cs">
+      <DependentUpon>grupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\roles\grupos.aspx.designer.cs">
+      <DependentUpon>grupos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\roles\gruposValidacion.aspx.cs">
+      <DependentUpon>gruposValidacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\roles\gruposValidacion.aspx.designer.cs">
+      <DependentUpon>gruposValidacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\roles\roles.aspx.cs">
+      <DependentUpon>roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\roles\roles.aspx.designer.cs">
+      <DependentUpon>roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\sucursales\series.aspx.cs">
+      <DependentUpon>series.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\sucursales\series.aspx.designer.cs">
+      <DependentUpon>series.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\sucursales\sucursalesEmisor.aspx.cs">
+      <DependentUpon>sucursalesEmisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\sucursales\sucursalesEmisor.aspx.designer.cs">
+      <DependentUpon>sucursalesEmisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\proveedores.aspx.cs">
+      <DependentUpon>proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\proveedores.aspx.designer.cs">
+      <DependentUpon>proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\receptores.aspx.cs">
+      <DependentUpon>receptores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\receptores.aspx.designer.cs">
+      <DependentUpon>receptores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\clientes.aspx.cs">
+      <DependentUpon>clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\clientes.aspx.designer.cs">
+      <DependentUpon>clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\empleados.aspx.cs">
+      <DependentUpon>empleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\empleados.aspx.designer.cs">
+      <DependentUpon>empleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\modificarPerfil.aspx.cs">
+      <DependentUpon>modificarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\usuarios\modificarPerfil.aspx.designer.cs">
+      <DependentUpon>modificarPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminstracion\sucursales\sucursales.aspx.cs">
+      <DependentUpon>sucursales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminstracion\sucursales\sucursales.aspx.designer.cs">
+      <DependentUpon>sucursales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CantidadTimbres.aspx.cs">
+      <DependentUpon>CantidadTimbres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CantidadTimbres.aspx.designer.cs">
+      <DependentUpon>CantidadTimbres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatCdfi.cs" />
+    <Compile Include="configuracion\Bancos.aspx.cs">
+      <DependentUpon>Bancos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\Bancos.aspx.designer.cs">
+      <DependentUpon>Bancos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\ConceptosOnQ.aspx.cs">
+      <DependentUpon>ConceptosOnQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\ConceptosOnQ.aspx.designer.cs">
+      <DependentUpon>ConceptosOnQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\Herramientas\archivosRecibidos.aspx.cs">
+      <DependentUpon>archivosRecibidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\Herramientas\archivosRecibidos.aspx.designer.cs">
+      <DependentUpon>archivosRecibidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\Herramientas\helpdesk.aspx.cs">
+      <DependentUpon>helpdesk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\Herramientas\helpdesk.aspx.designer.cs">
+      <DependentUpon>helpdesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\Herramientas\Certificado.aspx.cs">
+      <DependentUpon>Certificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\Herramientas\Certificado.aspx.designer.cs">
+      <DependentUpon>Certificado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\Conceptos.aspx.cs">
+      <DependentUpon>Conceptos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\Conceptos.aspx.designer.cs">
+      <DependentUpon>Conceptos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultarCodigo.aspx.cs">
+      <DependentUpon>consultarCodigo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultarCodigo.aspx.designer.cs">
+      <DependentUpon>consultarCodigo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\email\reglas.aspx.cs">
+      <DependentUpon>reglas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\email\reglas.aspx.designer.cs">
+      <DependentUpon>reglas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\email\editemail.aspx.cs">
+      <DependentUpon>editemail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\email\editemail.aspx.designer.cs">
+      <DependentUpon>editemail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\email\servermail.aspx.cs">
+      <DependentUpon>servermail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\email\servermail.aspx.designer.cs">
+      <DependentUpon>servermail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\Emisores.aspx.cs">
+      <DependentUpon>Emisores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\Emisores.aspx.designer.cs">
+      <DependentUpon>Emisores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\Impuestos\Impuestos.aspx.cs">
+      <DependentUpon>Impuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\Impuestos\Impuestos.aspx.designer.cs">
+      <DependentUpon>Impuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\Mostrar.aspx.cs">
+      <DependentUpon>Mostrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion\Mostrar.aspx.designer.cs">
+      <DependentUpon>Mostrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlUtilities.cs" />
+    <Compile Include="Cancelaciones.aspx.cs">
+      <DependentUpon>Cancelaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cancelaciones.aspx.designer.cs">
+      <DependentUpon>Cancelaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cuenta\ActivarCuenta.aspx.cs">
+      <DependentUpon>ActivarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta\ActivarCuenta.aspx.designer.cs">
+      <DependentUpon>ActivarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DescargarZip.aspx.cs">
+      <DependentUpon>DescargarZip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DescargarZip.aspx.designer.cs">
+      <DependentUpon>DescargarZip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaGlobalMicros.aspx.cs">
+      <DependentUpon>FacturaGlobalMicros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacturaGlobalMicros.aspx.designer.cs">
+      <DependentUpon>FacturaGlobalMicros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImpuestosConceptoTemp.cs" />
+    <Compile Include="nuevo\CfdiRelacionadoTemp.cs" />
+    <Compile Include="nuevo\factura\FacturaGlobalOnQ.aspx.cs">
+      <DependentUpon>FacturaGlobalOnQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\factura\FacturaGlobalOnQ.aspx.designer.cs">
+      <DependentUpon>FacturaGlobalOnQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\factura\FacturaOperaHp.aspx.cs">
+      <DependentUpon>FacturaOperaHp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\factura\FacturaOperaHp.aspx.designer.cs">
+      <DependentUpon>FacturaOperaHp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctosRelacionadosTemp.cs" />
+    <Compile Include="previsualizarPDF.aspx.cs">
+      <DependentUpon>previsualizarPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="previsualizarPDF.aspx.designer.cs">
+      <DependentUpon>previsualizarPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="recepcion\DropzoneHandler.ashx.cs">
+      <DependentUpon>DropzoneHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="recepcion\PagoCfdiTemp.cs" />
+    <Compile Include="Tickets.aspx.cs">
+      <DependentUpon>Tickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tickets.aspx.designer.cs">
+      <DependentUpon>Tickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentosPendientes.aspx.cs">
+      <DependentUpon>DocumentosPendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentosPendientes.aspx.designer.cs">
+      <DependentUpon>DocumentosPendientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentosPorCobrar.aspx.cs">
+      <DependentUpon>DocumentosPorCobrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentosPorCobrar.aspx.designer.cs">
+      <DependentUpon>DocumentosPorCobrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentos.aspx.cs">
+      <DependentUpon>Documentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentos.aspx.designer.cs">
+      <DependentUpon>Documentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\editarComprobante.aspx.cs">
+      <DependentUpon>editarComprobante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\editarComprobante.aspx.designer.cs">
+      <DependentUpon>editarComprobante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\factura\crearFacturaRestaurante.aspx.cs">
+      <DependentUpon>crearFacturaRestaurante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\factura\crearFacturaRestaurante.aspx.designer.cs">
+      <DependentUpon>crearFacturaRestaurante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\interfazExcel.aspx.cs">
+      <DependentUpon>interfazExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\interfazExcel.aspx.designer.cs">
+      <DependentUpon>interfazExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recepcion\Documentos.aspx.cs">
+      <DependentUpon>Documentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recepcion\Documentos.aspx.designer.cs">
+      <DependentUpon>Documentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\autoComprobantes.asmx.cs">
+      <DependentUpon>autoComprobantes.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="nuevo\cartaporte\crearCartaPorte.aspx.cs">
+      <DependentUpon>crearCartaPorte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\cartaporte\crearCartaPorte.aspx.designer.cs">
+      <DependentUpon>crearCartaPorte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\factura\crearNomina.aspx.cs">
+      <DependentUpon>crearNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\factura\crearNomina.aspx.designer.cs">
+      <DependentUpon>crearNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\factura\crearFactura.aspx.cs">
+      <DependentUpon>crearFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\factura\crearFactura.aspx.designer.cs">
+      <DependentUpon>crearFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="print.aspx.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="print.aspx.designer.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LicExpirada.aspx.cs">
+      <DependentUpon>LicExpirada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LicExpirada.aspx.designer.cs">
+      <DependentUpon>LicExpirada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\notacredito\crearNotaCreditoNuevo.aspx.cs">
+      <DependentUpon>crearNotaCreditoNuevo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\notacredito\crearNotaCreditoNuevo.aspx.designer.cs">
+      <DependentUpon>crearNotaCreditoNuevo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodoTimbres.aspx.cs">
+      <DependentUpon>PeriodoTimbres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PeriodoTimbres.aspx.designer.cs">
+      <DependentUpon>PeriodoTimbres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logo.aspx.cs">
+      <DependentUpon>Logo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logo.aspx.designer.cs">
+      <DependentUpon>Logo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RawPrinterHelper.cs" />
+    <Compile Include="recepcion\RepGeneral.aspx.cs">
+      <DependentUpon>RepGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recepcion\RepGeneral.aspx.designer.cs">
+      <DependentUpon>RepGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recepcion\SubirArchivos.aspx.cs">
+      <DependentUpon>SubirArchivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recepcion\SubirArchivos.aspx.designer.cs">
+      <DependentUpon>SubirArchivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMensual.cs" />
+    <Compile Include="Seguridad.aspx.cs">
+      <DependentUpon>Seguridad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad.aspx.designer.cs">
+      <DependentUpon>Seguridad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notificacion.aspx.cs">
+      <DependentUpon>Notificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notificacion.aspx.designer.cs">
+      <DependentUpon>Notificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="download.aspx.designer.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cuenta\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cerrar.aspx.cs">
+      <DependentUpon>Cerrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cerrar.aspx.designer.cs">
+      <DependentUpon>Cerrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\autoRuc.asmx.cs">
+      <DependentUpon>autoRuc.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="nuevo\notacredito\crearNotaCredito.aspx.cs">
+      <DependentUpon>crearNotaCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\notacredito\crearNotaCredito.aspx.designer.cs">
+      <DependentUpon>crearNotaCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo\retencion\crearRetencion.aspx.cs">
+      <DependentUpon>crearRetencion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo\retencion\crearRetencion.aspx.designer.cs">
+      <DependentUpon>crearRetencion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\RepGeneral.aspx.cs">
+      <DependentUpon>RepGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportes\RepGeneral.aspx.designer.cs">
+      <DependentUpon>RepGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinLicencia.aspx.cs">
+      <DependentUpon>SinLicencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinLicencia.aspx.designer.cs">
+      <DependentUpon>SinLicencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="visorEventos.aspx.cs">
+      <DependentUpon>visorEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visorEventos.aspx.designer.cs">
+      <DependentUpon>visorEventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="descargarPDF.aspx.cs">
+      <DependentUpon>descargarPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="descargarPDF.aspx.designer.cs">
+      <DependentUpon>descargarPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FacturaGlobalWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsAloha\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsBanxico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsDescargarZip\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsEmision\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsHpresidente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsMicros\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsOpera\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsRecepcion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsRestaurantes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsTimbres\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\Config.csproj">
+      <Project>{07bb4b10-c744-4639-8c9e-5122e4bf048b}</Project>
+      <Name>Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{6D54F8F7-39DE-4076-BC26-775D833A3C85}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{30E49478-97EE-45B6-A9C2-4E5242F7A39F}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="manual\Usuario.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:49558/FacturaGlobalWeb.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FacturaGlobalWeb\</RelPath>
+      <UpdateFromURL>http://localhost:49558/FacturaGlobalWeb.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_FacturaGlobalWeb_FacturaGlobalWeb</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsAloha.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsAloha\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsAloha.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsAloha_wsAloha</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsCertTimbres.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsTimbres\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsCertTimbres.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsTimbres_wsCertTimbres</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsOpera.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsOpera\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsOpera.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsOpera_WsOpera</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.ipsofactu.net/mx.HamptonCdMex/core/wsDescargarZip.asmx%3fop=DescargarZip">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsDescargarZip\</RelPath>
+      <UpdateFromURL>http://www.ipsofactu.net/mx.HamptonCdMex/core/wsDescargarZip.asmx%3fop=DescargarZip</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsDescargarZip_wsDescargarZip</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsEmision.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsEmision\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsEmision.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsEmision_WsEmision</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsHpresidente.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsHpresidente\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsHpresidente.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsHpresidente_wsHpresidente</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsMicros.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsMicros\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsMicros.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsMicros_wsMicros</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsOpera.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsOpera\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsOpera.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsOpera_WsOpera</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsRecepcion.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsRecepcion\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsRecepcion.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsRecepcion_WsRecepcion</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49558/wsRestaurantes.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsRestaurantes\</RelPath>
+      <UpdateFromURL>http://localhost:49558/wsRestaurantes.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsRestaurantes_wsRestaurantes</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.banxico.org.mx/DgieWSWeb/DgieWS%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsBanxico\</RelPath>
+      <UpdateFromURL>http://www.banxico.org.mx/DgieWSWeb/DgieWS%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DataExpressWeb_wsBanxico_DgieWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>imagenes\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7869</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd"
+           xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified"
+           elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter"
+                  Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema"
+                  xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dataHerbalifeEcuConnectionString"
+                      ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly"
+                      Name="dataHerbalifeEcuConnectionString (Settings)" ParameterPrefix="@"
+                      PropertyReference="ApplicationSettings.Reportes.Properties.Settings.GlobalReference.Default.dataHerbalifeEcuConnectionString"
+                      Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component"
+                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
+                        DataAccessorName="RepGeneralTableAdapter"
+                        GeneratorDataComponentClassName="RepGeneralTableAdapter" Name="RepGeneral"
+                        UserDataComponentName="RepGeneralTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dataHerbalifeEcuConnectionString (Settings)" DbObjectName=""
+                        DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
+                        GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
+                        GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
+                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+                        UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        RECEPTOR.RFCREC, CAST(RECEPTOR.NOMREC AS VARCHAR(30)) AS NOMREC, CAST(Catalogo1_C.descripcion AS VARCHAR(15)) AS TIPODOC,
+                      GENERAL.secuencial AS FOLFAC, GENERAL.totalDescuento, GENERAL.fecha AS FECHA, GENERAL.IVA12, GENERAL.ICE, GENERAL.totalSinImpuestos,
+                      CAST(GENERAL.importeAPagar AS NUMERIC(18, 2)) AS TOTAL, GENERAL.numeroAutorizacion, GENERAL.fechaAutorizacion, Herbalife.noOrden, Herbalife.empleado,
+                      InfoAdicional.nombre, InfoAdicional.valor
+                      FROM            Archivos INNER JOIN
+                      GENERAL ON Archivos.IDEFAC = GENERAL.idComprobante INNER JOIN
+                      Configuracion ON GENERAL.id_Config = Configuracion.IDECNF INNER JOIN
+                      EMISOR ON GENERAL.id_Emisor = EMISOR.IDEEMI INNER JOIN
+                      RECEPTOR ON GENERAL.id_Receptor = RECEPTOR.IDEREC INNER JOIN
+                      Catalogo1_C ON GENERAL.codDoc = Catalogo1_C.codigo AND Catalogo1_C.tipo = 'Comprobante' INNER JOIN
+                      Herbalife ON GENERAL.idComprobante = Herbalife.id_Comprobante INNER JOIN
+                      InfoAdicional ON GENERAL.idComprobante = InfoAdicional.id_Comprobante
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RFCREC" DataSetColumn="RFCREC" />
+              <Mapping SourceColumn="NOMREC" DataSetColumn="NOMREC" />
+              <Mapping SourceColumn="TIPODOC" DataSetColumn="TIPODOC" />
+              <Mapping SourceColumn="FOLFAC" DataSetColumn="FOLFAC" />
+              <Mapping SourceColumn="totalDescuento" DataSetColumn="totalDescuento" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="IVA12" DataSetColumn="IVA12" />
+              <Mapping SourceColumn="ICE" DataSetColumn="ICE" />
+              <Mapping SourceColumn="totalSinImpuestos" DataSetColumn="totalSinImpuestos" />
+              <Mapping SourceColumn="TOTAL" DataSetColumn="TOTAL" />
+              <Mapping SourceColumn="numeroAutorizacion" DataSetColumn="numeroAutorizacion" />
+              <Mapping SourceColumn="fechaAutorizacion" DataSetColumn="fechaAutorizacion" />
+              <Mapping SourceColumn="noOrden" DataSetColumn="noOrden" />
+              <Mapping SourceColumn="empleado" DataSetColumn="empleado" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="valor" DataSetColumn="valor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component"
+                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
+                        DataAccessorName="RepRetencionesTableAdapter"
+                        GeneratorDataComponentClassName="RepRetencionesTableAdapter" Name="RepRetenciones"
+                        UserDataComponentName="RepRetencionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dataHerbalifeEcuConnectionString (Settings)" DbObjectName=""
+                        DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
+                        GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
+                        GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
+                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+                        UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        RECEPTOR.RFCREC, CAST(RECEPTOR.NOMREC AS VARCHAR(30)) AS NOMREC, CAST(Catalogo1_C.descripcion AS VARCHAR(15)) AS TIPODOC,
+                      TotalConImpuestos.codigo, TotalConImpuestos.codigoPorcentaje, TotalConImpuestos.baseImponible, TotalConImpuestos.tarifa, TotalConImpuestos.valor,
+                      TotalConImpuestos.porcentajeRetener, RECEPTOR.RFCREC AS Expr1, GENERAL.secuencial AS FOLFAC, GENERAL.numeroAutorizacion,
+                      GENERAL.fechaAutorizacion
+                      FROM            Archivos INNER JOIN
+                      GENERAL ON Archivos.IDEFAC = GENERAL.idComprobante INNER JOIN
+                      Configuracion ON GENERAL.id_Config = Configuracion.IDECNF INNER JOIN
+                      EMISOR ON GENERAL.id_Emisor = EMISOR.IDEEMI INNER JOIN
+                      RECEPTOR ON GENERAL.id_Receptor = RECEPTOR.IDEREC INNER JOIN
+                      TotalConImpuestos ON GENERAL.idComprobante = TotalConImpuestos.id_Comprobante INNER JOIN
+                      Catalogo1_C ON GENERAL.codDoc = Catalogo1_C.codigo AND Catalogo1_C.tipo = 'Comprobante'
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RFCREC" DataSetColumn="RFCREC" />
+              <Mapping SourceColumn="NOMREC" DataSetColumn="NOMREC" />
+              <Mapping SourceColumn="TIPODOC" DataSetColumn="TIPODOC" />
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
+              <Mapping SourceColumn="codigoPorcentaje" DataSetColumn="codigoPorcentaje" />
+              <Mapping SourceColumn="baseImponible" DataSetColumn="baseImponible" />
+              <Mapping SourceColumn="tarifa" DataSetColumn="tarifa" />
+              <Mapping SourceColumn="valor" DataSetColumn="valor" />
+              <Mapping SourceColumn="porcentajeRetener" DataSetColumn="porcentajeRetener" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="FOLFAC" DataSetColumn="FOLFAC" />
+              <Mapping SourceColumn="numeroAutorizacion" DataSetColumn="numeroAutorizacion" />
+              <Mapping SourceColumn="fechaAutorizacion" DataSetColumn="fechaAutorizacion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component"
+                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
+                        DataAccessorName="RepEtiquetasTableAdapter"
+                        GeneratorDataComponentClassName="RepEtiquetasTableAdapter" Name="RepEtiquetas"
+                        UserDataComponentName="RepEtiquetasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dataHerbalifeEcuConnectionString (Settings)" DbObjectName=""
+                        DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
+                        GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
+                        GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
+                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+                        UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        Etiquetas.noGuia, Etiquetas.noOrden, Etiquetas.fecha, Etiquetas.impreso, Etiquetas.cantCajas, Herbalife.dirBill, Herbalife.shiptel
+                      FROM            Etiquetas INNER JOIN
+                      Herbalife ON Etiquetas.id_General = Herbalife.id_Comprobante
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="noGuia" DataSetColumn="noGuia" />
+              <Mapping SourceColumn="noOrden" DataSetColumn="noOrden" />
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="impreso" DataSetColumn="impreso" />
+              <Mapping SourceColumn="cantCajas" DataSetColumn="cantCajas" />
+              <Mapping SourceColumn="dirBill" DataSetColumn="dirBill" />
+              <Mapping SourceColumn="shiptel" DataSetColumn="shiptel" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
+              msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1"
+              msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RepGeneral" msprop:Generator_TableClassName="RepGeneralDataTable"
+                    msprop:Generator_TableVarName="tableRepGeneral"
+                    msprop:Generator_RowChangedName="RepGeneralRowChanged" msprop:Generator_TablePropName="RepGeneral"
+                    msprop:Generator_RowDeletingName="RepGeneralRowDeleting"
+                    msprop:Generator_RowChangingName="RepGeneralRowChanging"
+                    msprop:Generator_RowEvHandlerName="RepGeneralRowChangeEventHandler"
+                    msprop:Generator_RowDeletedName="RepGeneralRowDeleted"
+                    msprop:Generator_RowClassName="RepGeneralRow" msprop:Generator_UserTableName="RepGeneral"
+                    msprop:Generator_RowEvArgName="RepGeneralRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RFCREC" msprop:Generator_ColumnVarNameInTable="columnRFCREC"
+                          msprop:Generator_ColumnPropNameInRow="RFCREC"
+                          msprop:Generator_ColumnPropNameInTable="RFCRECColumn"
+                          msprop:Generator_UserColumnName="RFCREC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMREC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNOMREC"
+                          msprop:Generator_ColumnPropNameInRow="NOMREC"
+                          msprop:Generator_ColumnPropNameInTable="NOMRECColumn"
+                          msprop:Generator_UserColumnName="NOMREC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPODOC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIPODOC"
+                          msprop:Generator_ColumnPropNameInRow="TIPODOC"
+                          msprop:Generator_ColumnPropNameInTable="TIPODOCColumn"
+                          msprop:Generator_UserColumnName="TIPODOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FOLFAC" msprop:Generator_ColumnVarNameInTable="columnFOLFAC"
+                          msprop:Generator_ColumnPropNameInRow="FOLFAC"
+                          msprop:Generator_ColumnPropNameInTable="FOLFACColumn"
+                          msprop:Generator_UserColumnName="FOLFAC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="totalDescuento" msprop:Generator_ColumnVarNameInTable="columntotalDescuento"
+                          msprop:Generator_ColumnPropNameInRow="totalDescuento"
+                          msprop:Generator_ColumnPropNameInTable="totalDescuentoColumn"
+                          msprop:Generator_UserColumnName="totalDescuento" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA"
+                          msprop:Generator_ColumnPropNameInRow="FECHA"
+                          msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA"
+                          type="xs:dateTime" />
+              <xs:element name="IVA12" msprop:Generator_ColumnVarNameInTable="columnIVA12"
+                          msprop:Generator_ColumnPropNameInRow="IVA12"
+                          msprop:Generator_ColumnPropNameInTable="IVA12Column" msprop:Generator_UserColumnName="IVA12"
+                          type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICE" msprop:Generator_ColumnVarNameInTable="columnICE"
+                          msprop:Generator_ColumnPropNameInRow="ICE" msprop:Generator_ColumnPropNameInTable="ICEColumn"
+                          msprop:Generator_UserColumnName="ICE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="totalSinImpuestos" msprop:Generator_ColumnVarNameInTable="columntotalSinImpuestos"
+                          msprop:Generator_ColumnPropNameInRow="totalSinImpuestos"
+                          msprop:Generator_ColumnPropNameInTable="totalSinImpuestosColumn"
+                          msprop:Generator_UserColumnName="totalSinImpuestos" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL"
+                          msprop:Generator_ColumnPropNameInRow="TOTAL"
+                          msprop:Generator_ColumnPropNameInTable="TOTALColumn" msprop:Generator_UserColumnName="TOTAL"
+                          type="xs:decimal" minOccurs="0" />
+              <xs:element name="numeroAutorizacion" msprop:Generator_ColumnVarNameInTable="columnnumeroAutorizacion"
+                          msprop:Generator_ColumnPropNameInRow="numeroAutorizacion"
+                          msprop:Generator_ColumnPropNameInTable="numeroAutorizacionColumn"
+                          msprop:Generator_UserColumnName="numeroAutorizacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="37" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaAutorizacion" msprop:Generator_ColumnVarNameInTable="columnfechaAutorizacion"
+                          msprop:Generator_ColumnPropNameInRow="fechaAutorizacion"
+                          msprop:Generator_ColumnPropNameInTable="fechaAutorizacionColumn"
+                          msprop:Generator_UserColumnName="fechaAutorizacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="noOrden" msprop:Generator_ColumnVarNameInTable="columnnoOrden"
+                          msprop:Generator_ColumnPropNameInRow="noOrden"
+                          msprop:Generator_ColumnPropNameInTable="noOrdenColumn"
+                          msprop:Generator_UserColumnName="noOrden" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empleado" msprop:Generator_ColumnVarNameInTable="columnempleado"
+                          msprop:Generator_ColumnPropNameInRow="empleado"
+                          msprop:Generator_ColumnPropNameInTable="empleadoColumn"
+                          msprop:Generator_UserColumnName="empleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre"
+                          msprop:Generator_ColumnPropNameInRow="nombre"
+                          msprop:Generator_ColumnPropNameInTable="nombreColumn"
+                          msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="valor" msprop:Generator_ColumnVarNameInTable="columnvalor"
+                          msprop:Generator_ColumnPropNameInRow="valor"
+                          msprop:Generator_ColumnPropNameInTable="valorColumn" msprop:Generator_UserColumnName="valor"
+                          minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RepRetenciones" msprop:Generator_TableClassName="RepRetencionesDataTable"
+                    msprop:Generator_TableVarName="tableRepRetenciones"
+                    msprop:Generator_RowChangedName="RepRetencionesRowChanged"
+                    msprop:Generator_TablePropName="RepRetenciones"
+                    msprop:Generator_RowDeletingName="RepRetencionesRowDeleting"
+                    msprop:Generator_RowChangingName="RepRetencionesRowChanging"
+                    msprop:Generator_RowEvHandlerName="RepRetencionesRowChangeEventHandler"
+                    msprop:Generator_RowDeletedName="RepRetencionesRowDeleted"
+                    msprop:Generator_RowClassName="RepRetencionesRow" msprop:Generator_UserTableName="RepRetenciones"
+                    msprop:Generator_RowEvArgName="RepRetencionesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RFCREC" msprop:Generator_ColumnVarNameInTable="columnRFCREC"
+                          msprop:Generator_ColumnPropNameInRow="RFCREC"
+                          msprop:Generator_ColumnPropNameInTable="RFCRECColumn"
+                          msprop:Generator_UserColumnName="RFCREC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMREC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNOMREC"
+                          msprop:Generator_ColumnPropNameInRow="NOMREC"
+                          msprop:Generator_ColumnPropNameInTable="NOMRECColumn"
+                          msprop:Generator_UserColumnName="NOMREC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPODOC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIPODOC"
+                          msprop:Generator_ColumnPropNameInRow="TIPODOC"
+                          msprop:Generator_ColumnPropNameInTable="TIPODOCColumn"
+                          msprop:Generator_UserColumnName="TIPODOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo"
+                          msprop:Generator_ColumnPropNameInRow="codigo"
+                          msprop:Generator_ColumnPropNameInTable="codigoColumn"
+                          msprop:Generator_UserColumnName="codigo" type="xs:short" minOccurs="0" />
+              <xs:element name="codigoPorcentaje" msprop:Generator_ColumnVarNameInTable="columncodigoPorcentaje"
+                          msprop:Generator_ColumnPropNameInRow="codigoPorcentaje"
+                          msprop:Generator_ColumnPropNameInTable="codigoPorcentajeColumn"
+                          msprop:Generator_UserColumnName="codigoPorcentaje" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="baseImponible" msprop:Generator_ColumnVarNameInTable="columnbaseImponible"
+                          msprop:Generator_ColumnPropNameInRow="baseImponible"
+                          msprop:Generator_ColumnPropNameInTable="baseImponibleColumn"
+                          msprop:Generator_UserColumnName="baseImponible" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tarifa" msprop:Generator_ColumnVarNameInTable="columntarifa"
+                          msprop:Generator_ColumnPropNameInRow="tarifa"
+                          msprop:Generator_ColumnPropNameInTable="tarifaColumn"
+                          msprop:Generator_UserColumnName="tarifa" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valor" msprop:Generator_ColumnVarNameInTable="columnvalor"
+                          msprop:Generator_ColumnPropNameInRow="valor"
+                          msprop:Generator_ColumnPropNameInTable="valorColumn" msprop:Generator_UserColumnName="valor"
+                          type="xs:decimal" minOccurs="0" />
+              <xs:element name="porcentajeRetener" msprop:Generator_ColumnVarNameInTable="columnporcentajeRetener"
+                          msprop:Generator_ColumnPropNameInRow="porcentajeRetener"
+                          msprop:Generator_ColumnPropNameInTable="porcentajeRetenerColumn"
+                          msprop:Generator_UserColumnName="porcentajeRetener" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1"
+                          msprop:Generator_ColumnPropNameInRow="Expr1"
+                          msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1"
+                          minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FOLFAC" msprop:Generator_ColumnVarNameInTable="columnFOLFAC"
+                          msprop:Generator_ColumnPropNameInRow="FOLFAC"
+                          msprop:Generator_ColumnPropNameInTable="FOLFACColumn"
+                          msprop:Generator_UserColumnName="FOLFAC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numeroAutorizacion" msprop:Generator_ColumnVarNameInTable="columnnumeroAutorizacion"
+                          msprop:Generator_ColumnPropNameInRow="numeroAutorizacion"
+                          msprop:Generator_ColumnPropNameInTable="numeroAutorizacionColumn"
+                          msprop:Generator_UserColumnName="numeroAutorizacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="37" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaAutorizacion" msprop:Generator_ColumnVarNameInTable="columnfechaAutorizacion"
+                          msprop:Generator_ColumnPropNameInRow="fechaAutorizacion"
+                          msprop:Generator_ColumnPropNameInTable="fechaAutorizacionColumn"
+                          msprop:Generator_UserColumnName="fechaAutorizacion" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RepEtiquetas" msprop:Generator_TableClassName="RepEtiquetasDataTable"
+                    msprop:Generator_TableVarName="tableRepEtiquetas"
+                    msprop:Generator_RowChangedName="RepEtiquetasRowChanged"
+                    msprop:Generator_TablePropName="RepEtiquetas"
+                    msprop:Generator_RowDeletingName="RepEtiquetasRowDeleting"
+                    msprop:Generator_RowChangingName="RepEtiquetasRowChanging"
+                    msprop:Generator_RowEvHandlerName="RepEtiquetasRowChangeEventHandler"
+                    msprop:Generator_RowDeletedName="RepEtiquetasRowDeleted"
+                    msprop:Generator_RowClassName="RepEtiquetasRow" msprop:Generator_UserTableName="RepEtiquetas"
+                    msprop:Generator_RowEvArgName="RepEtiquetasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="noGuia" msprop:Generator_ColumnVarNameInTable="columnnoGuia"
+                          msprop:Generator_ColumnPropNameInRow="noGuia"
+                          msprop:Generator_ColumnPropNameInTable="noGuiaColumn"
+                          msprop:Generator_UserColumnName="noGuia" type="xs:int" minOccurs="0" />
+              <xs:element name="noOrden" msprop:Generator_ColumnVarNameInTable="columnnoOrden"
+                          msprop:Generator_ColumnPropNameInRow="noOrden"
+                          msprop:Generator_ColumnPropNameInTable="noOrdenColumn"
+                          msprop:Generator_UserColumnName="noOrden" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha"
+                          msprop:Generator_ColumnPropNameInRow="fecha"
+                          msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha"
+                          type="xs:dateTime" minOccurs="0" />
+              <xs:element name="impreso" msprop:Generator_ColumnVarNameInTable="columnimpreso"
+                          msprop:Generator_ColumnPropNameInRow="impreso"
+                          msprop:Generator_ColumnPropNameInTable="impresoColumn"
+                          msprop:Generator_UserColumnName="impreso" type="xs:boolean" minOccurs="0" />
+              <xs:element name="cantCajas" msprop:Generator_ColumnVarNameInTable="columncantCajas"
+                          msprop:Generator_ColumnPropNameInRow="cantCajas"
+                          msprop:Generator_ColumnPropNameInTable="cantCajasColumn"
+                          msprop:Generator_UserColumnName="cantCajas" type="xs:int" minOccurs="0" />
+              <xs:element name="dirBill" msprop:Generator_ColumnVarNameInTable="columndirBill"
+                          msprop:Generator_ColumnPropNameInRow="dirBill"
+                          msprop:Generator_ColumnPropNameInTable="dirBillColumn"
+                          msprop:Generator_UserColumnName="dirBill" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="shiptel" msprop:Generator_ColumnVarNameInTable="columnshiptel"
+                          msprop:Generator_ColumnPropNameInRow="shiptel"
+                          msprop:Generator_ColumnPropNameInTable="shiptelColumn"
+                          msprop:Generator_UserColumnName="shiptel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A45A98D0-EF8A-4B7F-B014-8F90BA7C1837}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reportes</RootNamespace>
+    <AssemblyName>Reportes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dtsReporteNA.cs">
+      <DependentUpon>dtsReporteNA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsReporteNA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsReporteNA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsReporteNE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsReporteNE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsReporteGeneral.cs">
+      <DependentUpon>dtsReporteGeneral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsReporteGeneral1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsReporteGeneral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsReporteIndividual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsReporteIndividual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsReporteRetenciones.cs">
+      <DependentUpon>dtsReporteRetenciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsReporteRetenciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsReporteRetenciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RepEmail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepEmail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepEstatus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepEstatus.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RepG.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepNotasVenta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepNotasVenta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepNP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepNP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte2.cs">
+      <DependentUpon>Reporte2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteFactNC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteFactNC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RepRetenciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepRetenciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepSRI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepSRI.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dtsReporteGeneral.xsc">
+      <DependentUpon>dtsReporteGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteGeneral.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsReporteGeneral1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtsReporteGeneral.xss">
+      <DependentUpon>dtsReporteGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteIndividual.xsc">
+      <DependentUpon>dtsReporteIndividual.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteIndividual.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsReporteIndividual.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dtsReporteIndividual.xss">
+      <DependentUpon>dtsReporteIndividual.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteNA.xsc">
+      <DependentUpon>dtsReporteNA.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteNA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsReporteNA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dtsReporteNA.xss">
+      <DependentUpon>dtsReporteNA.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteNE.xsc">
+      <DependentUpon>dtsReporteNE.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteNE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsReporteNE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtsReporteNE.xss">
+      <DependentUpon>dtsReporteNE.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteRetenciones.xsc">
+      <DependentUpon>dtsReporteRetenciones.xsd</DependentUpon>
+    </None>
+    <None Include="dtsReporteRetenciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsReporteRetenciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dtsReporteRetenciones.xss">
+      <DependentUpon>dtsReporteRetenciones.xsd</DependentUpon>
+    </None>
+    <None Include="RepEstatus.xsc">
+      <DependentUpon>RepEstatus.xsd</DependentUpon>
+    </None>
+    <None Include="RepEstatus.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepEstatus.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RepEstatus.xss">
+      <DependentUpon>RepEstatus.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte2.xsc">
+      <DependentUpon>Reporte2.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reporte2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte2.xss">
+      <DependentUpon>Reporte2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes.xsc">
+      <DependentUpon>Reportes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes.xss">
+      <DependentUpon>Reportes.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RepEmail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepEmail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepG.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepNotasVenta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepNotasVenta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepNP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepNP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteFactNC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFactNC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepRetenciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepRetenciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepSRI.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepSRI.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

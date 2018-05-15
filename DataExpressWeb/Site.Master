@@ -1,0 +1,1768 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="DataExpressWeb.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head runat="server">
+    <div>
+        <!-- Propiedades de la página -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="~/imagenes/favicon.ico" type="image/x-icon" />
+        <title>DataExpress Latinoamérica</title>
+        <!-- Estilos CSS -->
+        <link href="~/css/full.css" rel="stylesheet" />
+        <%--<link href="~/css/bootstrap-datepicker3.min.css" rel="stylesheet" />--%>
+        <link href="~/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-theme.min.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-toggle.min.css" rel="stylesheet" />
+        <link href="~/css/theme.css" rel="stylesheet" />
+        <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+        <link href="~/css/summernote.css" rel="stylesheet" />
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-submenu.min.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-colorpicker.css" rel="stylesheet" />
+        <link href="~/css/dropzone.min.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-select.min.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-tagsinput.css" rel="stylesheet" />
+        <link href="~/css/select2.min.css" rel="stylesheet" />
+        <link href="~/css/select2-bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/jquery.toastmessage.css" rel="stylesheet" />
+
+        <!------ ASEGURARSE QUE ESTE CSS SEA EL ULTIMO ------>
+        <link href="~/css/Site.Master.css" rel="stylesheet" />
+        <!-------------------------------------------------->
+
+        <asp:ContentPlaceHolder ID="cpCabecera" runat="server" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+        <style type="text/css">
+            body {
+                
+            }
+        </style>
+    </div>
+</head>
+<body id="bodyMaster" runat="server">
+    <form id="mainForm" runat="server" enctype="multipart/form-data">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" LoadScriptsBeforeUI="true" AsyncPostBackTimeout="36000">
+            <Services>
+                <asp:ServiceReference Path="~/nuevo/autoRuc.asmx"></asp:ServiceReference>
+                <asp:ServiceReference Path="~/nuevo/autoComprobantes.asmx"></asp:ServiceReference>
+            </Services>
+        </asp:ScriptManager>
+        <asp:HiddenField ID="hfConfirm" runat="server" Value="" />
+        <asp:HiddenField ID="hfBackground" runat="server" Value="~/imagenes/backgrounds/trans.jpg" />
+        <nav class="navbar navbar-custom navbar-fixed-top opaque-navbar navbr" id="navBarMenu" runat="server" visible="true">
+                <div class="container">
+                    <asp:UpdatePanel ID="UpdatePanelMenuMaster" runat="server" ChildrenAsTriggers="true" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <asp:Image ID="imgLogo" runat="server" CssClass="img-rounded img-responsive" ImageUrl="~/Logo.aspx?id=1" Style="width: 110px; height: 43px" />
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li runat="server" id="myliInicio" class="">
+                                    <asp:HyperLink ID="InicioID" CssClass="page-scroll" NavigateUrl="~/Default.aspx" Visible="false" runat="server"> Inicio </asp:HyperLink>
+                                </li>
+                                <li id="liEmision">
+                                    <asp:HyperLink ID="hlEmision" CssClass="dropdown-toggle" role="button" Visible="false" aria-expanded="false" data-toggle="dropdown" data-hover="dropdown" runat="server" data-submenu>Emisión <span class="caret"></span></asp:HyperLink>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu" runat="server" id="liConsulta">
+                                            <a href="#">Consultar</a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                            <asp:HyperLink ID="hlDocumentos" CssClass="page-scroll" NavigateUrl="~/Documentos.aspx" runat="server">Documentos</asp:HyperLink>
+                                        </li>
+                                                    <li>
+                                            <asp:HyperLink ID="hlDocsPendientes" CssClass="page-scroll" NavigateUrl="~/DocumentosPendientes.aspx" runat="server">Documentos Pendientes</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlDXC" CssClass="page-scroll" NavigateUrl="~/DocumentosPorCobrar.aspx" runat="server">Documentos Por Cobrar</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlCancelaciones" CssClass="page-scroll" NavigateUrl="~/Cancelaciones.aspx" runat="server">Cancelaciones</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlTickets" CssClass="page-scroll" NavigateUrl="~/Tickets.aspx" runat="server">Tickets</asp:HyperLink>
+                                        </li>
+                                                      <li>
+                                            <asp:HyperLink ID="hlDescargarZip" CssClass="page-scroll" NavigateUrl="~/DescargarZip.aspx" runat="server">Descargas Zip</asp:HyperLink>
+                                        </li>
+                                                        <li id="liReportesYambal">
+                                    <asp:HyperLink ID="HyperLink10" CssClass="page-scroll" NavigateUrl="~/reportes/RepYambal/ReportesTxtYambal.aspx" Visible="false" runat="server">Reporte (Factura y Cobranza)</asp:HyperLink>
+                                </li>
+                                                </ul>
+                                        </li>
+                                        <li class="dropdown-submenu" runat="server" id="liCrear">
+                                            <a href="#">Crear</a>
+                                                <ul class="dropdown-menu">
+                                                   <li>
+                                            <asp:HyperLink ID="hlFactura" runat="server" CssClass="hipermenu" NavigateUrl="~/nuevo/factura/crearFactura.aspx">Factura</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlFacturaRestaurante" runat="server" CssClass="hipermenu" NavigateUrl="~/nuevo/factura/crearFacturaRestaurante.aspx">Factura</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlFacturaOperaHp" runat="server" CssClass="hipermenu" NavigateUrl="~/nuevo/factura/FacturaOperaHp.aspx">Factura Opera</asp:HyperLink>
+                                        </li>
+                                        <li class="dropdown-submenu" runat="server" id="liNotaCredito">
+                                            <a href="#">Nota de Crédito</a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <asp:HyperLink ID="hlNotaCreditoParcial" runat="server"  NavigateUrl="~/nuevo/notacredito/crearNotaCredito.aspx">Parcial</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlNotaCreditoAnulacion" runat="server" NavigateUrl="~/nuevo/notacredito/crearNotaCreditoNuevo.aspx">Anulación</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlNomina" runat="server" CssClass="hipermenu" NavigateUrl="~/nuevo/factura/crearNomina.aspx">Nómina</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlRetenciones" runat="server" CssClass="hipermenu" NavigateUrl="~/nuevo/retencion/crearRetencion.aspx">Comprobante de Retenciones</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlCartaPorte" runat="server" CssClass="hipermenu" NavigateUrl="~/nuevo/cartaporte/crearCartaPorte.aspx">Carta Porte</asp:HyperLink>
+                                        </li>
+                                                    <li>
+                                            <asp:HyperLink ID="hlEditarComp" runat="server" CssClass="hipermenu" NavigateUrl="~/nuevo/editarComprobante.aspx">Editar Comprobante</asp:HyperLink>
+                                        </li>       
+                                        <li>
+                                            <asp:HyperLink ID="hlReformaXls" runat="server" CssClass="page-scroll" NavigateUrl="~/nuevo/interfazExcel.aspx">Interfaz SUN (Excel)</asp:HyperLink>
+                                        </li>      
+                                        <li>
+                                            <asp:HyperLink ID="hlGlobalOnQ" runat="server" CssClass="page-scroll" NavigateUrl="~/nuevo/factura/FacturaGlobalOnQ.aspx">Factura Global OnQ</asp:HyperLink>
+                                        </li>
+                                                    <li>
+                                            <asp:HyperLink ID="hlGlobalMicros" runat="server" CssClass="page-scroll" NavigateUrl="~/FacturaGlobalMicros.aspx">Factura Global Micros</asp:HyperLink>
+                                        </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="liInformes">
+                                    <asp:HyperLink ID="HyperLink3" CssClass="page-scroll" NavigateUrl="~/reportes/RepGeneral.aspx" Visible="false" runat="server">Informes</asp:HyperLink>                                 
+                                </li>                               
+                                <li id="liSeguridad">
+                                    <asp:HyperLink ID="HyperLink15" CssClass="dropdown-toggle" role="button" aria-expanded="false" data-toggle="dropdown" data-hover="dropdown" Visible="false" runat="server">Seguridad<span class="caret"></span></asp:HyperLink>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink18" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/usuarios/empleados.aspx">Empleados</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink26" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/usuarios/clientes.aspx">Clientes</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlProveedores" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/usuarios/proveedores.aspx">Proveedores</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink19" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/roles/roles.aspx">Perfiles</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink7" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/roles/grupos.aspx">Grupos validadores</asp:HyperLink>
+                                            <asp:HyperLink ID="HyperLink9" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/roles/gruposValidacion.aspx">Grupos validadores</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="liEmpresa">
+                                    <asp:HyperLink ID="HyperLink12" CssClass="dropdown-toggle" role="button" aria-expanded="false" data-toggle="dropdown" data-hover="dropdown" Visible="false" runat="server" data-submenu>Empresa<span class="caret"></span></asp:HyperLink>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li class="dropdown-submenu">
+                                            <asp:HyperLink ID="HyperLink1" NavigateUrl="#" runat="server">Receptores</asp:HyperLink>
+                                                <ul class="dropdown-menu">
+                                                        <li>
+                                                            <asp:HyperLink ID="HyperLink11" runat="server" CssClass="page-scroll" NavigateUrl="~/adminstracion/usuarios/receptores.aspx">Catálogo</asp:HyperLink>
+                                                        </li>
+                                                        <li>
+                                                            <asp:HyperLink ID="HyperLink5" runat="server" CssClass="page-scroll" NavigateUrl="~/adminstracion/Sucursales/sucursales.aspx">Sucursales</asp:HyperLink>
+                                                        </li>
+                                                    <li>
+                                                            <asp:HyperLink ID="HyperLinkFacturaGlobal" runat="server" CssClass="page-scroll" NavigateUrl="~/adminstracion/FacturaGlobal.aspx">Facturas Globales</asp:HyperLink>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink22" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/Emisores.aspx">Emisor(es)</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink13" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/Sucursales/sucursalesEmisor.aspx">Sucursales</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink14" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/Sucursales/series.aspx">Series</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink21" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/Mostrar.aspx">Directorios</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlCertificados" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/Herramientas/Certificado.aspx">Folios y Certificados</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="liAjustes">
+                                    <asp:HyperLink ID="HyperLink16" CssClass="dropdown-toggle" data-hover="dropdown" role="button" aria-expanded="false" data-toggle="dropdown" Visible="false" runat="server">Ajustes<span class="caret"></span></asp:HyperLink>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink17" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/email/servermail.aspx">Servidor SMTP</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink24" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/email/editemail.aspx">Modificar Mensajes</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink27" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/email/reglas.aspx">Reglas de E-Mail</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink28" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/impuestos/impuestos.aspx">Catalogo Impuestos</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlConceptos" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/Conceptos.aspx">Catalogo Conceptos</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlBancos" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/Bancos.aspx">Catalogo Bancos</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlConceptosOnQ" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/ConceptosOnQ.aspx">Catalogo Conceptos OnQ</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink36" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/Herramientas/archivosRecibidos.aspx">Tramas Recibidas</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlVisorEventos" runat="server" CssClass="hipermenu" NavigateUrl="~/visorEventos.aspx">Visor de Eventos</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="liRecepcion">
+                                    <asp:HyperLink ID="HyperLink29" CssClass="dropdown-toggle" role="button" Visible="false" aria-expanded="false" data-toggle="dropdown" data-hover="dropdown" runat="server">Recepción<span class="caret"></span></asp:HyperLink>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li runat="server" id="Li1" class="">
+                                            <asp:HyperLink ID="ldDocumentosRecepcion" CssClass="page-scroll" NavigateUrl="~/recepcion/Documentos.aspx" runat="server">Consultar Documentos</asp:HyperLink>
+                                        </li>
+                                        <li runat="server" id="Li3" class="">
+                                            <asp:HyperLink ID="HyperLink6" CssClass="page-scroll" NavigateUrl="~/recepcion/SubirArchivos.aspx" runat="server">Subir Archivos</asp:HyperLink>
+                                        </li>
+                                        <li runat="server" id="Li4" class="">
+                                            <asp:HyperLink ID="HyperLink8" CssClass="page-scroll" NavigateUrl="~/recepcion/RepGeneral.aspx" runat="server">Informes</asp:HyperLink>
+                                        </li>
+                                        <li runat="server" id="LiRecepcionVip" class="" visible="false">
+                                            <asp:HyperLink ID="HyperLink2" CssClass="page-scroll" NavigateUrl="http://50.97.147.202/IpsofactuVIP/" runat="server" Target="_blank">Recepción V.I.P.</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="liHelpDesk" runat="server" visible="false">
+                                    <asp:HyperLink ID="HyperLink34" Visible="false" runat="server" CssClass="hipermenu" NavigateUrl="~/configuracion/Herramientas/helpdesk.aspx"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> HelpDesk</asp:HyperLink>
+                                </li>
+                                <li id="liPerfil">
+                                    <asp:HyperLink ID="PerfilID" CssClass="dropdown-toggle" data-hover="dropdown" role="button" aria-expanded="false" data-toggle="dropdown" Visible="false" runat="server"> Perfil <span class="caret"></span></asp:HyperLink>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="hipermenu" NavigateUrl="~/adminstracion/usuarios/modificarPerfil.aspx">
+                                                <asp:Label ID="Perfil" runat="server"></asp:Label>
+                                            </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink23" runat="server" CssClass="hipermenu" NavigateUrl="~/Cerrar.aspx">Cerrar Sesión</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="liAyuda">
+                                    <asp:HyperLink ID="hlAyuda" CssClass="dropdown-toggle" data-hover="dropdown" role="button" aria-expanded="false" data-toggle="dropdown" runat="server" Visible="false"> Ayuda <span class="caret"></span></asp:HyperLink>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li runat="server" id="liManualEmpleado" visible="false">
+                                            <a class="hipermenu" href='javascript:loadPdfModal("<%= ResolveClientUrl("~/manual/Manual_Usuario.pdf") %>");'>Empleado</a>
+                                        </li>
+                                        <li runat="server" id="liManualCliente" visible="false">
+                                            <a class="hipermenu" href='javascript:loadPdfModal("<%= ResolveClientUrl("~/manual/Manual_Clientes.pdf") %>");'>Cliente</a>
+                                        </li>
+                                        <li runat="server" id="liManualAdmin" visible="false">
+                                            <a class="hipermenu" href='javascript:loadPdfModal("<%= ResolveClientUrl("~/manual/Manual_Administrador.pdf") %>");'>Administrador</a>
+                                        </li>
+                                        <li runat="server" id="liManualProveedor" visible="false">
+                                            <a class="hipermenu" href='javascript:loadPdfModal("<%= ResolveClientUrl("~/manual/Manual_Proveedores.pdf") %>");'>Proveedor</a>
+                                        </li>
+                                        <li runat="server" id="liManualExtranet" visible="false">
+                                            <a class="hipermenu" href='javascript:loadPdfModal("<%= ResolveClientUrl("~/manual/Extranet.pdf") %>");'>Extranet</a>
+                                        </li>
+                                        <li runat="server" id="liManualOnQ" visible="false">
+                                            <a class="hipermenu" href='javascript:loadPdfModal("<%= ResolveClientUrl("~/manual/OnQ.pdf") %>");'>OnQ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="liNotif">
+                                    <asp:HyperLink ID="btnNotificaciones" runat="server" CssClass="hipermenu" NavigateUrl="javascript:;" Visible="false" data-toggle="popover" title="Notificaciones" data-content="" data-placement="bottom"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>&nbsp;<span id="countNotifications" runat="server" class="badge badge-outline"></span></asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:LinkButton ID="hlWebSettings" runat="server" CssClass="hipermenu" 
+                                        OnClick="hlWebSettings_Click" CausesValidation="false" Visible="false" >
+                                        <span class="fa fa-cog fa-lg" aria-hidden="true"></span>
+                                    </asp:LinkButton>
+                                </li>
+                            </ul>
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                </div>
+            </nav>
+        <div id="divLoading">
+        </div>
+        <div class="container">
+            <div style="display: none; text-align: right;" id="divSucursal" runat="server">
+                <span class="label label-primary" style="display: inline-block !important;">
+                    <asp:Literal ID="lblUsuario" runat="server" />
+                </span>
+                <span class="label label-primary" style="display: none" runat="server" id="spanSucursal">
+                    <asp:Literal ID="lblSucursal" runat="server" />
+                </span>
+            </div>
+            <div align="center" id="divHeader" runat="server" visible="true">
+                <div id="notifications" style="display: none;">
+                    <div class="alert alert-success" role="alert" id="success-alert">
+                        <div id="success-html"></div>
+                    </div>
+                    <div class="alert alert-info" role="alert" id="info-alert">
+                        <div id="info-html"></div>
+                    </div>
+                    <div class="alert alert-warning" role="alert" id="warning-alert">
+                        <div id="warning-html"></div>
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="danger-alert">
+                        <div id="danger-html"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="auto-style1">
+                        <strong>
+                            <span id="spanTitulo">
+                                <asp:ContentPlaceHolder ID="cpTitulo" runat="server" Visible="true">
+                                </asp:ContentPlaceHolder>
+                            </span>
+                        </strong>
+                    </p>
+                </div>
+            </div>
+
+            <div id="bodyContainer">
+                <!--well-->
+                <div id="lblTimbresRestantes" runat="server" visible="false" align="right">
+                    <strong>Transacciones Restantes:</strong> <h4><span class="label label-primary">
+                        <asp:Label runat="server" Text='<%# FoliosRestantes %>'></asp:Label></span></h4>
+                </div>
+                <div align="center">
+                    <asp:ContentPlaceHolder ID="cpCuerpoSup" runat="server" />
+                </div>
+            </div>
+
+        </div>
+        <br />
+        <footer id="footer" runat="server" visible="true">
+                <div class="container">
+                    <div class="row">
+                        <asp:ContentPlaceHolder ID="cpCuerpoInf" runat="server" />
+                        <h3 class="section-subheading text-muted">
+                            <strong>DataExpress Latinoamérica &reg</strong>
+                        </h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <asp:ContentPlaceHolder ID="cpPie" runat="server" />
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <span class="copyright">Copyright &copy;  2016</span>
+                            <br />
+                            DataExpress Latinoamérica &reg;
+                            <br />
+                            Todos los derechos reservados.
+                            <br />
+                            <strong>México</strong>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            
+            </footer>
+        <div id="footer-extended">
+        </div>
+        <div class="modal fade " id="webSettings">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content ">
+                    <asp:UpdatePanel ID="upd" runat="server" ChildrenAsTriggers="true">
+                        <ContentTemplate>
+                            <div class="modal-header ">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title ">Configuración</h4>
+                            </div>
+                            <div class="modal-body rowsSpaced">
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-2">Color de fondo:</div>
+                                    <div class="col-md-3">
+                                        <div class="input-group colorpicker colorpicker-component">
+                                            <asp:TextBox ID="tbColorFondo" runat="server" CssClass="form-control" Style="text-align: center"></asp:TextBox>
+                                            <span class="input-group-addon"><i></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <asp:Button ID="bColorDefault" runat="server" CssClass="btn btn-primary" OnClick="bColorDefault_Click" Text="Default" />
+                                    </div>
+                                    <div class="col-md-3"></div>
+                                </div>
+                                <div id="divConfigGlobal" style="display: none !important" runat="server">
+                                    <div class="row"></div>
+                                    <div class="panel panel-primary" style="background-color: rgba(245, 245, 245, 0) !important">
+                                        <div class="panel panel-heading">
+                                            <h3 class="panel-title">SISTEMA</h3>
+                                        </div>
+                                        <div class="panel panel-body">
+                                            <div class="alert alert-warning" role="alert">
+                                                <strong>¡Cuidado!</strong> Modificar las configuraciones de esta sección podría afectar el funcionamiento del sistema.
+                                            </div>
+                                            <div style="max-height: 200px; overflow: auto;">
+                                                <div class="row" style="width: 100%">
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-2">Tipo de empresa:</div>
+                                                    <div class="col-md-4">
+                                                        <asp:DropDownList ID="ddlTipoEmpresa" runat="server" CssClass="form-control" Style="text-align: center" DataValueField="codigo" DataTextField="descripcion"></asp:DropDownList>
+                                                    </div>
+                                                    <div class="col-md-2">Versión de CFDI:</div>
+                                                    <div class="col-md-2">
+                                                        <asp:DropDownList ID="ddlVersionCfdi" runat="server" CssClass="form-control" Style="text-align: center">
+                                                            <asp:ListItem Value="3.2" Text="3.2"></asp:ListItem>
+                                                            <asp:ListItem Value="3.3" Text="3.3"></asp:ListItem>
+                                                        </asp:DropDownList>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                </div>
+                                                <div class="row" style="width: 100%">
+                                                    <div class="col-md-12">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">Conectores Automáticos</div>
+                                                            <div class="panel-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading">POS (Punto de Venta)</div>
+                                                                            <div class="panel-body" style="text-align: left !important">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <asp:CheckBoxList ID="chkPos" runat="server">
+                                                                                            <asp:ListItem Value="micros" Text="Micros (Oracle)"></asp:ListItem>
+                                                                                            <asp:ListItem Value="maitred" Text="Maitre'D (Posera)"></asp:ListItem>
+                                                                                            <asp:ListItem Value="innsist-pos" Text="Innsist (TCA)"></asp:ListItem>
+                                                                                            <asp:ListItem Value="smh-pos" Text="SMH (Data Express)"></asp:ListItem>
+                                                                                        </asp:CheckBoxList>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading">PMS (Sistema Hotelero)</div>
+                                                                            <div class="panel-body" style="text-align: left !important">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <asp:CheckBoxList ID="chkPms" runat="server">
+                                                                                            <asp:ListItem Value="opera" Text="Opera (Micros/Oracle)"></asp:ListItem>
+                                                                                            <asp:ListItem Value="onq" Text="OnQ (Hilton)"></asp:ListItem>
+                                                                                            <asp:ListItem Value="innsist-pms" Text="Innsist (TCA)"></asp:ListItem>
+                                                                                            <asp:ListItem Value="hodeline" Text="Hodeline (Multinet)"></asp:ListItem>
+                                                                                            <asp:ListItem Value="smh-pms" Text="SMH (Data Express)"></asp:ListItem>
+                                                                                        </asp:CheckBoxList>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading">ERP (Recursos Empresariales)</div>
+                                                                            <div class="panel-body" style="text-align: left !important">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <asp:CheckBoxList ID="chkErp" runat="server">
+                                                                                            <asp:ListItem Value="oracle" Text="Oracle"></asp:ListItem>
+                                                                                            <asp:ListItem Value="sap" Text="SAP"></asp:ListItem>
+                                                                                        </asp:CheckBoxList>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-1">Otros:</div>
+                                                                    <div class="col-md-11">
+                                                                        <asp:TextBox ID="tbOtrosErp" runat="server" data-role="tagsinput" placeholder="tag,tag,tag"></asp:TextBox>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="width: 100%">
+                                                    <div class="col-md-12">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">Módulos</div>
+                                                            <div class="panel-body">
+                                                                <div class="alert alert-info">En construcción...</div>
+                                                                <div style="display: none">
+                                                                    <!--CONTENT GOES HERE-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <asp:LinkButton ID="btnSaveWebSettings" runat="server" CssClass="btn btn-primary" OnClick="btnSaveWebSettings_Click" Text="Guardar"></asp:LinkButton>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <asp:SqlDataSource ID="SqlDataSourceTipoEmpresa" runat="server" SelectCommand="SELECT codigo, descripcion FROM Cat_Catalogo1_C WHERE tipo = 'EmpresaTipo'"></asp:SqlDataSource>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/jquery-1.12.4.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/moment.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/es.js") %>'></script>
+        <%--<script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-datepicker.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-datepicker.es.min.js") %>'></script>--%>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-datetimepicker.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootbox.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/jquery.bootstrap.wizard.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bs.pagination.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-toggle.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-filestyle.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/jqBootstrapValidation.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/download.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/jquery.bootstrap-touchspin.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-hover-dropdown.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/dropzone.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/summernote.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/summernote-es-ES.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/clipboard.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-submenu.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/Blob.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/FileSaver.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-colorpicker.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/ie10-viewport-bug-workaround.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/ie-emulation-modes-warning.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/color-thief.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/common.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/paintbrush.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-select.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-select-es_ES.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/bootstrap-tagsinput.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/select2/select2.min.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/select2/es.js") %>'></script>
+        <script type="text/javascript" src='<%= ResolveClientUrl("~/js/jquery.toastmessage.js") %>'></script>
+
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () { });
+            Sys.Application.add_load(bindEvents);
+            Sys.Application.add_init(appl_init);
+            function appl_init() {
+                var pgRegMgr = Sys.WebForms.PageRequestManager.getInstance();
+                pgRegMgr.add_beginRequest(beforeAsyncPostBack);
+                pgRegMgr.add_endRequest(afterAsyncPostBack);
+                Sys.Net.WebRequestManager.add_invokingRequest(beforePostBack);
+                Sys.Net.WebRequestManager.add_completedRequest(afterPostBack);
+            }
+            function beforeAsyncPostBack(sender, e) {
+                localStorage.setItem('activeAccordionGroup', '');
+                var active = [];
+                $("[id*='accordion'] .in").each(function () {
+                    active.push($(this).attr('id'));
+                });
+                localStorage.setItem('activeAccordionGroup', JSON.stringify(active));
+            }
+            function afterAsyncPostBack(sender, e) {
+                var data = JSON.parse(localStorage.getItem("activeAccordionGroup"));
+                if (data != undefined && data != null && data != []) {
+                    $("[id*='accordion'] .panel-collapse").removeClass('in');
+                    $.each(data, function (index, value) {
+                        $("#" + value).addClass("in");
+                    });
+                }
+            }
+            function beforePostBack(sender, e) {
+                beforeAsyncPostBack(sender, e);
+                $("div#divLoading").addClass('show');
+            }
+            function afterPostBack(sender, e) {
+                afterAsyncPostBack(sender, e);
+                $("div#divLoading").removeClass('show');
+            }
+            function bindEvents() {
+                $.fn.hasAttr = function (name) {
+                    return this.attr(name) !== undefined;
+                };
+                $.fn.redraw = function () {
+                    $(this).each(function () {
+                        var redraw = this.offsetHeight;
+                    });
+                };
+                $(document).ready(function () {
+                    var defaultColor = '<%= System.Configuration.ConfigurationManager.AppSettings["ColorDefault"] != null ? System.Configuration.ConfigurationManager.AppSettings["ColorDefault"].ToString() : "90,175,212" %>';
+                    if (defaultColor == undefined || defaultColor == null || defaultColor == '') {
+                        defaultColor = '90,175,212';
+                    }
+                    $('#bodyMaster').css('background', 'linear-gradient(rgba(' + defaultColor + ',0.75),rgba(' + defaultColor + ',0.75)),url("' + ResolveUrl('~/imagenes/backgrounds/trans.jpg') + '") no-repeat center center fixed !important');
+                });
+                $(document).ready(function () {
+                    $('#rootwizard').bootstrapWizard({
+                        tabClass: 'nav nav-pills nav-noaction',
+                        onNext: function (tab, navigation, index) {
+                            localStorage.setItem('lastTab', index);
+                            return (Boolean(validateTab(index)));
+                        },
+                        onTabShow: function (tab, navigation, index) {
+                            var $total = navigation.find('li').length;
+                            var $current = index + 1;
+                            var $percent = ($current / $total) * 95;
+                            $('#rootwizard .progress-bar').css({ width: $percent + '%' });
+                        },
+                        onTabClick: function (tab, navigation, index) {
+                            return false; // <---- COMENTAR PARA TESTING
+                        },
+                        onPrevious: function (tab, navigation, index) {
+                            localStorage.setItem('lastTab', index);
+                        },
+                        onFirst: function (tab, navigation, index) {
+                            localStorage.setItem('lastTab', index);
+                        },
+                        onLast: function (tab, navigation, index) {
+                            localStorage.setItem('lastTab', index);
+                            return (Boolean(validateTab(index)));
+                        }
+                    });
+                });
+                $(document).ready(function () {
+                    $("input[type='checkbox']").each(function () {
+                        var chk = $(this);
+                        var checkStrings = 'SI|NO';
+                        var span = chk.closest("span");
+                        if (span.hasAttr("checkStrings")) {
+                            checkStrings = span.attr("checkStrings");
+                        }
+                        var size = span.attr("size") || 'mini';
+                        var splitted = checkStrings.split('|', 2);
+                        var onString = splitted[0];
+                        var offString = splitted[1];
+                        chk.bootstrapToggle({
+                            on: onString,
+                            off: offString,
+                            size: size
+                        });
+                        chk.change(function () {
+                            chk.click();
+                        });
+                        var $label = $("label[for='" + chk.attr("id") + "']");
+                        var labelText = $label.text();
+                        if (!startsWith(labelText, '\xa0')) {
+                            $label.text('\xa0' + labelText + '\xa0');
+                        }
+
+                    });
+                });
+                $(document).ready(function () {
+                    var chkPostBack = '<%= Page.IsPostBack ? "true" : "false" %>';
+                    if (chkPostBack == 'true') {
+                        var lastTab = localStorage.getItem('lastTab');
+                        if (lastTab != undefined) {
+                            $('#rootwizard').bootstrapWizard('show', lastTab);
+                        }
+                    } else {
+                        clearNotifications();
+                    }
+                });
+                $(document).ready(function () {
+                    var minwidth = '600px';
+                    $('[data-toggle="popover"]').popover({ trigger: "manual", html: true, animation: false })
+                        .on("mouseenter", function () {
+                            var _this = this;
+                            $(this).popover("show");
+                            $(".popover").on("mouseleave", function () {
+                                $(_this).popover('hide');
+                            });
+                        }).on("mouseleave", function () {
+                            var _this = this;
+                            setTimeout(function () {
+                                if (!$(".popover:hover").length) {
+                                    $(_this).popover("hide");
+                                }
+                            }, 100);
+                        }).on("show.bs.popover", function (e) {
+                            $(this).data("bs.popover").tip().css({ "min-width": minwidth }, { "overflow-y": "auto" }, { "max-width": "none" });
+                        });
+                });
+                $(document).ready(function () {
+                    //$(".input-group.date").datepicker({
+                    //    language: "es",
+                    //    todayBtn: "linked",
+                    //    autoclose: true,
+                    //    todayHighlight: true,
+                    //    format: "yyyy/mm/dd",
+                    //    orientation: "bottom auto"
+                    //});
+                    //$(".input-group.date-month").datepicker({
+                    //    language: "es",
+                    //    todayBtn: "linked",
+                    //    autoclose: true,
+                    //    todayHighlight: true,
+                    //    format: "yyyy/mm",
+                    //    orientation: "bottom auto"
+                    //});
+                    $(".input-group.date").each(function () {
+                        var current = $(this).find("input.form-control:first-child");
+                        $(this).datetimepicker({
+                            format: 'YYYY/MM/DD',
+                            useCurrent: false,
+                            allowInputToggle: true,
+                            showTodayButton: true,
+                            locale: 'es',
+                            widgetPositioning: {
+                                horizontal: 'auto',
+                                vertical: 'bottom'
+                            },
+                            icons: {
+                                today: 'fa fa-calendar-check-o'
+                            }
+                        }).on('dp.change', function (e) {
+                            current.change();
+                        });
+                    });
+                    $(".input-group.date-month").each(function () {
+                        var current = $(this).find("input.form-control:first-child");
+                        $(this).datetimepicker({
+                            format: 'YYYY/MM',
+                            useCurrent: false,
+                            allowInputToggle: true,
+                            locale: 'es',
+                            widgetPositioning: {
+                                horizontal: 'auto',
+                                vertical: 'bottom'
+                            }
+                        }).on('dp.change', function (e) {
+                            current.change();
+                        });
+                    });
+                    $(".input-group.datetime").each(function () {
+                        var current = $(this).find("input.form-control:first-child");
+                        $(this).datetimepicker({
+                            format: 'YYYY-MM-DDTHH:mm:ss',
+                            useCurrent: false,
+                            allowInputToggle: true,
+                            locale: 'es',
+                            widgetPositioning: {
+                                horizontal: 'auto',
+                                vertical: 'bottom'
+                            }
+                        }).on('dp.change', function (e) {
+                            current.change();
+                        });
+                    });
+                });
+                $(document).ready(function () {
+                    var clipboard = new Clipboard('.btn-clip');
+                    clipboard.on('success', function (e) {
+                        e.clearSelection();
+                        $(e.trigger).tooltip({
+                            title: 'Copiado!',
+                            trigger: 'manual',
+                            placement: 'auto left',
+                        }).tooltip('show');
+                        setTimeout("$('#" + $(e.trigger).attr('id') + "').tooltip('destroy');", 1000);
+                    });
+                });
+                $(document).ready(function () {
+                    $("div.dropzone").each(function () {
+                        var _url = $(this).attr('url');
+                        var _urlAjax = $(this).attr('urlAjax');
+                        var _maxFiles = $(this).attr('maxFiles');
+                        var _maxFileSize = $(this).attr('maxFileSizeMb');
+                        var _message = $(this).attr('message');
+                        var _extraParam = $(this).attr('extraParam');
+                        var _blockedButton = $(this).attr('idBlockedButton');
+                        $(this).dropzone({
+                            paramName: "file",
+                            params: {
+                                parameter: _extraParam || null
+                            },
+                            url: _url,
+                            maxFilesize: _maxFileSize || 10, // MB
+                            maxFiles: _maxFiles || 10,
+                            fallback: null,
+                            dictDefaultMessage: _message || "Drop files here or click to upload.",
+                            autoProcessQueue: true,
+                            init: function () {
+                                var myDropZone = this;
+                                myDropZone.on("maxfilesexceeded", function (data) {
+                                    alertBootBox("Error al subir archivo '" + file.name + "': Se ha excedido el número máximo de archivos", 4);
+                                });
+                                myDropZone.on("processing", function (file) {
+                                    //alert("on processing");
+                                });
+                                myDropZone.on("complete", function (file) {
+                                    var _this = this;
+                                    if (_urlAjax != undefined && _urlAjax != "") {
+                                        if (_blockedButton != undefined && _blockedButton != "") {
+                                            var element = document.getElementById(_blockedButton);
+                                            element.style.display = "none";
+                                        }
+                                        var accepted = myDropZone.getAcceptedFiles();
+                                        var outterArray = [];
+                                        var inserted = false;
+                                        for (var i = 0, len = accepted.length; i < len; i++) {
+                                            var fileLoop = accepted[i];
+                                            getBase64(fileLoop, function (fileBase64, fileName) {
+                                                var innerArray = [fileName, fileBase64];
+                                                outterArray.push(innerArray);
+                                                inserted = outterArray.length == accepted.length;
+                                            });
+                                        }
+                                        setTimeout(function () {
+                                            if (inserted == true) {
+                                                var result = sendFilesFromDropZone(_extraParam, outterArray);
+                                                if (!result) {
+                                                    _this.removeFile(file);
+                                                }
+                                                if (_blockedButton != undefined && _blockedButton != "") {
+                                                    var element = document.getElementById(_blockedButton);
+                                                    element.style.display = "block";
+                                                }
+                                            }
+                                        }, 500);
+                                    }
+                                });
+                                myDropZone.on("success", function (file, serverResponse) {
+                                    try {
+                                        // var removeButton = file.previewElement.querySelector("button#removeButton");
+                                        // file.previewElement.removeChild(removeButton);
+                                    } catch (err) {
+                                        // alert("Error al eliminar button#removeButton: " + err);
+                                    } finally {
+                                        // alertBootBox(serverResponse, 1);
+                                    }
+                                });
+                                myDropZone.on("removedfile", function (file) {
+                                    // alert("Archivo '" + file.name + "' eliminado");
+                                });
+                                myDropZone.on("error", function (file, errorMessage) {
+                                    alertBootBox("Error al subir archivo '" + file.name + "': " + errorMessage, 4);
+                                    this.removeFile(file);
+                                });
+                                myDropZone.on("addedfile", function (file) {
+                                    var removeButton = Dropzone.createElement("<button id='removeButton' class='btn btn-danger btn-xs'><i class='fa fa-times' aria-hidden='true'></i>&nbsp;Quitar</button>");
+                                    var _this = this;
+                                    removeButton.addEventListener("click", function (e) {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        _this.removeFile(file);
+                                    });
+                                    file.previewElement.appendChild(removeButton);
+                                });
+                            }
+                        });
+                    });
+                });
+                $(document).ready(function () {
+                    $(":file").not(".dz-hidden-input").filestyle({
+                        buttonText: 'Examinar',
+                        buttonName: "btn btn-primary",
+                        buttonBefore: true,
+                        placeholder: "Ningún archivo seleccionado",
+                    });
+                });
+                $(document).ready(function () {
+                    $(".input-number").each(function () {
+                        var min = $(this).attr('min');
+                        var max = $(this).attr('max');
+                        if (!$(this).hasAttr("readonly")) {
+                            $(this).TouchSpin({
+                                min: min || -1000000000,
+                                max: max || 1000000000,
+                                stepinterval: 50,
+                                maxboostedstep: 10000000
+                            });
+                        }
+                    });
+                });
+                $(document).ready(function () {
+                    $(".input-decimal").each(function () {
+                        var min = $(this).attr('min');
+                        var max = $(this).attr('max');
+                        if (!$(this).hasAttr("readonly")) {
+                            $(this).TouchSpin({
+                                min: min || -1000000000,
+                                max: max || 1000000000,
+                                step: 0.1,
+                                decimals: 2,
+                                boostat: 5,
+                                maxboostedstep: 10,
+                                forcestepdivisibility: 'none'
+                            });
+                        }
+                    });
+                });
+                $(document).ready(function () {
+                    $(".input-percent").each(function () {
+                        var min = $(this).attr('min');
+                        var max = $(this).attr('max');
+                        if (!$(this).hasAttr("readonly")) {
+                            $(this).TouchSpin({
+                                min: min || -1000000000,
+                                max: max || 1000000000,
+                                step: 0.1,
+                                decimals: 2,
+                                boostat: 5,
+                                maxboostedstep: 10,
+                                postfix: '%',
+                                forcestepdivisibility: 'none'
+                            });
+                        }
+                    });
+                });
+                $(document).ready(function () {
+                    $(".input-money").each(function () {
+                        var min = $(this).attr('min');
+                        var max = $(this).attr('max');
+                        if (!$(this).hasAttr("readonly")) {
+                            $(this).TouchSpin({
+                                min: min || -1000000000,
+                                max: max || 1000000000,
+                                step: 0.1,
+                                decimals: 2,
+                                boostat: 5,
+                                maxboostedstep: 10,
+                                prefix: '$',
+                                forcestepdivisibility: 'none'
+                            });
+                        }
+                    });
+                });
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip({
+                        html: true,
+                        trigger: 'hover'
+                    });
+                });
+                //$(document).ready(function () {
+                //    $('select:not([onchange*="__doPostBack"])').each(function () {
+                //        var disabled = !$(this).hasAttr("editable");
+                //        var jsExtra = disabled ? "disabled " : "";
+                //    });
+                //});
+                $(document).ready(function () {
+                    $("select.bootstrap-select").selectpicker({
+                        liveSearch: true,
+                        size: 5,
+                        liveSearchPlaceholder: "Escriba para filtrar...",
+                        showSubtext: true
+                    });
+                });
+                $(document).ready(function () {
+                    $('.select-large-4').select2({
+                        minimumInputLength: 4,
+                        language: 'es',
+                        theme: "bootstrap",
+                        placeholder: 'Seleccione una opción',
+                        matcher: function (params, data) {
+                            params.term = params.term || '';
+                            if (data.text.toUpperCase().indexOf(params.term.toUpperCase()) == 0) {
+                                return data;
+                            }
+                            return false;
+                        },
+                        width: '100%'
+                    });
+                    $('.select-large-1').select2({
+                        minimumInputLength: 1,
+                        language: 'es',
+                        theme: "bootstrap",
+                        placeholder: 'Seleccione una opción',
+                        matcher: function (params, data) {
+                            params.term = params.term || '';
+                            if (data.text.toUpperCase().indexOf(params.term.toUpperCase()) == 0) {
+                                return data;
+                            }
+                            return false;
+                        },
+                        width: '100%'
+                    });
+                });
+                $(document).ready(function () {
+                    $("select.bootstrap-select-multiple").each(function () {
+                        var select = $(this);
+                        select.attr('multiple', '');
+                        select.selectpicker({
+                            showSubtext: true
+                        }).on('changed.bs.select', function (event, clickedIndex, newValue, oldValue) {
+                            var selected = $(this).val();
+                            var selectedString = selected.join();
+                            var setControlID = select.attr('SetControlID');
+                            var setControl = $('#' + setControlID);
+                            if (setControl != null & setControl != undefined) {
+                                setControl.val(selectedString);
+                            }
+                        }).on('loaded.bs.select', function () {
+                            var setControlID = select.attr('SetControlID');
+                            var setControl = $('#' + setControlID);
+                            if (setControl != null & setControl != undefined) {
+                                var selectedJoin = setControl.val();
+                                if (selectedJoin != "") {
+                                    var selected = selectedJoin.split(',');
+                                    select.selectpicker('val', selected);
+                                }
+                            }
+                        });
+                    });
+                });
+                $(document).ready(function () {
+                    $('input[type=text].upper').keyup(function () {
+                        ToUpper($(this));
+                    });
+                });
+                $(document).ready(function () {
+                    $("table.table").each(function () {
+                        var isFixed = $(this).hasAttr("fixed-height");
+                        var isWrapped = $(this).parent("div.table-responsive").length;
+                        if (!isWrapped) {
+                            $(this).wrap(function () {
+                                return "<div class='table-responsive" + (isFixed ? " table-fixed" : "") + "'></div>";
+                            });
+                        }
+                        $(this).find('td,th').css('text-align', 'center');
+                    });
+                });
+                $(document).ready(function () {
+                    $('[data-submenu]').submenupicker();
+                    $('.colorpicker').colorpicker({
+                        format: 'rgb',
+                    });
+                });
+                $(document).ready(function () {
+                    $('.carousel-fixed').each(function () {
+                        var item = $(this);
+                        var ID = item.attr('id');
+                        item.carousel({
+                            interval: false
+                        }).on('slid.bs.carousel', function () {
+                            checkitemCarousel(item);
+                        });
+                        checkitemCarousel(item);
+                    });
+                });
+                $(document).ready(function () {
+                    $('[data-role="tagsinput"]').tagsinput({
+                        trimValue: true,
+                        tagClass: 'label label-primary',
+                        confirmKeys: [188]
+                    });
+                });
+            }
+            function checkitemCarousel(item)                        // check function
+            {
+                var $this = item;
+                var ID = '#' + $this.attr('id');
+                if ($('.carousel-inner .item:first').hasClass('active')) {
+                    // Hide left arrow
+                    $this.children('.left.carousel-control').hide();
+                    // But show right arrow
+                    $this.children('.right.carousel-control').show();
+                } else if ($('.carousel-inner .item:last').hasClass('active')) {
+                    // Hide right arrow
+                    $this.children('.right.carousel-control').hide();
+                    // But show left arrow
+                    $this.children('.left.carousel-control').show();
+                } else {
+                    $this.children('.carousel-control').show();
+                }
+            }
+            function ToUpper(textbox) {
+                var actual = textbox.val().toUpperCase();
+                textbox.val(actual);
+            }
+            function resaltar(id) {
+                $('#navBarMenu li.active-current').attr('class', '');
+                try {
+                    $("#navBarMenu li[id*=" + id + "]").attr('class', 'active-current');
+                }
+                catch (err) {
+                    // Error handling
+                }
+
+            }
+            function createsummernote() {
+                var btnEmision = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-upload"><span class="caret"></i>',
+                            tooltip: "Variables de Emisión",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@FechaEmision">Fecha de Emisión</a></li>\
+<li><a href="#" data-value="@FechaAutorizacion">Fecha de Autorización</a></li>\
+<li><a href="#" data-value="@NumeroAutorizacion">UUID</a></li>\
+<li><a href="#" data-value="@Folio">Folio</a></li>\
+<li><a href="#" data-value="@Serie">Serie</a></li>\
+<li><a href="#" data-value="@OrderDsid">Numero de Orden + DSID</a></li>\
+<li><a href="#" data-value="@TipoDocumento">Tipo de Comprobante</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnPagos = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-credit-card"><span class="caret"></i>',
+                            tooltip: "Variables de Pagos",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@FechaEmision">Fecha de Emisión</a></li>\
+<li><a href="#" data-value="@FechaAutorizacion">Fecha de Autorización</a></li>\
+<li><a href="#" data-value="@NumeroAutorizacion">UUID</a></li>\
+<li><a href="#" data-value="@FechaPago">Fecha del Pago</a></li>\
+<li><a href="#" data-value="@MontoPago">Monto del Pago</a></li>\
+<li><a href="#" data-value="@FormaPago">Forma de Pago</a></li>\
+<li><a href="#" data-value="@TablaFacturasRelacionadas">Tabla de Facturas Relacionadas</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnRecepcion = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-download"><span class="caret"></i>',
+                            tooltip: "Variables de Recepcion",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@NombreReceptor">Nombre de Receptor</a></li>\
+<li><a href="#" data-value="@RFCReceptor">RFC de Receptor</a></li>\
+<li><a href="#" data-value="@FechaEmision">Fecha de Emisión</a></li>\
+<li><a href="#" data-value="@FechaAutorizacion">Fecha de Autorización</a></li>\
+<li><a href="#" data-value="@NumeroAutorizacion">UUID</a></li>\
+<li><a href="#" data-value="@Folio">Folio</a></li>\
+<li><a href="#" data-value="@Serie">Serie</a></li>\
+<li><a href="#" data-value="@TipoDocumento">Tipo de Comprobante</a></li>\
+<li><a href="#" data-value="@DetallesError">Error de Validación</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnWorkflow = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-download"><span class="caret"></i>',
+                            tooltip: "Variables de Recepción (Workflow)",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@NombreReceptor">Nombre de Receptor</a></li>\
+<li><a href="#" data-value="@RFCReceptor">RFC de Receptor</a></li>\
+<li><a href="#" data-value="@FechaEmision">Fecha de Emisión</a></li>\
+<li><a href="#" data-value="@FechaAutorizacion">Fecha de Autorización</a></li>\
+<li><a href="#" data-value="@NumeroAutorizacion">UUID</a></li>\
+<li><a href="#" data-value="@Folio">Folio</a></li>\
+<li><a href="#" data-value="@Serie">Serie</a></li>\
+<li><a href="#" data-value="@TipoDocumento">Tipo de Comprobante</a></li>\
+<li><a href="#" data-value="@Validaciones">Registro de validaciones</a></li>\
+<li><a href="#" data-value="@Status">Status Actual</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnOpera = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-exchange"><span class="caret"></i>',
+                            tooltip: "Variables de Error en Opera",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@Folio">Folio</a></li>\
+<li><a href="#" data-value="@Serie">Serie</a></li>\
+<li><a href="#" data-value="@FechaEmision">Fecha de Emisión</a></li>\
+<li><a href="#" data-value="@Reserva">Folio de Reservación</a></li>\
+<li><a href="#" data-value="@Habitacion">No. de Habitación</a></li>\
+<li><a href="#" data-value="@RFCCliente">RFC de Cliente</a></li>\
+<li><a href="#" data-value="@Huesped">Nombre de Huésped</a></li>\
+<li><a href="#" data-value="@Descripcion">Descripción Error</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnWeb = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-cloud"><span class="caret"></i>',
+                            tooltip: "Variables de Error en la Web",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@FechaError">Fecha de Error</a></li>\
+<li><a href="#" data-value="@MensajeError">Mensaje de Error</a></li>\
+<li><a href="#" data-value="@DetallesError">Detalles Técnicos</a></li>\
+<li><a href="#" data-value="@Emisor">Nombre de Emisor</a></li>\
+<li><a href="#" data-value="@URLError">Url Error</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnTimbres = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-hashtag"><span class="caret"></i>',
+                            tooltip: "Variables de Timbres",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnCertificado = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-lock"><span class="caret"></i>',
+                            tooltip: "Variables de Certificado",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnHelpDesk = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-question-circle"><span class="caret"></i>',
+                            tooltip: "Variables de HelpDesk",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@RfcEmisor">RFC del Emisor</a></li>\
+<li><a href="#" data-value="@Emisor">Nombre de Emisor</a></li>\
+<li><a href="#" data-value="@NombreEmpleado">Nombre del Usuario</a></li>\
+<li><a href="#" data-value="@FechaTicket">Fecha de Ticket</a></li>\
+<li><a href="#" data-value="@CodigoTicket">Código de Ticket</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnActivacion = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-unlock-alt"><span class="caret"></i>',
+                            tooltip: "Variables de Activación de Cuenta",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@NombreEmpleado">Nombre del Usuario</a></li>\
+<li><a href="#" data-value="@Username">Código de Usuario</a></li>\
+<li><a href="#" data-value="@Contrasena">Contraseña</a></li>\
+<li><a href="#" data-value="@TokenActivacion">Link de Activación</a></li>\
+<li><a href="#" data-value="@RfcReceptor">RFC del Receptor</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                var btnActivada = function (context) {
+                    var ui = $.summernote.ui;
+                    var $emojiList = ui.buttonGroup([
+                        ui.button({
+                            className: 'dropdown-toggle',
+                            contents: '<i class="fa fa-unlock"><span class="caret"></i>',
+                            tooltip: "Variables de Cuenta Activada/Olvido de Contraseña",
+                            data: {
+                                toggle: 'dropdown'
+                            }
+                        }),
+                        ui.dropdown({
+                            className: 'dropdown-style',
+                            contents: '\
+<li><a href="#" data-value="@NombreEmpleado">Nombre del Usuario</a></li>\
+<li><a href="#" data-value="@Username">Código de Usuario</a></li>\
+<li><a href="#" data-value="@Contrasena">Contraseña</a></li>',
+                            callback: function ($dropdown) {
+                                $dropdown.find('li').each(function () {
+                                    $(this).click(function () {
+                                        appendBtnText($(this).children("a").attr('data-value'));
+                                    });
+                                });
+                            }
+                        })]);
+                    return $emojiList.render();
+                }
+                $('#summernoteDiv').summernote({
+                    lang: 'es-ES',
+                    height: 300,
+                    minHeight: 300,
+                    maxHeight: 600,
+                    focus: true,
+                    placeholder: 'Escriba el mensaje aquí',
+                    toolbar: [
+                        ['style', ['style']],
+                        ['font', ['bold', 'underline', 'clear']],
+                        ['fontname', ['fontname']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['table', ['table']],
+                        ['insert', ['link', 'picture', 'video']],
+                        ['view', ['fullscreen', 'codeview', 'help']],
+                        ['vars', ['emision', 'pagos', 'recepcion', 'workflow', 'opera', 'web', 'timbres', 'cert', 'helpdesk', 'activacion', 'activada']]
+                    ],
+                    popover: {
+                        image: [
+                            ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+                            ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                            ['remove', ['removeMedia']]
+                        ],
+                        link: [
+                            ['link', ['linkDialogShow', 'unlink']]
+                        ],
+                        air: [
+                            ['color', ['color']],
+                            ['font', ['bold', 'underline', 'clear']],
+                            ['para', ['ul', 'paragraph']],
+                            ['table', ['table']],
+                            ['insert', ['link', 'picture']]
+                        ]
+                    },
+                    buttons: {
+                        emision: btnEmision,
+                        pagos: btnPagos,
+                        recepcion: btnRecepcion,
+                        workflow: btnWorkflow,
+                        opera: btnOpera,
+                        web: btnWeb,
+                        timbres: btnTimbres,
+                        cert: btnCertificado,
+                        helpdesk: btnHelpDesk,
+                        activacion: btnActivacion,
+                        activada: btnActivada
+                    }
+                });
+            }
+            function ReformatTextEditor() {
+                var txtAntes = $('#summernoteDiv').summernote('code');
+                if (endsWith(txtAntes, "</p>")) {
+                    txtAntes = txtAntes.replace(/<p>(?![\s\S]*<p>)/, '').replace(/<\/p>(?![\s\S]*<\/p>)/, '');
+                }
+                if (endsWith(txtAntes, "<br>")) {
+                    txtAntes = txtAntes.replace(/<br>(?![\s\S]*<br>)/, '');
+                }
+                return txtAntes;
+            }
+            function setSn(txt, idHf) {
+                createsummernote();
+                $('#summernoteDiv').summernote('code', txt);
+                $(idHf).val(txt);
+            }
+            function appendBtnText(txt) {
+                $('#summernoteDiv').summernote('editor.insertText', txt);
+            }
+            function clearNotifications() {
+                $("#success-alert").hide();
+                $("#info-alert").hide();
+                $("#warning-alert").hide();
+                $("#danger-alert").hide();
+                $("#notifications").css('display', 'inline');
+            }
+            function validateFinish(buttonId) {
+                var index = ($('#rootwizard').bootstrapWizard('currentIndex')) + 1; //ZERO based index
+                var valid = (Boolean(validateTab(index)));
+                if (valid) {
+                    localStorage.setItem('lastTab', 0);
+                    $('#rootwizard .progress-bar').css({ width: '100%' });
+                    SimulateClick(buttonId);
+                    $('#rootwizard').bootstrapWizard('show', 0);
+                }
+                return valid;
+            }
+            function LimpiarFiltros(idBody, idModal) {
+                $('#' + idBody + ' input[type="text"]').val('');
+                $('#' + idBody + ' select').each(function () {
+                    var defaultVal = $(this).prop('defaultSelected');
+                    $(this).val(defaultVal);
+                });
+                $('#' + idModal).modal('show');
+                return false;
+            }
+            function SimulateClick(buttonId) {
+                var button = document.getElementById(buttonId);
+                if (button) {
+                    if (button.click) {
+                        button.click();
+                    } else if (button.onclick) {
+                        button.onclick();
+                    }
+                }
+            }
+            function validateTab(index) {
+                var mensajes = [];
+                var control = true;
+                $("#tab" + index + " .validationGroup").each(function () {
+                    if ($(this).hasAttr("habilitado")) {
+                        var valid = Page_ClientValidate($(this).attr("value"));
+                        if (!valid) {
+                            control &= false;
+                            if ($(this).hasAttr("mensaje")) {
+                                mensajes.push($(this).attr("mensaje"));
+                            }
+                        }
+                    }
+                });
+                if (!control) {
+                    if (mensajes.length == 0) {
+                        mensajes.push("Verifique que todos los datos sean correctos");
+                    }
+                    alertBootBox(mensajes.join("<br />"), 4);
+                }
+                return control;
+            }
+            function alertBootBoxTitle(mensaje, titulo, callbackStringInput, size, customWidth) {
+                var callbackString = (callbackStringInput != '' ? callbackStringInput : '') || '';
+                var tam = (size != '' ? size : null) || null;
+                var width = (customWidth != '' ? customWidth : null) || null;
+                var dialog = bootbox.dialog({
+                    size: tam,
+                    message: mensaje,
+                    title: titulo,
+                    onEscape: function () {
+                        eval(callbackString);
+                    },
+                    buttons: {
+                        main: {
+                            label: "Cerrar",
+                            className: "btn-primary",
+                            callback: function () {
+                                eval(callbackString);
+                            }
+                        }
+                    }
+                });
+                if (width != null) {
+                    dialog.find("div.modal-dialog").width(width);
+                }
+                dialog.off("shown.bs.modal");
+            }
+            /**
+             * Muestra mensaje de alerta de Bootbox
+             * @param {String} mensaje El mensaje a mostrar (Puede contener HTLM)
+             * @param {Number} messageLevel Nivel de alerta a mostrar (1:success, 2:information, 3:question, 4:warning, 5:error)
+             * @param {String} callbackStringInput (Opcional) Codigo JS a ejecutar cuando se cierra la alerta
+             * @param {String} size (Opcional) Tamaño de la alerta
+             */
+            function alertBootBox(mensaje, messageLevel, callbackStringInput, size) {
+                messageLevel = (messageLevel == undefined) ? 0 : messageLevel;
+                var titulo = "";;
+                switch (messageLevel) {
+                    case 1: titulo = "<span class='text-success'><i class='fa fa-check fa-2x' aria-hidden='true'></i> Correcto</span>"; break;
+                    case 2: titulo = "<span class='text-primary'><i class='fa fa-info fa-2x' aria-hidden='true'></i> Información</span>"; break;
+                    case 3: titulo = "<span class='text-info'><i class='fa fa-question fa-2x' aria-hidden='true'></i> Pregunta</span>"; break;
+                    case 4: titulo = "<span class='text-warning'><i class='fa fa-exclamation fa-2x' aria-hidden='true'></i> Advertencia</span>"; break;
+                    case 5: titulo = "<span class='text-danger'><i class='fa fa-times fa-2x' aria-hidden='true'></i> Error</span>"; break;
+                }
+                alertBootBoxTitle(mensaje, titulo, callbackStringInput, size);
+            }
+            function confirmBootBox(mensaje, callbackOkInput, callbackCancelInput, size) {
+                var callbackOk = callbackOkInput || '';
+                var callbackCancel = callbackCancelInput || '';
+                var tam = size || null;
+                bootbox.confirm({
+                    size: tam,
+                    message: mensaje,
+                    callback: function (result) {
+                        if (Boolean(result)) {
+                            eval(callbackOk);
+                        } else {
+                            eval(callbackCancel);
+                        }
+                    }
+                });
+            }
+            function alertBootstrap(alertType, htmlCode) {
+                var alertBody = $("#" + alertType + "-html");
+                var alertElement = $("#" + alertType + "-alert");
+                alertBody.html(htmlCode);
+                clearNotifications();
+                alertElement.alert();
+                //alertElement.fadeTo(5000, 500).slideUp(500, function () {
+                //    alertElement.hide();
+                //});
+            }
+            function showDivOnModal(divId, titulo) {
+                var htmCode = $('#' + divId).html();
+                alertBootBoxTitle(htmCode, titulo);
+                return false;
+            }
+            function showDivOnModalLevel(divId, level) {
+                var htmCode = $('#' + divId).html();
+                alertBootBox(htmCode, level);
+                return false;
+            }
+            function endsWith(str, suffix) {
+                return str.indexOf(suffix, str.length - suffix.length) !== -1;
+            }
+            function startsWith(string, prefix) {
+                return string.slice(0, prefix.length) == prefix;
+            }
+            function cloneDivWithInputs(divId) {
+                $('#' + divId + ' input').each(function () {
+                    $(this).attr('value', $(this).val());
+                });
+                var htmlCode = $('#' + divId).html();
+                return htmlCode;
+            }
+            function ResolveUrl(url) {
+                var baseUrl = '<%= Page.ResolveClientUrl("~/") %>';
+                return url.replace("~/", baseUrl);
+            }
+            function loadUrlModal(url, args, titulo, callback, customHeightPx, customWidth) {
+                var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+                var _args = (args == undefined || args == '') ? '' : ('?' + args);
+                var _argsModal = _args + (_args == '' ? '?' : '&') + 'insidemodal=true';
+                var isLoading = true && !isChrome; //NO FUNCIONA EN CHROME
+                var outterObject = 'onload="Loaded();" onreadystatechange="Loaded();" data="' + url + _argsModal + '" width="100%" height="' + customHeightPx + 'px"';
+                var fallback = '<div class="alert alert-danger"><span>La página no pudo mostrarse en el diálogo<br/> De click <a href="' + url + args + '">aquí</a> para ir a a página solicitada</div>';
+                var loading = '<h3><span class="label label-default"><i class="fa fa-cog fa-spin fa-lg" ></i> Cargando...</span></h3>'
+                var object = '<object ' + outterObject + '>' + fallback + '</object>';
+                var div = '<div id="divLoadingPdf">' + (isLoading ? loading : '') + '</div><div>' + object + '</div><script>function Loaded(){if (document.readyState == "complete") { setTimeout(function(){ $("#divLoadingPdf").hide(); }, 1000); }}<\/script>';
+                alertBootBoxTitle(div, titulo, callback, 'large', customWidth);
+            }
+            function loadPdfModal(urlView, urlDownload) {
+                var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+                var isLoading = true && !isChrome; //NO FUNCIONA EN CHROME
+                var urlDown = urlDownload || urlView;
+                var outterObject = 'onload="Loaded();" onreadystatechange="Loaded();" data="' + urlView + '" width="100%" height="800px" type="application/pdf"';
+                var innerObject = 'data="' + ResolveUrl('~/pdfjs/web/viewer.html') + '?file=' + canonicalize(urlDown) + '" width="100%" height="800px"';
+                var fallback = '<div class="alert alert-danger"><span>El documento no pudo visualizarse en el navegador<br/><a class="btn btn-default btn-sm" aria-label="Left Align" href="' + urlDown + '"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Descargar</a></span></div>';
+                var loading = '<h3><span class="label label-default"><i class="fa fa-cog fa-spin fa-lg" ></i> Cargando...</span></h3>'
+                var object = '<object ' + outterObject + '>' + (endsWith(urlDown, ".pdf") ? '<object ' + innerObject + '>' + fallback + '</object>' : fallback) + '</object>';
+                var div = '<div id="divLoadingPdf">' + (isLoading ? loading : '') + '</div><div>' + object + '</div><script>function Loaded(){if (document.readyState == "complete") { setTimeout(function(){ $("#divLoadingPdf").hide(); }, 1000); }}<\/script>';
+                alertBootBoxTitle(div, 'Visualizar PDF', '', 'large');
+            }
+            function canonicalize(url) {
+                var div = document.createElement('div');
+                div.innerHTML = "<a></a>";
+                div.firstChild.href = url;
+                div.innerHTML = div.innerHTML;
+                return div.firstChild.href;
+            }
+            function changeToUpperCase(controlName) {
+                document.getElementById(controlName).value = document.getElementById(controlName).value.toUpperCase();
+            }
+            function isNumberKey(evt) {
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+                return true;
+            }
+            function downloadBytes(b64string, contentType, fileName, openInBrowser) {
+                var byteString = atob(b64string);
+                var ab = new ArrayBuffer(byteString.length);
+                var ia = new Uint8Array(ab);
+                for (var i = 0; i < byteString.length; i++) {
+                    ia[i] = byteString.charCodeAt(i);
+                }
+                var blob = new Blob([ia], { type: contentType });
+                if (!Boolean(openInBrowser)) {
+                    saveAs(blob, fileName);
+                } else {
+                    document.location.href = window.URL.createObjectURL(blob);
+                }
+            }
+            var keyStr = "ABCDEFGHIJKLMNOP" +
+                "QRSTUVWXYZabcdef" +
+                "ghijklmnopqrstuv" +
+                "wxyz0123456789+/" +
+                "=";
+            function decode64(input) {
+                var output = "";
+                var chr1, chr2, chr3 = "";
+                var enc1, enc2, enc3, enc4 = "";
+                var i = 0;
+
+                do {
+                    enc1 = keyStr.indexOf(input.charAt(i++));
+                    enc2 = keyStr.indexOf(input.charAt(i++));
+                    enc3 = keyStr.indexOf(input.charAt(i++));
+                    enc4 = keyStr.indexOf(input.charAt(i++));
+
+                    chr1 = (enc1 << 2) | (enc2 >> 4);
+                    chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+                    chr3 = ((enc3 & 3) << 6) | enc4;
+
+                    output = output + String.fromCharCode(chr1);
+
+                    if (enc3 != 64) {
+                        output = output + String.fromCharCode(chr2);
+                    }
+                    if (enc4 != 64) {
+                        output = output + String.fromCharCode(chr3);
+                    }
+
+                    chr1 = chr2 = chr3 = "";
+                    enc1 = enc2 = enc3 = enc4 = "";
+
+                } while (i < input.length);
+
+                return unescape(output);
+            }
+            function getBase64(file, callback) {
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function () {
+                    var result = reader.result;
+                    callback(result, file.name);
+                };
+            }
+        </script>
+    </form>
+</body>
+</html>

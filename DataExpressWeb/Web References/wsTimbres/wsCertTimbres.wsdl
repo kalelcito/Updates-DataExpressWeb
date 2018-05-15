@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ValidaCertificado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaCertificadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidaCertificadoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidaFolios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaFoliosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidaFoliosResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidaCertificadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaCertificado" />
+  </wsdl:message>
+  <wsdl:message name="ValidaCertificadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaCertificadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaFoliosSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaFolios" />
+  </wsdl:message>
+  <wsdl:message name="ValidaFoliosSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaFoliosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsCertTimbresSoap">
+    <wsdl:operation name="ValidaCertificado">
+      <wsdl:input message="tns:ValidaCertificadoSoapIn" />
+      <wsdl:output message="tns:ValidaCertificadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaFolios">
+      <wsdl:input message="tns:ValidaFoliosSoapIn" />
+      <wsdl:output message="tns:ValidaFoliosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsCertTimbresSoap" type="tns:wsCertTimbresSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaCertificado">
+      <soap:operation soapAction="http://tempuri.org/ValidaCertificado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaFolios">
+      <soap:operation soapAction="http://tempuri.org/ValidaFolios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCertTimbresSoap12" type="tns:wsCertTimbresSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaCertificado">
+      <soap12:operation soapAction="http://tempuri.org/ValidaCertificado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaFolios">
+      <soap12:operation soapAction="http://tempuri.org/ValidaFolios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCertTimbres">
+    <wsdl:port name="wsCertTimbresSoap" binding="tns:wsCertTimbresSoap">
+      <soap:address location="http://localhost:49558/wsCertTimbres.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCertTimbresSoap12" binding="tns:wsCertTimbresSoap12">
+      <soap12:address location="http://localhost:49558/wsCertTimbres.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
