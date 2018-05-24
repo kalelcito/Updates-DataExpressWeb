@@ -690,7 +690,7 @@ namespace DataExpressWeb
 
                 #region Notificaciones
                 //K
-                if (Session["IsCliente"] != null)
+                if (Session["IsCliente"] != null || Session["IsProveedor"] != null)
                 {
                     btnNotificaciones.Visible = false;
                 }
@@ -752,6 +752,16 @@ namespace DataExpressWeb
                     lblUsuario.Text = "Usuario: " + Perfil.Text;
                     divSucursal.Style["display"] = "block";
                 }
+                /*if(Session["CatalogosCfdi33"] != null)
+                {
+                    var tmp = (CatCdfi)Session["CatalogosCfdi33"];
+                    var txt = "";
+                    foreach(var item in tmp.CMetodopago)
+                    {
+                        txt += item.Value + " ";
+                    }
+                    cfdi.Text = txt;
+                }*/
             }
             else
             {

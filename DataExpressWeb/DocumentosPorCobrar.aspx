@@ -45,7 +45,10 @@
                 },
                 failure: function (response) {
                     alertBootBox('No se pudo generar el PDF<br/>Razón:' + response.d, 4);
-                }
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                     console.log(errorThrown);
+                  }
             });
         }
     </script>
@@ -210,7 +213,7 @@
                 </div>
             </div>
             <br />
-            <asp:GridView ID="gvFacturas" runat="server" AutoGenerateColumns="False" class=" table table-condensed table-responsive table-hover" OnPageIndexChanged="gvFacturas_PageIndexChanged" OnPageIndexChanging="gvFacturas_PageIndexChanging" PageSize="20" BackColor="White" AllowPaging="True" AllowSorting="True" OnRowDataBound="gvFacturas_RowDataBound" Font-Size="Smaller" GridLines="None" OnSorting="gvFacturas_SelectedIndexChanged" fixed-height DataKeyNames="ID">
+            <asp:GridView ID="gvFacturas" runat="server" AutoGenerateColumns="False" class=" table table-condensed table-responsive table-hover" OnPageIndexChanged="gvFacturas_PageIndexChanged" OnPageIndexChanging="gvFacturas_PageIndexChanging" PageSize="10" BackColor="White" AllowPaging="True" AllowSorting="True" OnRowDataBound="gvFacturas_RowDataBound" Font-Size="Smaller" GridLines="None" OnSorting="gvFacturas_SelectedIndexChanged" fixed-height DataKeyNames="ID">
                 <Columns>
                     <asp:TemplateField HeaderText="ESTADO">
                         <ItemTemplate>
@@ -571,7 +574,7 @@
                                             <!-- [Inicio] Cuarta seccion -->
                                             <div class="row" id="rowGridViewDoctosRelacionados" runat="server" style="display: none;">
                                                 <div class="col-md-12">
-                                                    <asp:GridView ID="gvDoctosRelacionados" runat="server" AutoGenerateColumns="false" CssClass="table table-condensed table-responsive table-hover" BackColor="White" AllowPaging="True" AllowSorting="True" Font-Size="Smaller" GridLines="None" DataKeyNames="uuid" fixed-height>
+                                                    <asp:GridView ID="gvDoctosRelacionados" runat="server" AutoGenerateColumns="false" CssClass="table table-condensed table-responsive table-hover" BackColor="White" AllowPaging="false" AllowSorting="True" Font-Size="Smaller" GridLines="None" DataKeyNames="uuid" fixed-height>
                                                         <Columns>
                                                             <asp:BoundField DataField="Uuid" HeaderText="UUID" />
                                                             <asp:BoundField DataField="Serie" HeaderText="Serie" />

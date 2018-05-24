@@ -609,6 +609,13 @@ namespace DataExpressWeb
             catch (Exception ex)
             {
                 (Master as SiteMaster).MostrarAlerta(this, "El comprobante no se creó correctamente<br/>" + ex.Message, 4, null);
+                if (ddlBusq.SelectedValue.Equals("1"))
+                {
+                }
+                else if (ddlBusq.SelectedValue.Equals("2"))
+                {
+                    ddlBusq.SelectedValue = "1";
+                }
             }
         }
 

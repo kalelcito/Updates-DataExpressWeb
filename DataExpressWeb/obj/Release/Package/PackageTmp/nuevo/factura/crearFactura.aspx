@@ -229,19 +229,19 @@
                     dataAjax = '{rfcDb: "' + rfcDb + '", Serie: "' + serie + '", Folio: "' + folio + '" }';
                 }
             }
-        AjaxValidateUuid(urlAjax, dataAjax).done(function (data) {
-            $("div#divLoading").removeClass('show');
-            var valid = data.d;
-            if (valid != undefined && (valid == "true" || valid == "1" || valid == "True" || valid == true)) {
-                returned = true;
-            } else if (selectedValue == "1") {
-                returned = confirm('El UUID no existe en el sistema, ¿Desea agregarlo de cualquier forma?');
-            } else if (selectedValue == "2") {
-                returned = false;
-                alertBootBox('No existe comprobante válido en sistema con la serie y el folio especificados', 4);
-            }
-        });
-        return returned;
+            AjaxValidateUuid(urlAjax, dataAjax).done(function (data) {
+                $("div#divLoading").removeClass('show');
+                var valid = data.d;
+                if (valid != undefined && (valid == "true" || valid == "1" || valid == "True" || valid == true)) {
+                    returned = true;
+                } else if (selectedValue == "1") {
+                    returned = confirm('El UUID no existe en el sistema, ¿Desea agregarlo de cualquier forma?');
+                } else if (selectedValue == "2") {
+                    returned = false;
+                    alertBootBox('No existe comprobante válido en sistema con la serie y el folio especificados', 4);
+                }
+            });
+            return returned;
     }
     function EditarItem33(checked) {
         var divCustomItem = $('#rowCustomItem');
@@ -2169,22 +2169,22 @@
                                                             <div class="col-md-1"></div>
                                                         </div>
                                                         <div class="row">
-                                                            <div id="divUUID" style="display: inline">
-                                                                <div class="col-md-6">
-                                                                    <asp:TextBox ID="tbUUID" runat="server" CssClass="form-control" Style="text-align: center" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"></asp:TextBox>
-                                                                    <asp:MaskedEditExtender runat="server" ID="tbUUID_MaskedEditExtender" TargetControlID="tbUUID" ClearMaskOnLostFocus="false" MaskType="None" Mask="CCCCCCCC-CCCC-CCCC-CCCC-CCCCCCCCCCCC" Filtered="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890" />
+                                                                <div id="divUUID" style="display: inline">
+                                                                    <div class="col-md-6">
+                                                                        <asp:TextBox ID="tbUUID" runat="server" CssClass="form-control" Style="text-align: center" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"></asp:TextBox>
+                                                                        <asp:MaskedEditExtender runat="server" ID="tbUUID_MaskedEditExtender" TargetControlID="tbUUID" ClearMaskOnLostFocus="false" MaskType="None" Mask="CCCCCCCC-CCCC-CCCC-CCCC-CCCCCCCCCCCC" Filtered="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890" />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div id="divSerFol" style="display: none">
-                                                                <div class="col-md-1">SERIE:</div>
-                                                                <div class="col-md-2">
-                                                                    <asp:TextBox ID="tbSerie" runat="server" CssClass="form-control upper" Style="text-align: center"></asp:TextBox>
+                                                                <div id="divSerFol" style="display: none">
+                                                                    <div class="col-md-1">SERIE:</div>
+                                                                    <div class="col-md-2">
+                                                                        <asp:TextBox ID="tbSerie" runat="server" CssClass="form-control upper" Style="text-align: center"></asp:TextBox>
+                                                                    </div>
+                                                                    <div class="col-md-1">FOLIO:</div>
+                                                                    <div class="col-md-2">
+                                                                        <asp:TextBox ID="tbFolio" runat="server" CssClass="form-control" Style="text-align: center" onkeypress="return isNumberKey(event)"></asp:TextBox>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="col-md-1">FOLIO:</div>
-                                                                <div class="col-md-2">
-                                                                    <asp:TextBox ID="tbFolio" runat="server" CssClass="form-control" Style="text-align: center" onkeypress="return isNumberKey(event)"></asp:TextBox>
-                                                                </div>
-                                                            </div>
                                                             <div class="col-md-5">
                                                                 <asp:DropDownList ID="ddlTipoRelacion" runat="server" CssClass="form-control" Style="text-align: center;">
                                                                     <asp:ListItem Value="03" Text="Devolución de mercancía sobre facturas o traslados previos"></asp:ListItem>

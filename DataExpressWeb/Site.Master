@@ -31,7 +31,7 @@
         <link href="~/css/bootstrap-tagsinput.css" rel="stylesheet" />
         <link href="~/css/select2.min.css" rel="stylesheet" />
         <link href="~/css/select2-bootstrap.min.css" rel="stylesheet" />
-        <link href="~/css/jquery.toastmessage.css" rel="stylesheet" />
+        <link href="~/css/toastmessage.css" rel="stylesheet" />
 
         <!------ ASEGURARSE QUE ESTE CSS SEA EL ULTIMO ------>
         <link href="~/css/Site.Master.css" rel="stylesheet" />
@@ -367,6 +367,7 @@
                 <div class="container">
                     <div class="row">
                         <asp:ContentPlaceHolder ID="cpCuerpoInf" runat="server" />
+                        <asp:Label ID="cfdi" runat="server"></asp:Label>
                         <h3 class="section-subheading text-muted">
                             <strong>DataExpress Latinoamérica &reg</strong>
                         </h3>

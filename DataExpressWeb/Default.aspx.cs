@@ -52,25 +52,39 @@ namespace DataExpressWeb
                 Session["mensaje"] = null;
             }
             (Master as SiteMaster).CheckTimbres();
-            if (Session["IsCliente"] != null)
+            if (Session["IsCliente"] != null || Session["IsProveedor"] != null)
             {
 
             }
             else
             {
-                llenarNotify();
-            }
-            
-            /*if(IsPostBack)
-            {
-                if (Page.Request.Params["__EVENTTARGET"].Equals("removeNotif"))
+                if (IsPostBack)
                 {
-                    if (pNotify.Controls.Count > 0) {
-                        pNotify.Controls.Clear();
-                    }
-                    llenarNotify();
+
                 }
-            }*/
+                else
+                {
+                    var notifArray = (Session["Notificaciones"] == null) ? new List<string[]>() : (List<string[]>)Session["Notificaciones"];
+                    for (var i = 0; i < notifArray.Count; i++)
+                    {
+                        var notificacion = notifArray[i];
+                        var tipo = "";
+                        if (notificacion[0] == "danger")
+                        {
+                            tipo = "error";
+                        }
+                        else if (notificacion[0] == "info")
+                        {
+                            tipo = "notice";
+                        }
+                        else
+                        {
+                            tipo = notificacion[0];
+                        }
+                        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "test" + i, "messages('" + notificacion[1] + "','" + tipo + "','" + i + "');", true);
+                    }
+                }
+            }
         }
 
         private void llenarNotify()

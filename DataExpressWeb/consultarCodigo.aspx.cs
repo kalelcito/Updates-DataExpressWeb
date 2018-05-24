@@ -76,6 +76,11 @@ namespace DataExpressWeb
         /// The id_ renglon
         /// </summary>
         static int _idRenglon = 0;
+        /// <summary>
+        ///  The catalogos
+        /// </summary>
+        //private CatCdfi catalogos = null;
+
 
         #region Variables Opera                   
         #region strings Opera
@@ -815,7 +820,6 @@ namespace DataExpressWeb
             Session["IDENTEMIEXT"] = rfc;
             _db = new BasesDatos(rfc);
             _log = new Log(rfc);
-
             if (!IsPostBack)
             {
                 // Generate a new PageiD //
@@ -878,7 +882,7 @@ namespace DataExpressWeb
                     Session["Conectores"] = arrayConcetores;
                 }
                 catch (Exception ex) { }
-                if (Session["CfdiVersion"].ToString().Equals("3.3") && Session["CatalogosCfdi33"] == null)
+                /*if (Session["CfdiVersion"].ToString().Equals("3.3") && Session["CatalogosCfdi33"] == null)
                 {
                     CatCdfi catalogos = null;
                     try
@@ -886,6 +890,10 @@ namespace DataExpressWeb
                         catalogos = new CatCdfi();
                         var bytes = Properties.Resources.catCFDI;
                         catalogos.LoadFromBytes(bytes);
+                        //ThreadStart pre = new ThreadStart(CrearCatalogo);
+                        //Thread c = new Thread(pre);
+                        //c.IsBackground = true;
+                        //c.Start();
                     }
                     catch (Exception ex)
                     {
@@ -896,7 +904,7 @@ namespace DataExpressWeb
                     {
                         Session["CatalogosCfdi33"] = catalogos;
                     }
-                }
+                }*/
                 DivUsoCfdi.Style["display"] = Session["CfdiVersion"].ToString().Equals("3.3") ? "inline" : "none";
                 tbPaisRec.Visible = !Session["CfdiVersion"].ToString().Equals("3.3");
                 ddlPais.Visible = Session["CfdiVersion"].ToString().Equals("3.3");
@@ -1021,6 +1029,14 @@ $('#UpdatePanelMenuMaster').prepend('<span style= \""display: inline-block; floa
                 }
                 if (!string.IsNullOrEmpty(value)) { ddlSucursalEmisor.SelectedValue = value; }
             }
+            /*void CrearCatalogo()
+            {
+                catalogos = new CatCdfi();
+                var bytes = Properties.Resources.catCFDI;
+                catalogos.LoadFromBytes(bytes);
+                Session["CatalogosCfdi33"] = catalogos;
+                //FillCatalogPaises();
+            }*/
         }
 
         /// <summary>
@@ -3357,6 +3373,7 @@ FROM
                 (Master as SiteMaster).MostrarAlerta(this, "El campo no puede estar vacio", 4, null, null, "$('#" + progressCrear.ClientID + "').css('display', 'none');");
                 return;
             }
+            FillCatalogPaises();
             Session[ViewState["_PageID"].ToString() + "_trama"] = "";
             Session[ViewState["_PageID"].ToString() + "_arrayTrama"] = null;
             Session[ViewState["_PageID"].ToString() + "_idTrama"] = "";

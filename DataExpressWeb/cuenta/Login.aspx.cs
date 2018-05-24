@@ -23,6 +23,7 @@ using Config;
 using System.Data.Common;
 using System.Linq;
 using System.IO;
+using System.Threading;
 
 namespace DataExpressWeb
 {
@@ -65,6 +66,11 @@ namespace DataExpressWeb
         /// </summary>
         private bool _asistenteSimplificado;
         //private static string rfc;
+        //K
+        /// <summary>
+        ///  The catalogos
+        /// </summary>
+        private CatCdfi catalogos = null;
 
         /// <summary>
         /// Handles the Click event of the bAgregar control.
@@ -415,6 +421,14 @@ namespace DataExpressWeb
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         protected void Page_Load(object sender, EventArgs e)
         {
+            //K
+            if (Session["CatalogosCfdi33"]==null)
+            {
+                ThreadStart pre = new ThreadStart(CrearCatalogo);
+                Thread c = new Thread(pre);
+                c.IsBackground = true;
+                c.Start();
+            }
             var auth = Request.QueryString.Get("auth");
             var redirect = Request.QueryString.Get("redirect");
             if (!string.IsNullOrEmpty(auth))
@@ -555,6 +569,17 @@ namespace DataExpressWeb
         protected void tbRFCNuevo_TextChanged(object sender, EventArgs e)
         {
             ColocarDatosRfcNuevo();
+        }
+
+        /// <summary>
+        /// Carga catalogo CFDI33.
+        /// </summary>
+        public void CrearCatalogo()
+        {
+            catalogos = new CatCdfi();
+            var bytes = Properties.Resources.catCFDI;
+            catalogos.LoadFromBytes(bytes);
+            Session["CatalogosCfdi33"] = catalogos;
         }
 
         /// <summary>
@@ -738,7 +763,6 @@ namespace DataExpressWeb
             var timeout = 100;
             var conexionessimultaneas = "";
             var identificacionemisor = "";
-
             _db = new BasesDatos(ddlEmpresa.SelectedValue);
             _dbRecepcion = new BasesDatos(ddlEmpresa.SelectedValue, "Recepcion");
 
@@ -1038,14 +1062,20 @@ namespace DataExpressWeb
                     Session["Conectores"] = arrayConcetores;
                 }
                 catch (Exception ex) { }
-                if (Session["CfdiVersion"].ToString().Equals("3.3") && Session["CatalogosCfdi33"] == null)
+                /*if (Session["CfdiVersion"].ToString().Equals("3.3") && Session["CatalogosCfdi33"] == null)
                 {
-                    CatCdfi catalogos = null;
+                    //CatCdfi catalogos = null;
                     try
                     {
-                        catalogos = new CatCdfi();
+                        //CATALOGOS
+
+                        //catalogos = new CatCdfi();
                         var bytes = Properties.Resources.catCFDI;
                         catalogos.LoadFromBytes(bytes);
+                        ThreadStart pre = new ThreadStart(CrearCatalogo);
+                        Thread c = new Thread(pre);
+                        c.IsBackground = true;
+                        c.Start();
                     }
                     catch (Exception ex)
                     {
@@ -1056,10 +1086,17 @@ namespace DataExpressWeb
                     {
                         Session["CatalogosCfdi33"] = catalogos;
                     }
-                }
+                }*/
                 Response.Redirect("~/Default.aspx");
             }
         }
+        /*void CrearCatalogo()
+        {
+            catalogos = new CatCdfi();
+            var bytes = Properties.Resources.catCFDI;
+            catalogos.LoadFromBytes(bytes);
+            Session["CatalogosCfdi33"] = catalogos;
+        }*/
     }
 
     /// <summary>

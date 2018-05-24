@@ -6,7 +6,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\public\Web\tmp</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\public\Web\23-05-2018</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -64,37 +64,37 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/19/2018 13:49:09</publishTime>
     </File>
     <File Include="bin/Config.dll">
-      <publishTime>05/09/2018 17:57:11</publishTime>
+      <publishTime>05/16/2018 18:19:05</publishTime>
     </File>
     <File Include="bin/Config.pdb">
-      <publishTime>05/09/2018 17:57:11</publishTime>
+      <publishTime>05/16/2018 18:19:05</publishTime>
     </File>
     <File Include="bin/Control.dll">
-      <publishTime>05/09/2018 17:57:14</publishTime>
+      <publishTime>05/16/2018 18:19:09</publishTime>
     </File>
     <File Include="bin/Control.dll.config">
       <publishTime>02/19/2018 13:49:12</publishTime>
     </File>
     <File Include="bin/Control.pdb">
-      <publishTime>05/09/2018 17:57:14</publishTime>
+      <publishTime>05/16/2018 18:19:09</publishTime>
     </File>
     <File Include="bin/Control.XmlSerializers.dll">
-      <publishTime>05/09/2018 17:57:16</publishTime>
+      <publishTime>05/16/2018 18:19:13</publishTime>
     </File>
     <File Include="bin/DataExpressWeb.dll">
-      <publishTime>05/14/2018 18:00:16</publishTime>
+      <publishTime>05/23/2018 13:40:25</publishTime>
     </File>
     <File Include="bin/DataExpressWeb.pdb">
-      <publishTime>05/14/2018 18:00:16</publishTime>
+      <publishTime>05/23/2018 13:40:27</publishTime>
     </File>
     <File Include="bin/DataExpressWeb.XmlSerializers.dll">
-      <publishTime>05/14/2018 18:00:22</publishTime>
+      <publishTime>05/23/2018 13:40:33</publishTime>
     </File>
     <File Include="bin/Datos.dll">
-      <publishTime>05/09/2018 17:57:11</publishTime>
+      <publishTime>05/16/2018 18:19:03</publishTime>
     </File>
     <File Include="bin/Datos.pdb">
-      <publishTime>05/09/2018 17:57:11</publishTime>
+      <publishTime>05/16/2018 18:19:03</publishTime>
     </File>
     <File Include="bin/DocumentFormat.OpenXml.dll">
       <publishTime>02/19/2018 13:48:55</publishTime>
@@ -184,7 +184,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>05/08/2018 10:14:10</publishTime>
     </File>
     <File Include="consultarCodigo.aspx">
-      <publishTime>05/08/2018 13:20:51</publishTime>
+      <publishTime>05/23/2018 11:10:21</publishTime>
     </File>
     <File Include="css/bootstrap-colorpicker.css">
       <publishTime>02/19/2018 13:47:55</publishTime>
@@ -234,6 +234,9 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="css/jquery.bootstrap-touchspin.min.css">
       <publishTime>02/19/2018 13:47:55</publishTime>
     </File>
+    <File Include="css/jquery.toastmessage.css">
+      <publishTime>05/21/2018 10:04:43</publishTime>
+    </File>
     <File Include="css/select2-bootstrap.min.css">
       <publishTime>02/19/2018 13:47:55</publishTime>
     </File>
@@ -249,6 +252,9 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="css/theme.css">
       <publishTime>02/19/2018 13:47:55</publishTime>
     </File>
+    <File Include="css/toastmessage.css">
+      <publishTime>05/21/2018 11:10:44</publishTime>
+    </File>
     <File Include="css/yellow.css">
       <publishTime>02/19/2018 13:47:55</publishTime>
     </File>
@@ -259,7 +265,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>05/09/2018 09:40:26</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>05/09/2018 15:33:59</publishTime>
+      <publishTime>05/22/2018 12:18:57</publishTime>
     </File>
     <File Include="descargarPDF.aspx">
       <publishTime>02/19/2018 13:48:12</publishTime>
@@ -274,7 +280,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>03/07/2018 13:49:27</publishTime>
     </File>
     <File Include="DocumentosPorCobrar.aspx">
-      <publishTime>05/08/2018 09:23:03</publishTime>
+      <publishTime>05/18/2018 17:51:49</publishTime>
     </File>
     <File Include="download.aspx">
       <publishTime>02/19/2018 13:47:57</publishTime>
@@ -429,6 +435,21 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="imagenes/sri.png">
       <publishTime>02/19/2018 13:48:06</publishTime>
     </File>
+    <File Include="imagenes/toast_close.gif">
+      <publishTime>05/18/2018 10:45:38</publishTime>
+    </File>
+    <File Include="imagenes/toast_error.png">
+      <publishTime>05/18/2018 10:45:38</publishTime>
+    </File>
+    <File Include="imagenes/toast_notice.png">
+      <publishTime>05/18/2018 10:45:38</publishTime>
+    </File>
+    <File Include="imagenes/toast_success.png">
+      <publishTime>05/18/2018 10:45:38</publishTime>
+    </File>
+    <File Include="imagenes/toast_warning.png">
+      <publishTime>05/18/2018 10:45:38</publishTime>
+    </File>
     <File Include="imagenes/tutorial-tickets/maitred/paso1.jpg">
       <publishTime>02/19/2018 13:48:03</publishTime>
     </File>
@@ -564,6 +585,9 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="js/jquery.bootstrap.wizard.min.js">
       <publishTime>02/19/2018 13:47:56</publishTime>
     </File>
+    <File Include="js/jquery.toastmessage.js">
+      <publishTime>05/18/2018 14:12:47</publishTime>
+    </File>
     <File Include="js/login.js">
       <publishTime>02/19/2018 13:47:56</publishTime>
     </File>
@@ -637,7 +661,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/19/2018 13:47:37</publishTime>
     </File>
     <File Include="nuevo/factura/crearFactura.aspx">
-      <publishTime>04/04/2018 14:25:10</publishTime>
+      <publishTime>05/15/2018 16:37:42</publishTime>
     </File>
     <File Include="nuevo/factura/crearFacturaRestaurante.aspx">
       <publishTime>02/19/2018 13:47:34</publishTime>
@@ -658,7 +682,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/21/2018 17:57:43</publishTime>
     </File>
     <File Include="nuevo/notacredito/crearNotaCreditoNuevo.aspx">
-      <publishTime>04/03/2018 16:39:54</publishTime>
+      <publishTime>05/21/2018 14:39:50</publishTime>
     </File>
     <File Include="nuevo/retencion/crearRetencion.aspx">
       <publishTime>02/19/2018 13:47:37</publishTime>
@@ -1777,7 +1801,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/19/2018 13:48:19</publishTime>
     </File>
     <File Include="recepcion/Documentos.aspx">
-      <publishTime>05/08/2018 10:21:08</publishTime>
+      <publishTime>05/22/2018 09:39:21</publishTime>
     </File>
     <File Include="recepcion/DropzoneHandler.ashx">
       <publishTime>02/19/2018 13:48:02</publishTime>
@@ -1798,7 +1822,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/19/2018 13:48:12</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>05/14/2018 14:20:06</publishTime>
+      <publishTime>05/22/2018 12:31:31</publishTime>
     </File>
     <File Include="Tickets.aspx">
       <publishTime>05/08/2018 09:31:17</publishTime>
@@ -1822,7 +1846,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/19/2018 13:47:59</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/09/2018 17:57:30</publishTime>
+      <publishTime>05/16/2018 18:19:30</publishTime>
     </File>
   </ItemGroup>
 </Project>

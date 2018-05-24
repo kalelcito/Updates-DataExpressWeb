@@ -287,8 +287,8 @@
                                     <asp:DropDownList ID="ddlEstado" runat="server" AppendDataBoundItems="True" Style="text-align: center" CssClass="form-control" placeholder="D:\ *">
                                         <asp:ListItem Value="00">Selecciona el Estado</asp:ListItem>
                                         <asp:ListItem Value="0">Rechazado</asp:ListItem>
-                                        <asp:ListItem Value="1">Aprobado</asp:ListItem>
-                                        <asp:ListItem Value="2">En proceso de Aprobación</asp:ListItem>
+                                        <asp:ListItem Value="1">Pagado</asp:ListItem>
+                                        <asp:ListItem Value="2">En proceso</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                             </div>

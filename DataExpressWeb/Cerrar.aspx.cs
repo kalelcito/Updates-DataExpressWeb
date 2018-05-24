@@ -12,6 +12,7 @@
 // <summary></summary>
 // ***********************************************************************
 using System;
+using System.Collections.Generic;
 using System.Web.UI;
 
 namespace DataExpressWeb
@@ -30,8 +31,19 @@ namespace DataExpressWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             var urlRedirect = (Session["ExternalAuthUrl"] != null && !string.IsNullOrEmpty(Session["ExternalAuthUrl"].ToString())) ? Session["ExternalAuthUrl"].ToString() : "~/cuenta/Login.aspx";
-            Session.Clear();
-            Session.Abandon();
+            //Session.Clear();
+            //Session.Abandon();
+            var sessionsToRemove = new List<string>();
+            foreach (string key in Session.Keys)
+            {
+                if (key != "CatalogosCfdi33")
+                    sessionsToRemove.Add(key);
+            }
+
+            foreach (var key in sessionsToRemove)
+            {
+                Session.Remove(key);
+            }
             Response.Redirect(urlRedirect);
         }
     }

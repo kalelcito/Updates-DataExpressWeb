@@ -1044,6 +1044,7 @@ namespace DataExpressWeb
         {
             var list = new List<DoctosRelacionadosTemp>();
             var rowsChecked = gvFacturas.Rows.Cast<GridViewRow>().Where(row => ((CheckBox)row.FindControl("check")).Checked).ToList();
+            decimal total = 0;
             foreach (GridViewRow row in rowsChecked)
             {
                 var id = ((HiddenField)row.FindControl("checkHdID")).Value;
@@ -1055,35 +1056,9 @@ namespace DataExpressWeb
                     var dr = _db.EjecutarConsulta();
                     if (dr.Read())
                     {
-                        decimal apagar = 0;
                         decimal pendientepago = 0;
-                        decimal pagado = 0;
-                        decimal.TryParse(dr["APagar"].ToString(), out apagar);
                         decimal.TryParse(dr["PendientePago"].ToString(), out pendientepago);
-                        decimal.TryParse(dr["Pagado"].ToString(), out pagado);
-                        var formaPago = dr["FormaPago"].ToString();
-                        var isParcialidad = Regex.IsMatch(formaPago, @"parcialidad", RegexOptions.IgnoreCase);
-                        var uuid = dr["Uuid"].ToString();
-                        var serie = dr["Serie"].ToString();
-                        var folio = dr["Folio"].ToString();
-                        var moneda = dr["Moneda"].ToString();
-                        var tipoCambio = dr["TipoCambio"].ToString();
-                        var relacionado = new DoctosRelacionadosTemp
-                        {
-                            IdComprobante = id,
-                            Serie = serie,
-                            Folio = folio,
-                            Parcialidad = "",
-                            MetodoPago = formaPago,
-                            Moneda = moneda,
-                            SaldoAnterior = pendientepago.ToString(),
-                            ImportePagado = "",
-                            SaldoInsoluto = pagado.ToString(),
-                            TipoCambio = tipoCambio,
-                            Uuid = uuid,
-                            Trama = ""
-                        };
-                        list.Add(relacionado);
+                        total += pendientepago;
                     }
                     _db.Desconectar();
                 }
@@ -1092,8 +1067,74 @@ namespace DataExpressWeb
                     // ignored
                 }
             }
-            Session["_doctosRelacionados"] = list;
-            BindDoctosRelacionadosExistentes();
+            decimal monto = 0;
+            decimal.TryParse(tbMonto_Pago.Text, out monto);
+            if (monto > total)
+            {
+                if (rowsChecked.Count > 1)
+                {
+                    (Master as SiteMaster).MostrarAlerta(this, "El monto no puede exceder a la suma de los adeudos.", 4);
+                }
+                else
+                {
+                    (Master as SiteMaster).MostrarAlerta(this, "El monto no puede exceder al adeudo.", 4);
+                }
+            }
+            else
+            {
+                foreach (GridViewRow row in rowsChecked)
+                {
+                    var id = ((HiddenField)row.FindControl("checkHdID")).Value;
+                    try
+                    {
+                        _db.Conectar();
+                        _db.CrearComando("SELECT TOP 1 g.numeroAutorizacion AS Uuid, g.serie AS Serie, g.folio AS Folio, g.moneda AS Moneda, g.tipoCambio AS TipoCambio, g.total AS 'APagar', g.saldoPendiente AS 'PendientePago', g.pagoAplicado AS 'Pagado', p.formapago AS FormaPago FROM Dat_General g LEFT OUTER JOIN Dat_pagos p ON p.id_Comprobante = g.idComprobante WHERE g.idComprobante = @id ORDER BY p.total DESC");
+                        _db.AsignarParametroCadena("@id", id);
+                        var dr = _db.EjecutarConsulta();
+                        if (dr.Read())
+                        {
+                            decimal apagar = 0;
+                            decimal pendientepago = 0;
+                            decimal pagado = 0;
+                            decimal t = 0;
+                            //fdecimal.TryParse(tbImportePagado, out t);
+                            decimal.TryParse(dr["APagar"].ToString(), out apagar);
+                            decimal.TryParse(dr["PendientePago"].ToString(), out pendientepago);
+                            decimal.TryParse(dr["Pagado"].ToString(), out pagado);
+                            var formaPago = dr["FormaPago"].ToString();
+                            var isParcialidad = Regex.IsMatch(formaPago, @"parcialidad", RegexOptions.IgnoreCase);
+                            var uuid = dr["Uuid"].ToString();
+                            var serie = dr["Serie"].ToString();
+                            var folio = dr["Folio"].ToString();
+                            var moneda = dr["Moneda"].ToString();
+                            var tipoCambio = dr["TipoCambio"].ToString();
+                            var relacionado = new DoctosRelacionadosTemp
+                            {
+                                IdComprobante = id,
+                                Serie = serie,
+                                Folio = folio,
+                                Parcialidad = "",
+                                MetodoPago = formaPago,
+                                Moneda = moneda,
+                                SaldoAnterior = pendientepago.ToString(),
+                                ImportePagado = "",
+                                SaldoInsoluto = pagado.ToString(),
+                                TipoCambio = tipoCambio,
+                                Uuid = uuid,
+                                Trama = ""
+                            };
+                            list.Add(relacionado);
+                        }
+                        _db.Desconectar();
+                    }
+                    catch (Exception ex)
+                    {
+                        // ignored
+                    }
+                }
+                Session["_doctosRelacionados"] = list;
+                BindDoctosRelacionadosExistentes();
+            }
         }
 
         protected void bGenerarComplemento_Click(object sender, EventArgs e)
@@ -1129,6 +1170,7 @@ namespace DataExpressWeb
             decimal montoPago = 0;
             decimal.TryParse(tbMonto_Pago.Text, out montoPago);
             rowGridViewDoctosRelacionados.Style["display"] = montoPago <= 0 ? "none" : "inline";
+            
         }
 
         protected void ddlMoneda_Pago_SelectedIndexChanged(object sender, EventArgs e)
@@ -1178,6 +1220,12 @@ namespace DataExpressWeb
             }
             decimal.TryParse(list.FirstOrDefault(docto => docto.Uuid.Equals(uuid)).SaldoAnterior, out saldoAnterior);
             var insoluto = (saldoAnterior - importePagado).ToString();
+            if(saldoAnterior - importePagado <0)
+            {
+                ((TextBox)sender).Text = "";
+                (Master as SiteMaster).MostrarAlerta(this, "El importe a pagar excede el adeudo.", 4);
+                return;
+            }
             list.FirstOrDefault(docto => docto.Uuid.Equals(uuid)).ImportePagado = importePagado.ToString();
             list.FirstOrDefault(docto => docto.Uuid.Equals(uuid)).SaldoInsoluto = insoluto;
             Session["_doctosRelacionados"] = list;
@@ -1229,6 +1277,7 @@ namespace DataExpressWeb
                 {
                     var xmlPath = row.Field<string>("XML");
                     var rutaXml = Server.MapPath("" + xmlPath);
+                    //var rutaXml = rutaDocus() + xmlPath;
                     var xDoc = new XmlDocument();
                     xDoc.Load(rutaXml);
                     var doctosRelacionados = xDoc.DocumentElement.GetElementsByTagName("pago10:DoctoRelacionado").Cast<XmlNode>();
@@ -1237,7 +1286,7 @@ namespace DataExpressWeb
                 }
                 catch (Exception ex)
                 {
-
+                    (Master as SiteMaster).MostrarAlerta(this, "error xml<br/>" + ex.Message, 4);
                 }
                 finally
                 {
@@ -1292,6 +1341,22 @@ namespace DataExpressWeb
                 }
                 _db.Desconectar();
             }
+        }
+
+        //directorios fuera de DataExpressWeb
+        public string rutaDocus()
+        {
+            var _DirDocs = "";
+            _db.Conectar();
+            _db.CrearComando(@"select dirdocs from Par_ParametrosSistema");
+            var dr = _db.EjecutarConsulta();
+            if (dr.Read())
+            {
+                _DirDocs = dr[0].ToString().Trim();
+            }
+            _db.Desconectar();
+
+            return _DirDocs.Replace("docus\\","");
         }
     }
 }

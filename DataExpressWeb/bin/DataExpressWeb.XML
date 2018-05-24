@@ -27546,6 +27546,11 @@
             The _asistente simplificado
             </summary>
         </member>
+        <member name="F:DataExpressWeb.Login.catalogos">
+            <summary>
+             The catalogos
+            </summary>
+        </member>
         <member name="M:DataExpressWeb.Login.bAgregar_Click(System.Object,System.EventArgs)">
             <summary>
             Handles the Click event of the bAgregar control.
@@ -27606,6 +27611,11 @@
             </summary>
             <param name="sender">The source of the event.</param>
             <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:DataExpressWeb.Login.CrearCatalogo">
+            <summary>
+            Carga catalogo CFDI33.
+            </summary>
         </member>
         <member name="M:DataExpressWeb.Login.idReceptor(System.String,System.Boolean)">
             <summary>
@@ -35673,6 +35683,15 @@
         <member name="F:DataExpressWeb.SiteMaster.cpCuerpoInf">
             <summary>
             Control cpCuerpoInf.
+            </summary>
+            <remarks>
+            Campo generado automáticamente.
+            Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+            </remarks>
+        </member>
+        <member name="F:DataExpressWeb.SiteMaster.cfdi">
+            <summary>
+            Control cfdi.
             </summary>
             <remarks>
             Campo generado automáticamente.

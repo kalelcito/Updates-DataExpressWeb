@@ -128,10 +128,16 @@
     <Content Include="configuracion\Bancos.aspx" />
     <Content Include="css\bootstrap-tagsinput.css" />
     <Content Include="css\essentials.css" />
+    <Content Include="css\toastmessage.css" />
     <Content Include="css\select2-bootstrap.min.css" />
     <Content Include="css\select2.min.css" />
     <Content Include="css\yellow.css" />
     <Content Include="imagenes\estructura-catalogo-conceptos-33.jpg" />
+    <Content Include="imagenes\toast_close.gif" />
+    <Content Include="imagenes\toast_error.png" />
+    <Content Include="imagenes\toast_notice.png" />
+    <Content Include="imagenes\toast_success.png" />
+    <Content Include="imagenes\toast_warning.png" />
     <Content Include="imagenes\tutorial-tickets\maitred\paso1.jpg" />
     <Content Include="imagenes\tutorial-tickets\maitred\paso2.jpg" />
     <Content Include="imagenes\tutorial-tickets\maitred\paso3.jpg" />
@@ -188,6 +194,7 @@
     <Content Include="js\bootstrap-select-es_ES.min.js" />
     <Content Include="js\bootstrap-select.min.js" />
     <Content Include="js\jquery-1.12.4.min.js" />
+    <Content Include="js\jquery.toastmessage.js" />
     <Content Include="js\moment.js" />
     <Content Include="js\select2\es.js" />
     <Content Include="js\select2\select2.min.js" />
